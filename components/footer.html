@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <!-- Kolom 1: Brand -->
+      <div class="footer__brand">
+        <a href="index.html">
+          <img src="assets/images/logowit.svg" alt="S. van Wijk Solutions" loading="lazy" class="footer__logo">
+        </a>
+        <p>Wij bouwen de toekomst van het web. Modern, snel en resultaatgericht.</p>
+      </div>
+
+      <!-- Kolom 2: Navigatie -->
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Contact -->
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul role="list">
+          <li>
+            <a href="mailto:info@svanwijksolutions.nl">info@svanwijksolutions.nl</a>
+          </li>
+          <li>Nederland, Regio Amsterdam</li>
+        </ul>
+      </div>
+
+      <!-- Kolom 4: Openingstijden -->
+      <div class="footer__col">
+        <h4>Openingstijden</h4>
+        <ul role="list" class="footer__hours">
+          <li><span>Maandag – Vrijdag</span><span>08:00 – 17:00</span></li>
+          <li><span>Zaterdag</span><span class="closed">Gesloten</span></li>
+          <li><span>Zondag</span><span class="closed">Gesloten</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; <span id="footer-year"></span> S. van Wijk Solutions. Alle rechten voorbehouden.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
