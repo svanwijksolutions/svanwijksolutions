@@ -160,7 +160,7 @@ header.scrolled { box-shadow: var(--shadow-md); }
 }
 
 .nav__logo img {
-  max-height: 34px;
+  max-height: 48px;
   width: auto;
 }
 
@@ -168,6 +168,8 @@ header.scrolled { box-shadow: var(--shadow-md); }
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-left: auto;
+  margin-right: 16px;
 }
 .nav__links a {
   text-decoration: none;
@@ -186,8 +188,9 @@ header.scrolled { box-shadow: var(--shadow-md); }
 .nav__cta {
   background: var(--clr-accent) !important;
   color: var(--clr-white) !important;
-  margin-left: 8px;
   border-radius: var(--radius-sm) !important;
+  flex-shrink: 0;
+  margin-right: 16px;
 }
 .nav__cta:hover {
   background: var(--clr-accent-h) !important;
@@ -290,15 +293,16 @@ header.scrolled { box-shadow: var(--shadow-md); }
   gap: 60px;
   align-items: center;
 }
+/* ===== HERO BADGE ===== */
 .hero__badge {
   display: inline-block;
   background: rgba(255,255,255,.15);
   color: #fff;
   border: 1px solid rgba(255,255,255,.2);
   backdrop-filter: blur(8px);
-  padding: 6px 18px;
+  padding: 8px 22px;
   border-radius: 24px;
-  font-size: .8rem;
+  font-size: .95rem;
   font-weight: 600;
   margin-bottom: 22px;
 }
@@ -655,13 +659,13 @@ header.scrolled { box-shadow: var(--shadow-md); }
 }
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
   gap: 40px;
   padding-bottom: 56px;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .footer__logo {
-  max-height: 38px;
+  max-height: 54px;
   width: auto;
   margin-bottom: 16px;
 }
@@ -736,7 +740,23 @@ header.scrolled { box-shadow: var(--shadow-md); }
 
 @media (max-width: 768px) {
   .nav__links     { display: none; }
-  .nav__burger    { display: flex; }
+  .nav__cta       { display: none; }
+  .nav__burger    { display: flex; margin-right: 0; }
+
+  /* About badge: zet onder de card op mobiel */
+  .about-visual__wrap { padding-bottom: 48px; }
+  .about-badge {
+    position: static;
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--radius-md);
+    padding: 12px 20px;
+    box-shadow: var(--shadow-md);
+  }
+  .about-badge strong { font-size: 1.3rem; }
+  .about-badge span   { font-size: .8rem; }
 
   .hero__grid,
   .about-grid,
