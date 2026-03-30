@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* De animatie voor de puntjes (werkt in Gmail, Outlook Web en iPhone) */
+    @keyframes wave {
+        0%, 100% { transform: translateY(0); opacity: 0.3; }
+        50% { transform: translateY(-4px); opacity: 1; }
+    }
+    .dot { animation: wave 2s infinite ease-in-out; }
+    .dot-1 { animation-delay: 0s; }
+    .dot-2 { animation-delay: 0.2s; }
+    .dot-3 { animation-delay: 0.4s; }
+
+    /* Zorgt dat links niet blauw worden in Outlook */
+    a { text-decoration: none !important; color: #1e1b4b !important; }
+</style>
+</head>
+<body style="margin: 0; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+<table cellpadding="0" cellspacing="0" style="border-collapse: collapse; color: #1e1b4b;">
+    <tr>
+        <!-- LINKER KOLOM: NAAM EN BRANDING -->
+        <td style="vertical-align: top; padding-right: 30px; min-width: 230px;">
+            <div style="font-size: 26px; font-weight: 900; color: #1e1b4b; margin: 0; line-height: 1.1;">
+                Sem van Wijk
+            </div>
+            <div style="font-size: 13px; color: #6366f1; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px;">
+                Eigenaar
+            </div>
+            
+            <div style="margin-top: 25px;">
+                <!-- SVG Logo met gefixte puntjes-positie -->
+                <svg width="240" height="35" viewBox="0 0 280 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="30" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#1e1b4b">S. van Wijk Solutions</text>
+                    <!-- Puntjes nu ruim achter de tekst -->
+                    <circle class="dot dot-1" cx="225" cy="22" r="3.5" fill="#6366f1"/>
+                    <circle class="dot dot-2" cx="240" cy="22" r="3.5" fill="#6366f1"/>
+                    <circle class="dot dot-3" cx="255" cy="22" r="3.5" fill="#6366f1"/>
+                </svg>
+            </div>
+        </td>
+
+        <!-- VERTICALE LIJN -->
+        <td style="border-left: 1px solid #e2e8f0; width: 1px;">&nbsp;</td>
+
+        <!-- RECHTER KOLOM: CONTACTGEGEVENS -->
+        <td style="vertical-align: middle; padding-left: 30px;">
+            <table cellpadding="0" cellspacing="0" style="font-size: 13px; line-height: 1.9; color: #1e1b4b;">
+                <!-- Telefoon -->
+                <tr>
+                    <td style="padding-right: 12px; font-size: 16px;">
+                        <span style="color: #d946ef;">&#128222;</span>
+                    </td>
+                    <td style="font-weight: 500; white-space: nowrap;">
+                        +31 6 81 83 59 35
+                    </td>
+                </tr>
+                <!-- Email -->
+                <tr>
+                    <td style="padding-right: 12px; font-size: 16px;">
+                        <span style="color: #c084fc;">&#9993;</span>
+                    </td>
+                    <td style="white-space: nowrap;">
+                        <a href="mailto:sem@svanwijksolutions.nl" style="color: #1e1b4b; text-decoration: none;">sem@svanwijksolutions.nl</a>
+                    </td>
+                </tr>
+                <!-- Website -->
+                <tr>
+                    <td style="padding-right: 12px; font-size: 16px;">
+                        <span style="color: #38bdf8;">&#127760;</span>
+                    </td>
+                    <td style="white-space: nowrap;">
+                        <a href="https://www.svanwijksolutions.nl" style="color: #1e1b4b; text-decoration: none;">www.svanwijksolutions.nl</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

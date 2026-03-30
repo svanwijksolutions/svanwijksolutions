@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Je Project | S. van Wijk Solutions</title>
+  <meta name="description" content="Start jouw webproject met S. van Wijk Solutions. Vertel ons over jouw wensen en wij nemen binnen 24 uur contact op.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="tag">START JE PROJECT</span>
+        <h1>Laten we iets moois bouwen</h1>
+        <p>Vertel ons over jouw project. Ons team neemt binnen 24 uur contact met je op voor een vrijblijvend gesprek.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="start-intro reveal">
+
+          <!-- Links: waarom kiezen voor ons -->
+          <div>
+            <span class="tag">WAAROM S. VAN WIJK</span>
+            <h2>Een website die écht voor jou werkt</h2>
+            <p style="margin-top:16px;">Wij bouwen geen standaard templates. Elk project is maatwerk — afgestemd op jouw doelen, doelgroep en branche. Ons team combineert technische expertise met een scherp oog voor design.</p>
+
+            <ul class="start-checklist">
+              <li>Persoonlijk contact met ons team van begin tot eind</li>
+              <li>Snelle laadtijden en technisch sterke code</li>
+              <li>Volledig responsive — perfect op mobiel en desktop</li>
+              <li>SEO-geoptimaliseerd van de grond af aan</li>
+              <li>Transparante communicatie, geen verrassingen</li>
+              <li>Nazorg en support na de livegang</li>
+            </ul>
+
+            <div style="margin-top:32px;background:var(--clr-soft);border-radius:var(--radius-lg);padding:24px 28px;">
+              <p style="font-size:.88rem;color:var(--clr-muted);margin-bottom:6px;">Liever eerst een vraag stellen?</p>
+              <a href="contact.html" style="color:var(--clr-accent);font-weight:700;font-size:.95rem;text-decoration:none;">→ Ga naar de contactpagina</a>
+            </div>
+          </div>
+
+          <!-- Rechts: uitgebreid projectformulier -->
+          <div class="contact-form-wrap">
+            <h3>Vertel ons over jouw project</h3>
+
+            <form id="contactForm" action="https://formspree.io/f/mbdplbjk" method="POST" novalidate>
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="_subject" value="Nieuw project via svanwijksolutions.nl">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="voornaam">Voornaam</label>
+                  <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="achternaam">Achternaam</label>
+                  <input type="text" id="achternaam" name="achternaam" placeholder="Jansen" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="jan@jouwbedrijf.nl" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="telefoon">Telefoonnummer <span style="font-weight:400;color:#94a3b8;">(optioneel)</span></label>
+                <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 00 000 000" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="dienst">Wat zoek je?</label>
+                <select id="dienst" name="dienst" required>
+                  <option value="" disabled selected>Kies een dienst…</option>
+                  <option value="nieuwe-website">Nieuwe Website</option>
+                  <option value="redesign">Redesign bestaande website</option>
+                  <option value="seo">SEO-optimalisatie</option>
+                  <option value="landingspagina">Landingspagina</option>
+                  <option value="webshop">Webshop</option>
+                  <option value="onderhoud">Onderhoud &amp; Support</option>
+                  <option value="anders">Anders / Weet ik nog niet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bericht">Vertel ons meer over je project</label>
+                <textarea id="bericht" name="message" rows="5" placeholder="Wat is het doel van de website? Wie is je doelgroep? Heb je al een bestaande site?" required></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="submitBtn">Verstuur Aanvraag →</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

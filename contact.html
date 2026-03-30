@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | S. van Wijk Solutions</title>
-  <meta name="description" content="Neem contact op met S. van Wijk Solutions voor een vrijblijvend gesprek over jouw nieuwe website of webshop.">
+  <meta name="description" content="Neem contact op met S. van Wijk Solutions. Wij zijn bereikbaar via e-mail en reageren binnen 24 uur op werkdagen.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -16,47 +16,45 @@
 
   <main>
 
-    <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container">
         <span class="tag">CONTACT</span>
-        <h1>Laten we samenwerken</h1>
-        <p>Klaar voor een website die echt werkt? Vul het formulier in of stuur een mail — wij reageren binnen 24 uur.</p>
+        <h1>Neem contact op</h1>
+        <p>Heb je een vraag of wil je meer informatie? Wij reageren binnen 24 uur op werkdagen.</p>
       </div>
     </section>
 
-    <!-- ===== CONTACT SPLIT ===== -->
     <section class="section section--alt">
       <div class="container">
         <div class="contact-split reveal">
 
-          <!-- Links: info + kaart -->
+          <!-- Links: kaart + gegevens -->
           <div>
             <div class="contact-info">
-              <h3>Contactgegevens</h3>
+              <h3>Onze gegevens</h3>
               <div class="info-item">
                 <div class="info-icon">📧</div>
                 <div>
-                  <h4>Algemeen</h4>
+                  <h4>E-mail</h4>
                   <a href="mailto:info@svanwijksolutions.nl">info@svanwijksolutions.nl</a>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">👤</div>
-                <div>
-                  <h4>Direct contact met Sem</h4>
-                  <a href="mailto:sem@svanwijksolutions.nl">sem@svanwijksolutions.nl</a>
                 </div>
               </div>
               <div class="info-item">
                 <div class="info-icon">📍</div>
                 <div>
                   <h4>Locatie</h4>
-                  <p>Nederland, Regio Amsterdam</p>
+                  <p>Nederland, Regio Westland</p>
                 </div>
               </div>
               <div class="info-item">
-                <div class="info-icon">⏱️</div>
+                <div class="info-icon">🕐</div>
+                <div>
+                  <h4>Openingstijden</h4>
+                  <p>Maandag t/m vrijdag: 08:00 – 17:00</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">⚡</div>
                 <div>
                   <h4>Reactietijd</h4>
                   <p>Binnen 24 uur op werkdagen</p>
@@ -64,62 +62,45 @@
               </div>
             </div>
 
-            <!-- Google Maps -->
             <div class="map-wrap">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156434.84239849204!2d4.743949!3d52.284242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c3db074b65%3A0x86915038ee823126!2sAmsterdam!5e0!3m2!1snl!2snl!4v1700000000000"
-                title="Locatie S. van Wijk Solutions — Regio Amsterdam"
-                loading="lazy"
-                allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39417.65!2d4.19!3d52.00!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b5c2de89b01f%3A0x8e1a7e3e3f3e3e3e!2sWestland!5e0!3m2!1snl!2snl!4v1700000000000"
+                title="Locatie S. van Wijk Solutions — Regio Westland"
+                loading="lazy" allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
           </div>
 
-          <!-- Rechts: formulier -->
+          <!-- Rechts: eenvoudig contactformulier -->
           <div class="contact-form-wrap">
             <h3>Stuur een bericht</h3>
-            <!--
-              Vervang de action-URL door jouw eigen Formspree endpoint:
-              action="https://formspree.io/f/JOUW-ID"
-            -->
-            <form action="#" method="POST">
+            <p style="margin-bottom:24px;font-size:.93rem;">Heb je een vraag, wil je een offerte of gewoon kennismaken? Vul het formulier in en wij nemen zo snel mogelijk contact met je op.</p>
+
+            <form id="contactForm" action="https://formspree.io/f/mbdplbjk" method="POST" novalidate>
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="_subject" value="Contactbericht via svanwijksolutions.nl">
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="voornaam">Voornaam</label>
-                  <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required>
+                  <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name">
                 </div>
                 <div class="form-group">
                   <label for="achternaam">Achternaam</label>
-                  <input type="text" id="achternaam" name="achternaam" placeholder="Jansen" required>
+                  <input type="text" id="achternaam" name="achternaam" placeholder="Jansen" required autocomplete="family-name">
                 </div>
               </div>
               <div class="form-group">
                 <label for="email">E-mailadres</label>
-                <input type="email" id="email" name="email" placeholder="jan@jouwbedrijf.nl" required>
-              </div>
-              <div class="form-group">
-                <label for="telefoon">Telefoonnummer <span style="font-weight:400;color:#94a3b8;">(optioneel)</span></label>
-                <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 00 000 000">
-              </div>
-              <div class="form-group">
-                <label for="dienst">Waarvoor neem je contact op?</label>
-                <select id="dienst" name="dienst" required>
-                  <option value="" disabled selected>Kies een dienst...</option>
-                  <option value="nieuwe-website">Nieuwe Website</option>
-                  <option value="webshop">Webshop</option>
-                  <option value="redesign">Redesign bestaande website</option>
-                  <option value="seo">SEO-optimalisatie</option>
-                  <option value="landingspagina">Landingspagina</option>
-                  <option value="onderhoud">Onderhoud & Support</option>
-                  <option value="anders">Anders</option>
-                </select>
+                <input type="email" id="email" name="email" placeholder="jan@jouwbedrijf.nl" required autocomplete="email">
               </div>
               <div class="form-group">
                 <label for="bericht">Jouw bericht</label>
-                <textarea id="bericht" name="bericht" rows="5" placeholder="Vertel ons over jouw project, wensen en eventueel je budget..." required></textarea>
+                <textarea id="bericht" name="message" rows="6" placeholder="Stel gerust je vraag…" required></textarea>
               </div>
-              <button type="submit" class="form-submit">Verstuur Bericht →</button>
+              <button type="submit" class="form-submit" id="submitBtn">Verstuur Bericht →</button>
             </form>
           </div>
 
@@ -131,5 +112,6 @@
 
   <div id="footer-placeholder"></div>
   <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
