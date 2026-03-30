@@ -2,32 +2,31 @@
   <div class="container">
     <nav class="nav">
 
-      <!-- Logo: links -->
+      <!-- Zone 1: Logo links -->
       <a href="index.html" class="nav__logo">
         <img src="assets/images/logokleur.svg" alt="S. van Wijk Solutions" loading="lazy">
       </a>
 
-      <!-- Nav-links: gecentreerd via flex -->
+      <!-- Zone 2: Links gecentreerd -->
       <ul class="nav__links" role="list">
-        <li><a href="index.html"     data-page="index">Home</a></li>
-        <li><a href="diensten.html"  data-page="diensten">Diensten</a></li>
-        <li><a href="over-ons.html"  data-page="over-ons">Over Ons</a></li>
-        <li><a href="contact.html"   data-page="contact">Contact</a></li>
+        <li><a href="index.html"    data-page="index">Home</a></li>
+        <li><a href="diensten.html" data-page="diensten">Diensten</a></li>
+        <li><a href="over-ons.html" data-page="over-ons">Over Ons</a></li>
+        <li><a href="contact.html"  data-page="contact">Contact</a></li>
       </ul>
 
-      <!-- CTA: rechts -->
-      <a href="start.html" class="nav__cta">Start Je Project</a>
-
-      <!-- Burger: alleen mobiel -->
-      <button class="nav__burger" aria-label="Menu openen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- Zone 3: CTA + burger rechts -->
+      <div class="nav__right">
+        <a href="start.html" class="nav__cta">Start Je Project</a>
+        <button class="nav__burger" aria-label="Menu openen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
 
     </nav>
   </div>
 </header>
 
-<!-- Mobile overlay -->
 <div class="mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobiel navigatiemenu">
   <button class="mobile-overlay__close" aria-label="Menu sluiten">✕</button>
   <nav>
