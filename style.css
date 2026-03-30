@@ -98,38 +98,37 @@ header .container {
 }
 header.scrolled { box-shadow:var(--shadow-md); }
 
-/* Nav: drie zones — logo links | links midden | cta rechts */
+/* Nav: drie zones — logo links | links gecentreerd | cta rechts */
 .nav {
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
   align-items:center;
-  justify-content:space-between;
   width:100%;
-  gap:0;
 }
 
-/* Logo zone — plakt aan de linkerkant */
+/* Logo — links uitgelijnd in zone 1 */
 .nav__logo {
+  justify-self:start;
   flex-shrink:0;
-  margin-right:32px;
 }
 .nav__logo img {
-  max-height:52px;
+  max-height:44px;
   width:auto;
   display:block;
 }
 
-/* Links zone — neemt alle ruimte in het midden */
+/* Links — gecentreerd in zone 2 */
 .nav__links {
   display:flex;
   align-items:center;
-  gap:2px;
+  gap:0;
   list-style:none;
-  flex:1;
+  justify-self:center;
 }
 .nav__links a {
   text-decoration:none; color:var(--clr-primary);
-  font-weight:600; font-size:.9rem;
-  padding:8px 18px; border-radius:var(--radius-sm);
+  font-weight:600; font-size:.88rem;
+  padding:7px 14px; border-radius:var(--radius-sm);
   transition:var(--tr); position:relative; white-space:nowrap;
 }
 .nav__links a:hover { background:var(--clr-soft); color:var(--clr-accent); }
@@ -139,19 +138,18 @@ header.scrolled { box-shadow:var(--shadow-md); }
 }
 .nav__links a.active::after {
   content:'';
-  position:absolute; bottom:4px; left:18px; right:18px;
+  position:absolute; bottom:3px; left:14px; right:14px;
   height:2px; border-radius:2px;
   background:var(--clr-accent);
 }
 
-/* CTA zone — plakt aan de rechterkant */
+/* CTA — rechts uitgelijnd in zone 3 */
 .nav__cta {
-  flex-shrink:0;
-  margin-left:24px;
+  justify-self:end;
   display:inline-block;
   background:var(--clr-accent); color:#fff;
-  padding:10px 22px; border-radius:var(--radius-sm);
-  font-weight:700; font-size:.88rem;
+  padding:9px 20px; border-radius:var(--radius-sm);
+  font-weight:700; font-size:.85rem;
   text-decoration:none; white-space:nowrap;
   transition:var(--tr);
 }
