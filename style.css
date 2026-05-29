@@ -591,8 +591,8 @@ p  { color:var(--clr-muted); line-height:1.75; }
 .taal-tag--fixed { background: var(--clr-teal-soft); opacity: .85; }
 .taal-tag__remove { background: none; border: none; color: var(--clr-teal-dark); cursor: pointer; font-size: 1rem; line-height: 1; padding: 0 2px; font-weight: 700; transition: color .2s; }
 .taal-tag__remove:hover { color: #ef4444; }
-.taal-tag__vlag { font-size: 1.05rem; line-height: 1; display: inline-block; }
-.taal-tag--fixed .taal-tag__vlag, .taal-tag__vlag { vertical-align: middle; }
+.taal-tag__vlag { width: 20px; height: 14px; object-fit: cover; border-radius: 2px; display: inline-block; vertical-align: middle; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.taal-tag__vlag--globe { width: auto; height: auto; font-size: 1.05rem; box-shadow: none; line-height: 1; }
 .taal-input-wrap { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
 .taal-dropdown { width: 100%; padding: 10px 12px; border: 1.5px solid var(--clr-border); border-radius: var(--radius-sm); font-family: 'Poppins',sans-serif; font-size: .88rem; color: var(--clr-text); background: var(--clr-light); cursor: pointer; transition: border-color .2s; appearance: auto; }
 .taal-dropdown:focus { outline: none; border-color: var(--clr-accent); }
@@ -741,10 +741,10 @@ p  { color:var(--clr-muted); line-height:1.75; }
   .float-tag { font-size: .75rem; }
 }
 @media (max-width: 768px) {
-  /* Nav mobiel */
-  .nav { grid-template-columns: auto auto; gap: 0; }
-  .nav__logo { margin-right: 0; }
-  .nav__right { margin-left: 0; }
+  /* Nav mobiel — logo links, hamburger rechts */
+  .nav { grid-template-columns: auto 1fr; gap: 0; align-items: center; }
+  .nav__logo { grid-column: 1; justify-self: start; margin-right: 0; }
+  .nav__right { grid-column: 2; justify-self: end; margin-left: 0; }
   .nav__links { display: none; }
   .nav__cta--gratis { display: none; }
   .nav__burger { display: flex; }

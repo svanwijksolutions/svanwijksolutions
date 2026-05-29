@@ -143,34 +143,39 @@ document.addEventListener('DOMContentLoaded', function () {
   var hiddenTalen  = document.getElementById('hiddenTalen');
   var gekozenTalen = ['Nederlands'];
 
-  // Vlaggetjes per taal (emoji — werkt op computer én telefoon)
-  var taalVlaggen = {
-    'Nederlands': '🇳🇱',
-    'Engels':     '🇬🇧',
-    'Duits':      '🇩🇪',
-    'Frans':      '🇫🇷',
-    'Spaans':     '🇪🇸',
-    'Italiaans':  '🇮🇹',
-    'Portugees':  '🇵🇹',
-    'Pools':      '🇵🇱',
-    'Turks':      '🇹🇷',
-    'Arabisch':   '🇸🇦',
-    'Chinees':    '🇨🇳',
-    'Russisch':   '🇷🇺',
-    'Grieks':     '🇬🇷',
-    'Zweeds':     '🇸🇪',
-    'Noors':      '🇳🇴',
-    'Deens':      '🇩🇰',
-    'Fins':       '🇫🇮',
-    'Japans':     '🇯🇵',
-    'Koreaans':   '🇰🇷',
-    'Hindi':      '🇮🇳',
-    'Oekraïens':  '🇺🇦'
+  // Landcode per taal — voor echte vlag-afbeeldingen (werkt op ELK apparaat, ook Windows)
+  var taalLandcode = {
+    'Nederlands': 'nl',
+    'Engels':     'gb',
+    'Duits':      'de',
+    'Frans':      'fr',
+    'Spaans':     'es',
+    'Italiaans':  'it',
+    'Portugees':  'pt',
+    'Pools':      'pl',
+    'Turks':      'tr',
+    'Arabisch':   'sa',
+    'Chinees':    'cn',
+    'Russisch':   'ru',
+    'Grieks':     'gr',
+    'Zweeds':     'se',
+    'Noors':      'no',
+    'Deens':      'dk',
+    'Fins':       'fi',
+    'Japans':     'jp',
+    'Koreaans':   'kr',
+    'Hindi':      'in',
+    'Oekraïens':  'ua'
   };
 
-  function vlagVoor(taal) {
-    // Bekende taal? Geef de vlag. Anders een neutraal wereld-icoon.
-    return taalVlaggen[taal] || '🌐';
+  function vlagHTML(taal) {
+    var code = taalLandcode[taal];
+    if (code) {
+      // Echte vlag-afbeelding (SVG) — schaalt scherp op elk scherm
+      return '<img class="taal-tag__vlag" src="https://flagcdn.com/' + code + '.svg" alt="" width="20" height="14" loading="lazy">';
+    }
+    // Onbekende taal → neutraal wereld-icoontje
+    return '<span class="taal-tag__vlag taal-tag__vlag--globe">🌐</span>';
   }
 
   function renderTaalTags() {
@@ -180,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (taal === 'Nederlands') return;
       var tag = document.createElement('span');
       tag.className = 'taal-tag';
-      tag.innerHTML = '<span class="taal-tag__vlag">' + vlagVoor(taal) + '</span> ' + taal + ' <button type="button" class="taal-tag__remove" aria-label="Verwijder ' + taal + '">×</button>';
+      tag.innerHTML = vlagHTML(taal) + ' ' + taal + ' <button type="button" class="taal-tag__remove" aria-label="Verwijder ' + taal + '">×</button>';
       tag.querySelector('.taal-tag__remove').addEventListener('click', function () {
         gekozenTalen = gekozenTalen.filter(function (t) { return t !== taal; });
         renderTaalTags(); updateHiddenTalen();
