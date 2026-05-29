@@ -7,33 +7,18 @@
   <meta name="description" content="S. van Wijk Solutions bouwt ultra-moderne, snelle en SEO-geoptimaliseerde websites voor bedrijven in heel Nederland.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="canonical" href="https://www.svanwijksolutions.nl/">
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-  <link rel="manifest" href="assets/images/site.webmanifest">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <!-- Open Graph -->
   <meta property="og:title" content="S. van Wijk Solutions | Moderne Websites & Maatwerk">
   <meta property="og:description" content="S. van Wijk Solutions bouwt ultra-moderne, snelle en SEO-geoptimaliseerde websites voor bedrijven in heel Nederland.">
   <meta property="og:url" content="https://www.svanwijksolutions.nl/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.svanwijksolutions.nl/assets/images/og-image.jpg">
   <meta property="og:locale" content="nl_NL">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "S. van Wijk Solutions",
-    "description": "Moderne websites en maatwerk webdesign voor bedrijven in heel Nederland.",
-    "url": "https://www.svanwijksolutions.nl",
-    "email": "info@svanwijksolutions.nl",
-    "telephone": "+31681835935",
-    "address": { "@type": "PostalAddress", "addressRegion": "Westland", "addressCountry": "NL" },
-    "openingHours": "Mo-Fr 08:00-17:00"
-  }
-  </script>
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -41,21 +26,8 @@
 
   <main>
 
-    <!-- HERO -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
-      <div class="hero__particles" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-
-      <!-- Floating code tags -->
-      <div class="floating-tags" aria-hidden="true">
-        <span class="float-tag float-tag--1">&lt;design /&gt;</span>
-        <span class="float-tag float-tag--2">&lt;build /&gt;</span>
-        <span class="float-tag float-tag--3">&lt;launch /&gt;</span>
-        <span class="float-tag float-tag--4">{ code }</span>
-      </div>
-
       <div class="container">
         <div class="hero__grid">
           <div class="hero__content">
@@ -63,7 +35,7 @@
             <h1>Wij bouwen<br><span class="typewriter" id="typewriter"></span></h1>
             <p class="hero__sub">Jouw digitale visitekaartje verdient meer dan een template. Wij creëren high-performance websites die converteren, imponeren en groeien.</p>
             <div class="hero__btns">
-              <a href="concept.html" class="btn btn--white">Gratis Concept →</a>
+              <a href="start.html" class="btn btn--white">Start Je Project →</a>
               <a href="diensten.html" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;">Onze Diensten</a>
             </div>
           </div>
@@ -72,7 +44,7 @@
               <div class="code-card__dots">
                 <span></span><span></span><span></span>
               </div>
-              <pre><span class="kw">const</span> <span class="fn">buildWebsite</span> = () =&gt; {
+              <pre><span class="kw">const</span> <span class="fn">buildWebsite</span> = () => {
   <span class="kw">return</span> {
     design:  <span class="str">"Ultra Modern"</span>,
     speed:   <span class="str">"Lightning Fast"</span>,
@@ -87,7 +59,7 @@
       </div>
     </section>
 
-    <!-- STATS -->
+    <!-- ===== STATS ===== -->
     <section class="stats">
       <div class="container">
         <div class="stats__grid">
@@ -97,280 +69,118 @@
           </div>
           <div class="reveal reveal--delay-2">
             <div class="stat__num"><span data-count="100" data-suffix="%">0%</span></div>
-            <div class="stat__label">Toewijding aan kwaliteit</div>
+            <div class="stat__label">Klanttevredenheid</div>
           </div>
           <div class="reveal reveal--delay-3">
-            <div class="stat__num"><span data-count="5" data-suffix=" dgn">0 dgn</span></div>
-            <div class="stat__label">Gratis concept binnen</div>
+            <div class="stat__num"><span data-count="4.9" data-suffix="★">0★</span></div>
+            <div class="stat__label">Gemiddelde beoordeling</div>
           </div>
           <div class="reveal">
-            <div class="stat__num"><span data-count="24" data-suffix="u">0u</span></div>
-            <div class="stat__label">Reactietijd werkdagen</div>
+            <div class="stat__num"><span data-count="5" data-suffix="+">0+</span></div>
+            <div class="stat__label">Jaar ervaring</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ONZE EXPERTISE — met sfeer foto -->
-    <section class="section expertise-sectie" id="diensten">
+    <!-- ===== DIENSTEN ===== -->
+    <section class="section section--alt" id="diensten">
       <div class="container">
         <div class="section-header reveal">
-          <span class="tag tag--teal">WAT WE DOEN</span>
+          <span class="tag">WAT WE DOEN</span>
           <h2>Onze Expertise</h2>
           <p>Alles wat je nodig hebt voor een dominante online aanwezigheid.</p>
         </div>
-
-        <div class="expertise-split">
-
-          <div class="expertise-cards">
-            <div class="exp-card reveal reveal--delay-1">
-              <div class="exp-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              </div>
-              <h3>Ultra Snel</h3>
-              <p>Bliksemsnelle laadtijden voor een betere gebruikerservaring en hogere Google-ranking.</p>
-            </div>
-            <div class="exp-card reveal reveal--delay-2">
-              <div class="exp-card__icon exp-card__icon--teal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-              </div>
-              <h3>Mobile First</h3>
-              <p>Perfect op elk scherm — van smartphone tot ultrawide monitor.</p>
-            </div>
-            <div class="exp-card reveal reveal--delay-3">
-              <div class="exp-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              </div>
-              <h3>SEO Geoptimaliseerd</h3>
-              <p>Wij bouwen de technische fundering zodat jouw bedrijf direct vindbaar is in Google.</p>
-            </div>
-            <div class="exp-card reveal reveal--delay-1">
-              <div class="exp-card__icon exp-card__icon--teal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="10.5" r="2.5"></circle><circle cx="8.5" cy="7.5" r="2.5"></circle><circle cx="6.5" cy="12.5" r="2.5"></circle><path d="M12 22c-7-2-9-6-9-9 0-3 3-5 6-5h6c3 0 6 2 6 5 0 3-3 9-9 9z"></path></svg>
-              </div>
-              <h3>Maatwerk Design</h3>
-              <p>Geen templates — elk ontwerp is uniek, gebouwd rond jouw merk en doelgroep.</p>
-            </div>
-            <div class="exp-card reveal reveal--delay-2">
-              <div class="exp-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-              </div>
-              <h3>Website Redesign</h3>
-              <p>Heb je al een website maar is het tijd voor een frisse look? Wij moderniseren met behoud van SEO-waarde.</p>
-            </div>
-            <div class="exp-card reveal reveal--delay-3">
-              <div class="exp-card__icon exp-card__icon--teal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <h3>Onderhoud & Support</h3>
-              <p>Altijd bereikbaar voor updates, vragen en optimalisaties. Maandag t/m vrijdag.</p>
-            </div>
+        <div class="grid--3">
+          <div class="card reveal reveal--delay-1">
+            <span class="card__icon">🚀</span>
+            <h3>Ultra Snel</h3>
+            <p>Bliksemsnelle laadtijden voor een betere gebruikerservaring en hogere Google-ranking.</p>
           </div>
-
-          <div class="expertise-visual reveal">
-            <div class="expertise-foto expertise-foto--landscape">
-              <img src="assets/images/receptioniste.jpg" alt="Professionele medewerker aan het werk voor S. van Wijk Solutions" loading="lazy" width="1608" height="1080">
-              <div class="expertise-foto__badge">
-                <span class="badge-dot"></span>
-                <span>Live & online</span>
-              </div>
-              <div class="expertise-foto__code">
-                <span class="code-line"><span class="kw">const</span> <span class="fn">create</span> = ()</span>
-                <span class="code-line">=&gt; <span class="str">"magic"</span>;</span>
-              </div>
-            </div>
+          <div class="card reveal reveal--delay-2">
+            <span class="card__icon">📱</span>
+            <h3>Mobile First</h3>
+            <p>Perfect op elk scherm — van smartphone tot ultrawide monitor.</p>
           </div>
-
+          <div class="card reveal reveal--delay-3">
+            <span class="card__icon">🔍</span>
+            <h3>SEO Geoptimaliseerd</h3>
+            <p>Wij bouwen de technische fundering zodat jouw bedrijf direct vindbaar is in Google.</p>
+          </div>
+          <div class="card reveal reveal--delay-1">
+            <span class="card__icon">🎨</span>
+            <h3>Maatwerk Design</h3>
+            <p>Geen templates — elk ontwerp is uniek, gebouwd rond jouw merk en doelgroep.</p>
+          </div>
+          <div class="card reveal reveal--delay-2">
+            <span class="card__icon">🛒</span>
+            <h3>Webshops</h3>
+            <p>Van productpagina tot checkout — wij bouwen webshops die verkopen.</p>
+          </div>
+          <div class="card reveal reveal--delay-3">
+            <span class="card__icon">🛡️</span>
+            <h3>Onderhoud & Support</h3>
+            <p>Altijd bereikbaar voor updates, vragen en optimalisaties. Maandag t/m vrijdag.</p>
+          </div>
         </div>
-
-        <div style="text-align:center;margin-top:48px;" class="reveal">
+        <div style="text-align:center;margin-top:44px;" class="reveal">
           <a href="diensten.html" class="btn btn--outline">Bekijk alle diensten →</a>
         </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO — alle 3 kleiner -->
-    <section class="section portfolio-sectie" id="projecten">
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials">
       <div class="container">
         <div class="section-header reveal">
-          <span class="tag">RECENTE PROJECTEN</span>
-          <h2>Van oud naar onweerstaanbaar</h2>
-          <p>Bekijk hoe wij websites bouwen die wél presteren — modern, snel en converterend.</p>
-        </div>
-
-        <div class="portfolio-mini-grid">
-
-          <div class="mini-project reveal reveal--delay-1">
-            <span class="mini-project__badge">Nieuw</span>
-            <div class="browser-frame">
-              <div class="browser-frame__bar">
-                <span></span><span></span><span></span>
-                <div class="browser-frame__url">bakkerij.nl</div>
-              </div>
-              <div class="browser-frame__screen">
-                <img src="assets/images/portfolio/peterse-new.png" alt="Bakkerij website" loading="lazy">
-              </div>
-            </div>
-            <h3>Lokale bakkerij</h3>
-            <p>Compleet nieuwe website voor een ambachtelijke buurtbakker.</p>
-            <ul class="portfolio-tags">
-              <li>Horeca</li><li>SEO</li>
-            </ul>
-          </div>
-
-          <div class="mini-project reveal reveal--delay-2">
-            <span class="mini-project__badge mini-project__badge--redesign">Redesign</span>
-            <div class="browser-frame">
-              <div class="browser-frame__bar">
-                <span></span><span></span><span></span>
-                <div class="browser-frame__url">schildersbedrijf.nl</div>
-              </div>
-              <div class="browser-frame__screen">
-                <img src="assets/images/portfolio/gieze-new.png" alt="Schildersbedrijf website" loading="lazy">
-              </div>
-            </div>
-            <h3>Schildersbedrijf</h3>
-            <p>Volledig redesign — donker, krachtig met oranje accenten.</p>
-            <ul class="portfolio-tags">
-              <li>Redesign</li><li>Bouw</li>
-            </ul>
-          </div>
-
-          <div class="mini-project reveal reveal--delay-3">
-            <span class="mini-project__badge mini-project__badge--redesign">Redesign</span>
-            <div class="browser-frame">
-              <div class="browser-frame__bar">
-                <span></span><span></span><span></span>
-                <div class="browser-frame__url">coaching.nl</div>
-              </div>
-              <div class="browser-frame__screen">
-                <img src="assets/images/portfolio/toma-new.png" alt="Coaching praktijk website" loading="lazy">
-              </div>
-            </div>
-            <h3>Coaching praktijk</h3>
-            <p>Rustige, professionele uitstraling die direct vertrouwen wekt.</p>
-            <ul class="portfolio-tags">
-              <li>Coaching</li><li>Conversie</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="reveal" style="text-align:center;margin-top:48px;">
-          <a href="diensten.html#projecten" class="btn btn--outline">Bekijk volledige portfolio →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOG PREVIEW -->
-    <section class="section section--alt blog-preview">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="tag tag--teal">KENNISBANK</span>
-          <h2>Tips & inzichten uit ons blog</h2>
-          <p>Praktische artikelen over websites, SEO en online groeien.</p>
-        </div>
-        <div class="blog-grid">
-          <article class="blog-card reveal reveal--delay-1">
-            <a href="blog/5-redenen-trage-website.html" class="blog-card__link">
-              <div class="blog-card__img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80');"></div>
-              <div class="blog-card__body">
-                <span class="blog-card__cat">Tips</span>
-                <h3>5 redenen waarom jouw website traag is</h3>
-                <p>Een trage website kost klanten. Ontdek de meest voorkomende oorzaken en wat je eraan kunt doen om dit op te lossen.</p>
-                <div class="blog-card__meta">
-                  <span>📅 Mei 2026</span>
-                  <span>⏱ 5 min</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="blog-card reveal reveal--delay-2">
-            <a href="blog/seo-basis-mkb.html" class="blog-card__link">
-              <div class="blog-card__img" style="background-image:url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80');"></div>
-              <div class="blog-card__body">
-                <span class="blog-card__cat">SEO</span>
-                <h3>SEO basis voor MKB in 7 stappen</h3>
-                <p>Geen technisch verhaal. Wij leggen uit wat SEO is en welke concrete stappen jij vandaag nog kunt zetten om hoger te scoren.</p>
-                <div class="blog-card__meta">
-                  <span>📅 Mei 2026</span>
-                  <span>⏱ 7 min</span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article class="blog-card reveal reveal--delay-3">
-            <a href="blog/mkb-westland-online-groeien.html" class="blog-card__link">
-              <div class="blog-card__img" style="background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80');"></div>
-              <div class="blog-card__body">
-                <span class="blog-card__cat">Lokaal</span>
-                <h3>MKB Westland: zo groei je online</h3>
-                <p>Lokale concurrentie wordt heftiger. Praktische tips voor ondernemers in het Westland om online zichtbaar te zijn.</p>
-                <div class="blog-card__meta">
-                  <span>📅 Mei 2026</span>
-                  <span>⏱ 5 min</span>
-                </div>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="reveal" style="text-align:center;margin-top:36px;">
-          <a href="blog.html" class="btn btn--outline">Alle blog artikelen →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- GARANTIES -->
-    <section class="section garanties-sectie">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="tag">ONZE BELOFTES</span>
-          <h2>Waarom kiezen voor S. van Wijk Solutions?</h2>
-          <p>Geen loze woorden — concrete garanties waar je op kunt rekenen.</p>
+          <span class="tag">BEOORDELINGEN</span>
+          <h2>Wat Klanten Zeggen</h2>
+          <p>Resultaten spreken voor zich — dit zeggen onze klanten.</p>
         </div>
         <div class="grid--3">
-          <div class="garantie-kaart garantie-kaart--teal reveal reveal--delay-1">
-            <div class="garantie-kaart__icon">💯</div>
-            <h3>100% Tevredenheidsgarantie</h3>
-            <p>Niet tevreden? Wij blijven reviseren totdat het wél klopt. Geen extra kosten.</p>
+          <div class="test-card reveal reveal--delay-1">
+            <div class="test-card__stars">★★★★★</div>
+            <p>"Sem heeft onze website volledig omgetoverd. Laadtijden gehalveerd, conversies verdubbeld. Absolute aanrader!"</p>
+            <div class="test-card__author">
+              <div class="avatar">MV</div>
+              <div>
+                <strong>Mark van den Berg</strong>
+                <span>Eigenaar</span>
+              </div>
+            </div>
           </div>
-          <div class="garantie-kaart reveal reveal--delay-2">
-            <div class="garantie-kaart__icon">⚡</div>
-            <h3>Binnen Afgesproken Deadline</h3>
-            <p>Wij leveren op tijd. Altijd. Als wij een deadline afspreken, houden wij ons eraan.</p>
+          <div class="test-card reveal reveal--delay-2">
+            <div class="test-card__stars">★★★★★</div>
+            <p>"Top service, snelle communicatie en een prachtig eindresultaat. Onze nieuwe site scoort geweldig in Google."</p>
+            <div class="test-card__author">
+              <div class="avatar">SJ</div>
+              <div>
+                <strong>Sophie Jansen</strong>
+                <span>Marketing Manager</span>
+              </div>
+            </div>
           </div>
-          <div class="garantie-kaart garantie-kaart--teal reveal reveal--delay-3">
-            <div class="garantie-kaart__icon">🔒</div>
-            <h3>Transparante Communicatie</h3>
-            <p>Geen verrassingen achteraf. Heldere prijzen, eerlijke adviezen en direct contact.</p>
-          </div>
-          <div class="garantie-kaart reveal reveal--delay-1">
-            <div class="garantie-kaart__icon">📱</div>
-            <h3>Altijd Mobile Perfect</h3>
-            <p>Elke website is gegarandeerd perfect op mobiel, tablet en desktop.</p>
-          </div>
-          <div class="garantie-kaart garantie-kaart--teal reveal reveal--delay-2">
-            <div class="garantie-kaart__icon">🔍</div>
-            <h3>SEO-fundering Inbegrepen</h3>
-            <p>Technische SEO, snelle laadtijden en correcte structuur — standaard inbegrepen.</p>
-          </div>
-          <div class="garantie-kaart reveal reveal--delay-3">
-            <div class="garantie-kaart__icon">🤝</div>
-            <h3>Persoonlijk Aanspreekpunt</h3>
-            <p>Direct contact met Sem — geen callcenter, geen tussenpersonen.</p>
+          <div class="test-card reveal reveal--delay-3">
+            <div class="test-card__stars">★★★★★</div>
+            <p>"Professioneel, creatief en altijd bereikbaar. S. van Wijk Solutions is de enige webpartner die ik nog aanbeveel."</p>
+            <div class="test-card__author">
+              <div class="avatar">RL</div>
+              <div>
+                <strong>Roos de Leeuw</strong>
+                <span>Directeur</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ===== CTA BANNER ===== -->
     <section class="cta-banner reveal">
       <div class="container">
         <h2>Klaar voor een website die werkt?</h2>
-        <p>Ontvang vandaag nog gratis een concept op maat — binnen 5 werkdagen in je inbox.</p>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="concept.html" class="btn btn--white">Gratis Concept Aanvragen →</a>
-          <a href="start.html" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;">Start Je Project</a>
-        </div>
+        <p>Neem vandaag nog contact op voor een gratis adviesgesprek.</p>
+        <a href="start.html" class="btn btn--white">Start Je Project →</a>
       </div>
     </section>
 
