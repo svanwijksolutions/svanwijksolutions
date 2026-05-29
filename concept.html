@@ -558,20 +558,14 @@
                 <h3>Bijna klaar! 🎉</h3>
                 <p class="step-subtitle">Nog een paar laatste details, dan gaat je aanvraag de deur uit.</p>
 
-                <!-- Logo's uploaden — meerdere bestanden, individueel verwijderbaar -->
+                <!-- Logo & foto's — simpel uitgelegd -->
                 <div class="form-group">
-                  <label>Logo's meesturen <span class="form-optional">(optioneel)</span></label>
-                  <p style="font-size:.85rem;color:var(--clr-muted);margin-bottom:10px;">Heb je al een logo? Deel een link naar je bestanden via Google Drive, WeTransfer, Dropbox of vergelijkbaar.</p>
-                  <input type="url" name="logo_link" placeholder="Bijv. https://drive.google.com/... of https://wetransfer.com/..." style="width:100%;padding:13px 16px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.9rem;color:var(--clr-text);background:var(--clr-light);transition:border-color .2s;">
-                  <small style="display:block;margin-top:8px;color:var(--clr-muted);font-size:.8rem;">💡 Geen link? Geen probleem — je kunt de bestanden ook na je aanvraag mailen naar <a href="mailto:info@svanwijksolutions.nl" style="color:var(--clr-accent);">info@svanwijksolutions.nl</a></small>
-                </div>
-
-                <!-- Bedrijfsfoto's uploaden — meerdere bestanden, individueel verwijderbaar -->
-                <div class="form-group">
-                  <label>Bedrijfsfoto's meesturen <span class="form-optional">(optioneel)</span></label>
-                  <p style="font-size:.85rem;color:var(--clr-muted);margin-bottom:10px;">Heb je foto's van je bedrijf, team of werkzaamheden? Deel ze via een link.</p>
-                  <input type="url" name="fotos_link" placeholder="Bijv. https://drive.google.com/... of https://wetransfer.com/..." style="width:100%;padding:13px 16px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.9rem;color:var(--clr-text);background:var(--clr-light);transition:border-color .2s;">
-                  <small style="display:block;margin-top:8px;color:var(--clr-muted);font-size:.8rem;">💡 Geen link? Geen probleem — je kunt de foto's ook na je aanvraag mailen naar <a href="mailto:info@svanwijksolutions.nl" style="color:var(--clr-accent);">info@svanwijksolutions.nl</a></small>
+                  <label>Logo en foto's <span class="form-optional">(optioneel)</span></label>
+                  <div style="background:var(--clr-soft);border-radius:var(--radius-md);padding:16px 18px;">
+                    <p style="font-size:.88rem;color:var(--clr-text);margin-bottom:6px;">Heb je al een logo of foto's? Geen zorgen — je hoeft nu niets te uploaden.</p>
+                    <p style="font-size:.85rem;color:var(--clr-muted);margin:0;">Je kunt ze ná je aanvraag gewoon mailen naar <a href="mailto:info@svanwijksolutions.nl" style="color:var(--clr-accent);font-weight:600;">info@svanwijksolutions.nl</a>. Heb je nog geen logo of foto's? Dan halen wij die waar mogelijk van je huidige website, of we voegen ze later samen toe. Wil je toch alvast een link delen (Google Drive, WeTransfer of Dropbox)? Plak die hieronder:</p>
+                    <input type="url" name="bestanden_link" placeholder="Link naar je bestanden (optioneel)" style="width:100%;margin-top:10px;padding:11px 14px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.88rem;color:var(--clr-text);background:#fff;transition:border-color .2s;">
+                  </div>
                 </div>
 
                 <div class="form-group">
@@ -598,6 +592,24 @@
             </div>
 
           </form>
+
+          <!-- BEDANKT-PANEEL — vervangt het formulier na indienen -->
+          <div class="concept-bedankt" id="conceptBedankt" style="display:none;">
+            <div class="concept-bedankt__icon">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" stroke="#6366f1" stroke-width="3"/>
+                <path d="M22 40 L34 52 L58 28" stroke="#14b8a6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2>Bedankt voor je aanvraag! 🚀</h2>
+            <p>Wij hebben je concept aanvraag in goede orde ontvangen. Binnen <strong>5 werkdagen</strong> ontvang je een professioneel concept op maat in je inbox.</p>
+            <div class="concept-bedankt__details">
+              <div><span>📧</span> Bevestiging onderweg naar je inbox</div>
+              <div><span>⏱️</span> Reactie binnen 5 werkdagen</div>
+              <div><span>💡</span> Volledig op maat, zonder verplichtingen</div>
+            </div>
+            <a href="index.html" class="btn btn--primary">Terug naar de homepagina →</a>
+          </div>
 
         </div>
 

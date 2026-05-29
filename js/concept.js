@@ -258,16 +258,23 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       if (res.ok) {
-        // Toon overlay
+        // Verberg het formulier en de stappen-balk, toon bedankt-paneel
+        form.style.display = 'none';
+        var stepsBar = document.querySelector('.concept-steps');
+        if (stepsBar) stepsBar.style.display = 'none';
+        var bedankt = document.getElementById('conceptBedankt');
+        if (bedankt) bedankt.style.display = 'block';
+        // Toon overlay-animatie erbovenop
         successOverlay.classList.add('show');
         document.body.style.overflow = 'hidden';
-        // Animaties na korte vertraging
         setTimeout(function () {
           document.getElementById('successIcon').classList.add('animate');
           launchRockets();
         }, 100);
+        // Scroll naar boven zodat het bedankt-bericht in beeld komt
+        var top = document.querySelector('.concept-wrapper');
+        if (top) window.scrollTo({ top: top.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
         form.reset();
-        // Reset talen
         gekozenTalen = ['Nederlands'];
         renderTaalTags();
         updateHiddenTalen();

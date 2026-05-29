@@ -658,6 +658,15 @@ p  { color:var(--clr-muted); line-height:1.75; }
 .social-input-row input[type="url"]:focus { outline: none; border-color: var(--clr-accent); background: #fff; }
 
 /* Success overlay */
+/* Bedankt-paneel (vervangt formulier na indienen) */
+.concept-bedankt { background: var(--clr-white); border-radius: var(--radius-lg); box-shadow: 0 24px 80px rgba(30,27,75,.12); padding: 56px 42px; text-align: center; }
+.concept-bedankt__icon { width: 80px; height: 80px; margin: 0 auto 22px; }
+.concept-bedankt__icon svg { width: 80px; height: 80px; }
+.concept-bedankt h2 { font-size: 1.7rem; color: var(--clr-heading); margin-bottom: 14px; }
+.concept-bedankt p { font-size: 1rem; color: var(--clr-muted); max-width: 520px; margin: 0 auto 26px; line-height: 1.7; }
+.concept-bedankt__details { display: inline-flex; flex-direction: column; gap: 10px; text-align: left; background: var(--clr-soft); border-radius: var(--radius-md); padding: 20px 26px; margin-bottom: 30px; }
+.concept-bedankt__details div { font-size: .9rem; color: var(--clr-text); display: flex; align-items: center; gap: 10px; }
+
 .success-overlay { display: none; position: fixed; inset: 0; background: rgba(15,10,46,.75); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; overflow: hidden; }
 .success-overlay.show { display: flex; }
 .success-card { background: #fff; border-radius: 24px; padding: 48px 44px 40px; max-width: 460px; width: 92%; text-align: center; box-shadow: 0 40px 100px rgba(0,0,0,.25); animation: cardPopIn .45s cubic-bezier(.175,.885,.32,1.275) forwards; position: relative; overflow: hidden; }
