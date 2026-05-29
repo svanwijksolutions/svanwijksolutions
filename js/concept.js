@@ -143,6 +143,36 @@ document.addEventListener('DOMContentLoaded', function () {
   var hiddenTalen  = document.getElementById('hiddenTalen');
   var gekozenTalen = ['Nederlands'];
 
+  // Vlaggetjes per taal (emoji — werkt op computer én telefoon)
+  var taalVlaggen = {
+    'Nederlands': '🇳🇱',
+    'Engels':     '🇬🇧',
+    'Duits':      '🇩🇪',
+    'Frans':      '🇫🇷',
+    'Spaans':     '🇪🇸',
+    'Italiaans':  '🇮🇹',
+    'Portugees':  '🇵🇹',
+    'Pools':      '🇵🇱',
+    'Turks':      '🇹🇷',
+    'Arabisch':   '🇸🇦',
+    'Chinees':    '🇨🇳',
+    'Russisch':   '🇷🇺',
+    'Grieks':     '🇬🇷',
+    'Zweeds':     '🇸🇪',
+    'Noors':      '🇳🇴',
+    'Deens':      '🇩🇰',
+    'Fins':       '🇫🇮',
+    'Japans':     '🇯🇵',
+    'Koreaans':   '🇰🇷',
+    'Hindi':      '🇮🇳',
+    'Oekraïens':  '🇺🇦'
+  };
+
+  function vlagVoor(taal) {
+    // Bekende taal? Geef de vlag. Anders een neutraal wereld-icoon.
+    return taalVlaggen[taal] || '🌐';
+  }
+
   function renderTaalTags() {
     // Verwijder alle behalve de fixed NL tag
     Array.from(taalTags.querySelectorAll('.taal-tag:not(.taal-tag--fixed)')).forEach(function (t) { t.remove(); });
@@ -150,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (taal === 'Nederlands') return;
       var tag = document.createElement('span');
       tag.className = 'taal-tag';
-      tag.innerHTML = taal + ' <button type="button" class="taal-tag__remove" aria-label="Verwijder ' + taal + '">×</button>';
+      tag.innerHTML = '<span class="taal-tag__vlag">' + vlagVoor(taal) + '</span> ' + taal + ' <button type="button" class="taal-tag__remove" aria-label="Verwijder ' + taal + '">×</button>';
       tag.querySelector('.taal-tag__remove').addEventListener('click', function () {
         gekozenTalen = gekozenTalen.filter(function (t) { return t !== taal; });
         renderTaalTags(); updateHiddenTalen();
@@ -272,8 +302,8 @@ document.addEventListener('DOMContentLoaded', function () {
           launchRockets();
         }, 100);
         // Scroll naar boven zodat het bedankt-bericht in beeld komt
-        var top = document.querySelector('.concept-wrapper');
-        if (top) window.scrollTo({ top: top.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+        var topEl = document.querySelector('.concept-wrapper');
+        if (topEl) window.scrollTo({ top: topEl.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
         form.reset();
         gekozenTalen = ['Nederlands'];
         renderTaalTags();
