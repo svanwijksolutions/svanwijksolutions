@@ -1,0 +1,10 @@
+<svg width="500" height="180" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="70" font-family="'Poppins', sans-serif" font-weight="800" font-size="48" fill="#ffffff">S. van Wijk</text>
+  <circle cx="340" cy="52" r="6" fill="#ffffff"/>
+  <circle cx="362" cy="52" r="6" fill="#ffffff" opacity="0.5"/>
+  <circle cx="384" cy="52" r="6" fill="#ffffff" opacity="0.2"/>
+  <rect x="20" y="95" width="410" height="40" rx="8" fill="rgba(255,255,255,0.1)"/>
+  <text x="50" y="122" font-family="'Courier New', monospace" font-weight="bold" font-size="22" fill="#ffffff">&lt;</text>
+  <text x="225" y="121" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="400" font-size="18" letter-spacing="16" fill="#ffffff">SOLUTIONS</text>
+  <text x="365" y="122" font-family="'Courier New', monospace" font-weight="bold" font-size="22" fill="#ffffff">/ &gt;</text>
+</svg>

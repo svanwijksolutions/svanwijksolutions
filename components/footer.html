@@ -1,0 +1,67 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo-link" aria-label="S. van Wijk Solutions homepage">
+          <img src="assets/images/logowit.svg" alt="S. van Wijk Solutions" loading="lazy" width="180" height="60" class="footer__logo">
+        </a>
+        <p>Wij bouwen de toekomst van het web.<br>Modern, snel en resultaatgericht.</p>
+        <a href="https://www.instagram.com/svanwijksolutions" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Menu</h4>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="concept.html">Gratis Concept</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul role="list">
+          <li><a href="mailto:info@svanwijksolutions.nl">info@svanwijksolutions.nl</a></li>
+          <li><a href="tel:+31681835935">+31 6 81 83 59 35</a></li>
+          <li><span>Nederland, Regio Westland</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Openingstijden</h4>
+        <ul role="list" class="footer__hours">
+          <li><span>Maandag – Vrijdag</span><span>08:00 – 17:00</span></li>
+          <li><span>Zaterdag</span><span class="closed">Gesloten</span></li>
+          <li><span>Zondag</span><span class="closed">Gesloten</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>
+        &copy; <span id="footer-year"></span> S. van Wijk Solutions. Alle rechten voorbehouden.
+        &nbsp;|&nbsp; KvK: 86749439
+        &nbsp;|&nbsp; <a href="privacy.html" style="color:rgba(255,255,255,.6);text-decoration:none;">Privacyverklaring</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var yr = document.getElementById('footer-year');
+  if (yr) yr.textContent = new Date().getFullYear();
+</script>
