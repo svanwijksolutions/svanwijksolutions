@@ -238,7 +238,7 @@ p  { color:var(--clr-muted); line-height:1.75; }
 /* ============================================================
    HERO
 ============================================================ */
-.hero { min-height: 78vh; background: var(--gradient); display: flex; align-items: center; padding-block: 68px; position: relative; overflow: hidden; }
+.hero { min-height: 84vh; background: var(--gradient); display: flex; align-items: center; padding-block: 92px; position: relative; overflow: hidden; }
 .hero__particles { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
 .hero__particles span { position: absolute; display: block; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.6); animation: floatUp 18s linear infinite; opacity: 0; }
 .hero__particles span:nth-child(1)  { left: 8%;  top: 100%; animation-delay: 0s; }
