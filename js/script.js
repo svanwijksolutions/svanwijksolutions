@@ -199,4 +199,25 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   setTimeout(initCardTilt, 200);
 
+
+  /* ============================================================
+     9. HERO-PODIUM — zachte glow volgt de cursor (lichtgewicht)
+  ============================================================ */
+  const initHeroStage = () => {
+    const stage = document.getElementById('heroStage');
+    const glow  = document.getElementById('heroGlow');
+    if (!stage || !glow) return;
+    if (window.matchMedia('(hover: none)').matches) return; // niet op touch
+    stage.addEventListener('pointermove', (e) => {
+      const r = stage.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  - 0.5) * 60;
+      const y = ((e.clientY - r.top)  / r.height - 0.5) * 60;
+      glow.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+    });
+    stage.addEventListener('pointerleave', () => {
+      glow.style.transform = 'translate(-50%, -50%)';
+    });
+  };
+  initHeroStage();
+
 });
