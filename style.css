@@ -109,6 +109,7 @@ p  { color:var(--clr-muted); line-height:1.75; }
   align-items: center;
   text-decoration: none;
   padding: 4px 0;
+  margin-left: -16px;
   margin-right: 80px;
   transition: opacity .2s;
 }
