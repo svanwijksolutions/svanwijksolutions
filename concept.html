@@ -53,69 +53,24 @@
             <div class="concept-steps" id="stepIndicator">
               <div class="concept-step active" data-step="1">
                 <span class="concept-step__num">1</span>
-                <span class="concept-step__label">Over jou</span>
+                <span class="concept-step__label">Je project</span>
               </div>
               <div class="concept-step__line"></div>
               <div class="concept-step" data-step="2">
                 <span class="concept-step__num">2</span>
-                <span class="concept-step__label">Je project</span>
+                <span class="concept-step__label">Je bedrijf &amp; website</span>
               </div>
               <div class="concept-step__line"></div>
               <div class="concept-step" data-step="3">
                 <span class="concept-step__num">3</span>
-                <span class="concept-step__label">Stel samen</span>
-              </div>
-              <div class="concept-step__line"></div>
-              <div class="concept-step" data-step="4">
-                <span class="concept-step__num">4</span>
                 <span class="concept-step__label">Afronden</span>
               </div>
             </div>
 
-            <!-- ═══════════════════════════════ STAP 1 ═══════════════════════════════ -->
+            <!-- ═══════════════════════════════ STAP 2 ═══════════════════════════════ -->
             <div class="form-step" id="step1">
               <div class="step-content">
-                <h3>Vertel ons over jezelf</h3>
-                <p class="step-subtitle">Zodat we contact met je kunnen opnemen over je concept.</p>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="c-voornaam">Voornaam</label>
-                    <input type="text" id="c-voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name">
-                  </div>
-                  <div class="form-group">
-                    <label for="c-achternaam">Achternaam</label>
-                    <input type="text" id="c-achternaam" name="achternaam" placeholder="Jansen" required autocomplete="family-name">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="c-email">E-mailadres</label>
-                  <input type="email" id="c-email" name="email" placeholder="jan@jouwbedrijf.nl" required autocomplete="email">
-                </div>
-                <div class="form-group">
-                  <label for="c-telefoon">Telefoonnummer</label>
-                  <input type="tel" id="c-telefoon" name="telefoon" placeholder="+31 6 00 000 000" required autocomplete="tel">
-                </div>
-                <div class="form-group">
-                  <label for="c-bedrijf">Bedrijfsnaam</label>
-                  <input type="text" id="c-bedrijf" name="bedrijfsnaam" placeholder="Jansen & Zo" required autocomplete="organization">
-                </div>
-                <div class="form-group">
-                  <label for="c-branche">Branche / sector</label>
-                  <input type="text" id="c-branche" name="branche" placeholder="Bijv. horeca, bouw, coaching…" required>
-                </div>
-              </div>
-
-              <div class="price-footer price-footer--nav-only">
-                <div></div>
-                <button type="button" class="btn btn--primary" id="step1Next">Volgende stap →</button>
-              </div>
-            </div>
-
-            <!-- ═══════════════════════════════ STAP 2 ═══════════════════════════════ -->
-            <div class="form-step" id="step2" style="display:none;">
-              <div class="step-content">
-                <h3>Vertel ons over je project</h3>
+                <h2>Vertel ons over je project</h2>
                 <p class="step-subtitle">Hoe meer wij weten, hoe beter het concept.</p>
 
                 <div class="form-group">
@@ -249,17 +204,25 @@
               </div>
 
               <div class="price-footer price-footer--nav-only">
-                <button type="button" class="btn btn--outline" id="step2Back">← Terug</button>
                 <div></div>
-                <button type="button" class="btn btn--primary" id="step2Next">Volgende stap →</button>
+                <button type="button" class="btn btn--primary" id="step1Next">Volgende stap →</button>
               </div>
             </div>
 
             <!-- ═══════════════════════════════ STAP 3 ═══════════════════════════════ -->
-            <div class="form-step" id="step3" style="display:none;">
+            <div class="form-step" id="step2" style="display:none;">
               <div class="step-content">
-                <h3>Stel je website samen</h3>
-                <p class="step-subtitle">Kies de pagina's en opties die jij nodig hebt.</p>
+                <h2>Je bedrijf &amp; je website</h2>
+                <p class="step-subtitle">Vertel kort over je bedrijf en stel daarna je website samen.</p>
+
+                <div class="form-group">
+                  <label for="c-bedrijf">Bedrijfsnaam</label>
+                  <input type="text" id="c-bedrijf" name="bedrijfsnaam" placeholder="Jansen & Zo" required autocomplete="organization">
+                </div>
+                <div class="form-group">
+                  <label for="c-branche">Branche / sector</label>
+                  <input type="text" id="c-branche" name="branche" placeholder="Bijv. horeca, bouw, coaching…" required>
+                </div>
 
                 <!-- Altijd inbegrepen -->
                 <div class="inbegrepen-box">
@@ -556,17 +519,36 @@
               </div>
 
               <div class="price-footer price-footer--nav-only">
-                <button type="button" class="btn btn--outline" id="step3Back">← Terug</button>
+                <button type="button" class="btn btn--outline" id="step2Back">← Terug</button>
                 <div></div>
-                <button type="button" class="btn btn--primary" id="step3Next">Volgende stap →</button>
+                <button type="button" class="btn btn--primary" id="step2Next">Volgende stap →</button>
               </div>
             </div>
 
             <!-- ═══════════════════════════════ STAP 4 ═══════════════════════════════ -->
-            <div class="form-step" id="step4" style="display:none;">
+            <div class="form-step" id="step3" style="display:none;">
               <div class="step-content">
-                <h3>Bijna klaar! 🎉</h3>
-                <p class="step-subtitle">Nog een paar laatste details, dan gaat je aanvraag de deur uit.</p>
+                <h2>Bijna klaar! 🎉</h2>
+                <p class="step-subtitle">Waar mogen we je gratis concept naartoe sturen?</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-voornaam">Voornaam</label>
+                    <input type="text" id="c-voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="c-achternaam">Achternaam</label>
+                    <input type="text" id="c-achternaam" name="achternaam" placeholder="Jansen" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="c-email">E-mailadres</label>
+                  <input type="email" id="c-email" name="email" placeholder="jan@jouwbedrijf.nl" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="c-telefoon">Telefoonnummer</label>
+                  <input type="tel" id="c-telefoon" name="telefoon" placeholder="+31 6 00 000 000" required autocomplete="tel">
+                </div>
 
                 <!-- Logo & foto's — simpel uitgelegd -->
                 <div class="form-group">
@@ -592,7 +574,7 @@
               </div>
 
               <div class="price-footer price-footer--final">
-                <button type="button" class="btn btn--outline" id="step4Back">← Terug</button>
+                <button type="button" class="btn btn--outline" id="step3Back">← Terug</button>
                 <div class="price-footer__info">
                   <div class="price-footer__label">Indicatieve prijs</div>
                   <div class="price-footer__amount" id="priceDisplay">€649,95</div>

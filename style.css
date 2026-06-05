@@ -109,7 +109,7 @@ p  { color:var(--clr-muted); line-height:1.75; }
   align-items: center;
   text-decoration: none;
   padding: 4px 0;
-  margin-right: 40px;
+  margin-right: 80px;
   transition: opacity .2s;
 }
 .nav__logo:hover { opacity: .82; transform: none; }
@@ -572,7 +572,7 @@ p  { color:var(--clr-muted); line-height:1.75; }
 .concept-step__line { flex: 1; height: 2px; background: rgba(255,255,255,.15); margin: 0 8px; margin-bottom: 22px; }
 .form-step { display: block; }
 .step-content { padding: 36px 42px 30px; }
-.step-content h3 { font-size: 1.45rem; font-weight: 800; color: var(--clr-heading); margin-bottom: 6px; }
+.step-content h2 { font-size: 1.45rem; font-weight: 800; color: var(--clr-heading); margin-bottom: 6px; }
 .step-subtitle { font-size: .92rem; color: var(--clr-muted); margin-bottom: 26px; }
 
 /* Altijd inbegrepen box */
@@ -849,7 +849,7 @@ p  { color:var(--clr-muted); line-height:1.75; }
   .footer__grid { grid-template-columns: 1fr; }
   .hero__btns { flex-direction: column; }
   .cta-banner .btn { width: 100%; text-align: center; }
-  .step-content h3 { font-size: 1.2rem; }
+  .step-content h2 { font-size: 1.2rem; }
   .pagina-item__detail { padding-left: 16px; }
 }
 /* ============================================================
@@ -857,39 +857,9 @@ p  { color:var(--clr-muted); line-height:1.75; }
    (toegevoegd: kleurrijker, niet-donker, op-merk)
 ============================================================ */
 
-/* ---- Hero: van donker naar licht & kleurrijk ---- */
-.hero {
-  min-height: 90vh;
-  background:
-    radial-gradient(55% 75% at 82% 16%, rgba(99,102,241,.20), transparent 70%),
-    radial-gradient(52% 70% at 6% 26%, rgba(16,185,129,.18), transparent 70%),
-    radial-gradient(46% 55% at 55% 108%, rgba(255,106,90,.15), transparent 70%),
-    linear-gradient(180deg, #ffffff 0%, #f4f6ff 100%);
-  border-bottom: 1px solid var(--clr-border);
-}
-.hero h1 { color: var(--clr-primary); }
-.hero h1 .typewriter { color: var(--clr-green-dark); border-right-color: var(--clr-green-dark); }
-.hero__sub { color: var(--clr-muted); }
-.hero__badge {
-  background: rgba(99,102,241,.08);
-  color: var(--clr-accent);
-  border: 1px solid rgba(99,102,241,.22);
-  backdrop-filter: none;
-}
+/* ---- Hero: terug naar het blauwe vlak met zwevende stippen ---- */
+.hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 55%, #4338ca 100%); }
 .hero__visual { order: 2; }
-
-/* Particles op lichte achtergrond — in merkkleuren */
-.hero__particles span { background: rgba(99,102,241,.45); }
-.hero__particles span:nth-child(4)  { background: rgba(16,185,129,.55); }
-.hero__particles span:nth-child(7)  { background: rgba(255,106,90,.50); }
-.hero__particles span:nth-child(10) { background: rgba(16,185,129,.50); }
-
-/* Zwevende code-tags op lichte achtergrond */
-.float-tag   { color: var(--clr-accent); background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.22); backdrop-filter: blur(2px); }
-.float-tag--1 { color: var(--clr-green-dark); background: rgba(16,185,129,.08); border-color: rgba(16,185,129,.30); }
-.float-tag--2 { color: var(--clr-accent);     background: rgba(99,102,241,.08); border-color: rgba(99,102,241,.30); }
-.float-tag--3 { color: var(--clr-coral-h);     background: rgba(255,106,90,.08); border-color: rgba(255,106,90,.30); }
-.float-tag--4 { color: var(--clr-green-dark);  background: rgba(16,185,129,.08); border-color: rgba(16,185,129,.30); }
 
 /* ---- Hero-podium: bewegende website-preview (rechts in de hero) ---- */
 .hero-stage { position: relative; width: 100%; min-height: 440px; display: flex; align-items: center; justify-content: center; perspective: 1000px; }

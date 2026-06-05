@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('conceptForm');
   if (!form) return;
 
-  var steps    = [document.getElementById('step1'), document.getElementById('step2'), document.getElementById('step3'), document.getElementById('step4')];
+  var steps    = [document.getElementById('step1'), document.getElementById('step2'), document.getElementById('step3')];
   var stepEls  = document.querySelectorAll('.concept-step');
   var current  = 0;
 
@@ -41,10 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ── Navigatieknoppen ── */
   document.getElementById('step1Next').addEventListener('click', function () { if (validateStep(0)) goTo(1); });
   document.getElementById('step2Next').addEventListener('click', function () { if (validateStep(1)) goTo(2); });
-  document.getElementById('step3Next').addEventListener('click', function () { goTo(3); });
   document.getElementById('step2Back').addEventListener('click', function () { goTo(0); });
   document.getElementById('step3Back').addEventListener('click', function () { goTo(1); });
-  document.getElementById('step4Back').addEventListener('click', function () { goTo(2); });
 
   form.querySelectorAll('input, textarea').forEach(function (el) {
     el.addEventListener('input',  function () { el.classList.remove('input-error'); });
@@ -279,6 +277,9 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     var honey = form.querySelector('[name="_gotcha"]');
     if (honey && honey.value) return;
+
+    // Valideer de laatste stap (contactgegevens + akkoord) vóór verzenden
+    if (!validateStep(2)) return;
 
     var btn = document.getElementById('submitBtn');
     var orig = btn.textContent;
