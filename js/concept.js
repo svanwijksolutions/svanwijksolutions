@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var logoNaam      = document.getElementById('logoNaamPreview');
   var bedrijfInput  = document.getElementById('c-bedrijf');
 
-  form.querySelectorAll('[name="project_type"]').forEach(function (btn) {
+  form.querySelectorAll('[name="🔧 Type project"]').forEach(function (btn) {
     btn.addEventListener('change', function () {
       if (urlWrap)       urlWrap.style.display       = (btn.value === 'redesign') ? 'block' : 'none';
       if (logoOptieWrap) logoOptieWrap.style.display  = (btn.value === 'nieuwe-website') ? 'block' : 'none';

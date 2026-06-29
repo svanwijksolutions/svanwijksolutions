@@ -91,6 +91,11 @@ p  { color:var(--clr-muted); line-height:1.75; }
   border-bottom: 1px solid rgba(255,255,255,.09);
   overflow: visible;
 }
+/* Container in header altijd volledige breedte — anders centreert hij en lijkt logo gecentreerd */
+#site-header .container,
+header .container {
+  width: 100%;
+}
 /* Nav: 3-kolom grid — logo links | links midden | CTA rechts */
 .nav {
   display: grid;
@@ -802,21 +807,21 @@ p  { color:var(--clr-muted); line-height:1.75; }
     gap: 0;
     width: 100%;
   }
-  /* Logo: reset alle desktop-marges, plak hem links */
+  /* Logo: reset desktop margin-right: 80px zodat logo hard links staat */
   .nav__logo {
     grid-column: auto;
     justify-self: auto;
     margin: 0;
-    margin-right: 0;   /* reset de desktop margin-right: 80px */
+    margin-right: 0;
     flex-shrink: 0;
   }
   .nav__links { display: none; }
-  /* Rechterblok: burger pakt de beschikbare ruimte niet, zit hard rechts */
+  /* Rechterblok: burger hard rechts */
   .nav__right {
     grid-column: auto;
     justify-self: auto;
     margin: 0;
-    margin-left: auto;  /* duwt burger naar rechts */
+    margin-left: auto;
   }
   .nav__cta--gratis { display: none; }
   .nav__burger { display: flex; }
