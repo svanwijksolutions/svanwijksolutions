@@ -793,11 +793,31 @@ p  { color:var(--clr-muted); line-height:1.75; }
   .float-tag { font-size: .75rem; }
 }
 @media (max-width: 768px) {
-  /* Nav mobiel — logo HARD links, hamburger HARD rechts (flex i.p.v. grid = waterdicht) */
-  .nav { display: flex; grid-template-columns: none; justify-content: space-between; align-items: center; gap: 0; width: 100%; }
-  .nav__logo { grid-column: auto; justify-self: auto; margin: 0; margin-right: auto; }
+  /* Nav mobiel — logo HARD links, hamburger HARD rechts */
+  .nav {
+    display: flex;
+    grid-template-columns: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+  /* Logo: reset alle desktop-marges, plak hem links */
+  .nav__logo {
+    grid-column: auto;
+    justify-self: auto;
+    margin: 0;
+    margin-right: 0;   /* reset de desktop margin-right: 80px */
+    flex-shrink: 0;
+  }
   .nav__links { display: none; }
-  .nav__right { grid-column: auto; justify-self: auto; margin: 0; margin-left: auto; }
+  /* Rechterblok: burger pakt de beschikbare ruimte niet, zit hard rechts */
+  .nav__right {
+    grid-column: auto;
+    justify-self: auto;
+    margin: 0;
+    margin-left: auto;  /* duwt burger naar rechts */
+  }
   .nav__cta--gratis { display: none; }
   .nav__burger { display: flex; }
   /* Blog artikel: 1 kolom op mobiel */
@@ -808,7 +828,11 @@ p  { color:var(--clr-muted); line-height:1.75; }
   .grid--3 { grid-template-columns: 1fr; }
   .portfolio-mini-grid { grid-template-columns: 1fr; }
   .stats__grid { grid-template-columns: repeat(2,1fr); }
-  .values { grid-template-columns: 1fr; }
+  /* Value-cards: forceer 1 kolom ook als .about-full de specificiteit wint */
+  .values,
+  .about-full .values { grid-template-columns: 1fr; }
+  /* Zorg dat value-items nooit breder worden dan de container */
+  .value-item { min-width: 0; box-sizing: border-box; }
   .form-row { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
   .about-visual { padding-bottom: 36px; }
