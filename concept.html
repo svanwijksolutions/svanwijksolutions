@@ -103,19 +103,19 @@
 /* ── Type knoppen ── */
 .concept-type-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:480px){.concept-type-btns{grid-template-columns:1fr;}}
-.type-btn{position:relative;border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:16px 44px 16px 18px;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s,transform .15s;background:var(--clr-white);display:block;}
+.type-btn{position:relative;border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:16px 44px 16px 18px;cursor:pointer;transition:border-color .2s,background .2s;background:var(--clr-white);display:block;}
 .type-btn input[type=radio]{position:absolute;opacity:0;pointer-events:none;}
 .type-btn span{display:block;}
 .type-btn span strong{display:block;font-size:.94rem;color:var(--clr-heading);margin-bottom:3px;}
 .type-btn span small{font-size:.8rem;color:var(--clr-muted);line-height:1.4;}
 .type-btn--icon{display:flex;align-items:center;gap:14px;padding-left:16px;}
-.type-btn__icon{flex-shrink:0;width:42px;height:42px;border-radius:11px;background:var(--clr-soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:background .2s,transform .2s;}
-.type-btn--icon:has(input:checked) .type-btn__icon{background:var(--clr-accent);transform:scale(1.05);}
+.type-btn__icon{flex-shrink:0;width:42px;height:42px;border-radius:11px;background:var(--clr-soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:background .2s;}
+.type-btn--icon:has(input:checked) .type-btn__icon{background:var(--clr-accent);}
 /* Custom radio-indicator rechtsboven */
 .type-btn::after{content:'';position:absolute;top:50%;right:16px;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;border:2px solid var(--clr-border);transition:border-color .2s,background .2s;background:var(--clr-white);}
 .type-btn::before{content:'';position:absolute;top:50%;right:22px;transform:translateY(-50%) scale(0);width:8px;height:8px;border-radius:50%;background:#fff;z-index:1;transition:transform .2s;}
-.type-btn:hover{border-color:var(--clr-accent);background:var(--clr-light);transform:translateY(-1px);}
-.type-btn:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);box-shadow:0 2px 10px rgba(99,102,241,.12);}
+.type-btn:hover{border-color:var(--clr-accent);background:var(--clr-light);}
+.type-btn:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);}
 .type-btn:has(input:checked)::after{border-color:var(--clr-accent);background:var(--clr-accent);}
 .type-btn:has(input:checked)::before{transform:translateY(-50%) scale(1);}
 .type-btn:has(input:focus-visible){box-shadow:0 0 0 3px rgba(99,102,241,.25);}
@@ -123,8 +123,7 @@
 /* ── Stijl kaarten ── */
 .stijl-kaarten{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:460px){.stijl-kaarten{grid-template-columns:1fr;}}
-.stijl-kaart{position:relative;border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:12px;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s,transform .15s;background:var(--clr-white);display:block;overflow:hidden;}
-.stijl-kaart:hover{transform:translateY(-1px);}
+.stijl-kaart{position:relative;border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:12px;cursor:pointer;transition:border-color .2s,background .2s;background:var(--clr-white);display:block;overflow:hidden;}
 .stijl-kaart input{position:absolute;opacity:0;pointer-events:none;}
 .stijl-kaart>span{display:block;}
 .stijl-kaart__preview{position:relative;width:100%;height:52px;border-radius:8px;display:block;margin-bottom:10px;}
@@ -137,7 +136,7 @@
 .stijl-kaart strong{display:block;font-size:.88rem;color:var(--clr-heading);margin-bottom:2px;}
 .stijl-kaart small{display:block;font-size:.76rem;color:var(--clr-muted);line-height:1.4;}
 .stijl-kaart:hover{border-color:var(--clr-accent);}
-.stijl-kaart:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);box-shadow:0 2px 10px rgba(99,102,241,.12);}
+.stijl-kaart:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);}
 .stijl-kaart:has(input:checked) .stijl-kaart__preview::after{opacity:1;transform:scale(1);}
 .stijl-kaart:has(input:focus-visible){box-shadow:0 0 0 3px rgba(99,102,241,.25);}
 /* ── Talen ── */
@@ -169,7 +168,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 .kleur-swatch--leeg{background:repeating-linear-gradient(45deg,#f1f5f9,#f1f5f9 4px,#e2e8f0 4px,#e2e8f0 8px);border-style:dashed;}
 /* ── Pakketten ── */
 .pakket-item{border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:18px 16px;margin-bottom:12px;background:var(--clr-light);position:relative;}
-.pakket-header{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start;}
+.pakket-header{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start;padding-right:32px;}
 .pakket-nummer{width:28px;height:28px;background:var(--clr-accent);color:#fff;border-radius:50%;font-size:.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
 .pakket-title-wrap{flex:1;}
 .pakket-title-wrap input{width:100%;padding:10px 13px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:600;color:var(--clr-heading);background:var(--clr-white);transition:border-color .2s;}
@@ -182,8 +181,8 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 .pakket-prijs-select:focus{outline:none;border-color:var(--clr-accent);}
 .pakket-prijs-val{flex:1;min-width:140px;padding:8px 12px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.84rem;color:var(--clr-text);background:var(--clr-light);transition:border-color .2s;}
 .pakket-prijs-val:focus{outline:none;border-color:var(--clr-accent);}
-.pakket-remove{position:absolute;top:12px;right:12px;background:none;border:none;cursor:pointer;color:var(--clr-muted);font-size:.78rem;padding:4px 8px;border-radius:6px;transition:background .15s,color .15s;}
-.pakket-remove:hover{background:#fee2e2;color:#dc2626;}
+.pakket-remove{position:absolute;top:12px;right:12px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;background:var(--clr-white);border:1.5px solid var(--clr-border);border-radius:50%;cursor:pointer;color:var(--clr-muted);padding:0;transition:background .15s,color .15s,border-color .15s;}
+.pakket-remove:hover{background:#fee2e2;color:#dc2626;border-color:#fca5a5;}
 .pakket-add-btn{width:100%;padding:12px;border:2px dashed var(--clr-border);border-radius:var(--radius-md);background:transparent;color:var(--clr-accent);font-family:'Poppins',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;transition:border-color .2s,background .2s;}
 .pakket-add-btn:hover{border-color:var(--clr-accent);background:var(--clr-soft);}
 /* ── Inbegrepen box ── */
@@ -381,90 +380,14 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                 <div id="logo-optie-wrap" style="display:none;">
                   <div class="logo-optie-box">
                     <p class="logo-optie-box__title">Logo nodig?</p>
-                    <p class="logo-optie-box__sub">Je hebt gekozen voor een nieuwe website. Wil je ook een logo? Wij sturen meerdere opties zodat je kunt kiezen.</p>
-                    <div class="logo-optie-box__naam">Bedrijfsnaam: <strong id="logoNaamPreview" style="color:var(--clr-accent)">&#8212;</strong><small style="display:block;font-size:.73rem;color:var(--clr-muted);margin-top:2px;">Klopt de naam niet? Pas hem aan bij het veld hierboven.</small></div>
+                    <p class="logo-optie-box__sub">Een logo kan altijd later nog besproken en toegevoegd worden aan je website, dus je hoeft er nu nog niets over te weten. Wil je alvast aangeven dat je hier gebruik van wilt maken?</p>
                     <label class="extra-row" style="margin-top:12px;">
-                      <input type="checkbox" name="Extras" value="Logo ontwerp gewenst" id="logoOptie" class="price-option" data-price="124.95">
-                      <div><strong>Logo laten ontwerpen</strong><small>Meerdere unieke opties, jij kiest de beste</small></div>
-                      <span class="extra-row__price">+ &#8364;124,95</span>
+                      <input type="checkbox" name="Logo gewenst" value="Ja, logo laten ontwerpen" id="logoOptie">
+                      <div><strong>Ja, ik wil een logo laten ontwerpen</strong><small>We bespreken de details later samen, geheel vrijblijvend</small></div>
                     </label>
-
-                    <div id="logoStijlWrap" style="display:none;margin-top:18px;">
-
-                      <!-- Type logo -->
-                      <label class="logo-vraag-label">Wat voor soort logo zoek je?</label>
-                      <div class="logo-type-opties">
-                        <label class="logo-type-optie">
-                          <input type="radio" name="Logo type" value="Icoon plus tekst (combinatielogo)">
-                          <span class="logo-type-optie__icon">&#128998;</span>
-                          <span><strong>Icoon + tekst</strong><small>Symbool met bedrijfsnaam erbij</small></span>
-                        </label>
-                        <label class="logo-type-optie">
-                          <input type="radio" name="Logo type" value="Alleen tekst (wordmark)">
-                          <span class="logo-type-optie__icon">Aa</span>
-                          <span><strong>Alleen tekst</strong><small>Stijlvolle typografie, geen symbool</small></span>
-                        </label>
-                        <label class="logo-type-optie">
-                          <input type="radio" name="Logo type" value="Alleen icoon of symbool">
-                          <span class="logo-type-optie__icon">&#11088;</span>
-                          <span><strong>Alleen een icoon</strong><small>Herkenbaar beeldmerk, los van tekst</small></span>
-                        </label>
-                        <label class="logo-type-optie">
-                          <input type="radio" name="Logo type" value="Weet ik nog niet, jullie mogen adviseren">
-                          <span class="logo-type-optie__icon">&#129504;</span>
-                          <span><strong>Weet ik niet</strong><small>Verras me met een goed advies</small></span>
-                        </label>
-                      </div>
-
-                      <!-- Stijl (single select, duidelijke richting) -->
-                      <label class="logo-vraag-label" style="margin-top:18px;">Welke stijl past het beste?</label>
-                      <div class="logo-stijl-chips" id="logoStijlChips">
-                        <button type="button" class="logo-chip" data-waarde="Minimalistisch">Minimalistisch</button>
-                        <button type="button" class="logo-chip" data-waarde="Modern">Modern</button>
-                        <button type="button" class="logo-chip" data-waarde="Speels">Speels</button>
-                        <button type="button" class="logo-chip" data-waarde="Zakelijk">Zakelijk</button>
-                        <button type="button" class="logo-chip" data-waarde="Luxe">Luxe</button>
-                        <button type="button" class="logo-chip" data-waarde="Retro">Retro</button>
-                        <button type="button" class="logo-chip" data-waarde="Handgeschreven">Handgeschreven</button>
-                        <button type="button" class="logo-chip" data-waarde="Geometrisch">Geometrisch</button>
-                        <button type="button" class="logo-chip" data-waarde="Organisch">Organisch</button>
-                        <button type="button" class="logo-chip" data-waarde="Vintage">Vintage</button>
-                        <button type="button" class="logo-chip" data-waarde="Stoer">Stoer</button>
-                        <button type="button" class="logo-chip" data-waarde="Elegant">Elegant</button>
-                      </div>
-                      <span class="form-hint">Kies er 1 tot 3 die het dichtst bij jouw beeld liggen.</span>
-
-                      <!-- Kleurvoorkeur -->
-                      <label class="logo-vraag-label" style="margin-top:18px;">Kleurvoorkeur voor het logo</label>
-                      <div class="logo-stijl-chips" id="logoKleurChips">
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Blauw" style="--chip-clr:#3b82f6">Blauw</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Groen" style="--chip-clr:#22c55e">Groen</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Rood" style="--chip-clr:#ef4444">Rood</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Zwart en Wit" style="--chip-clr:#111">Zwart/Wit</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Goud" style="--chip-clr:#d97706">Goud</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Paars" style="--chip-clr:#8b5cf6">Paars</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Oranje" style="--chip-clr:#f97316">Oranje</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Roze" style="--chip-clr:#ec4899">Roze</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Bruin/Aarde" style="--chip-clr:#92400e">Bruin/Aarde</button>
-                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Huisstijlkleuren" style="--chip-clr:#6366f1">Huisstijl</button>
-                      </div>
-
-                      <!-- Slogan -->
-                      <div class="form-group" style="margin-top:16px;margin-bottom:0;">
-                        <label for="f-logoslogan" style="font-size:.85rem;">Heb je een slogan die verwerkt moet worden? <span class="form-optional">(optioneel)</span></label>
-                        <input type="text" id="f-logoslogan" name="Logo slogan" placeholder="Bijv. 'Vakmanschap sinds 2015'">
-                      </div>
-
-                      <!-- Inspiratie logos -->
-                      <div class="form-group" style="margin-top:14px;margin-bottom:0;">
-                        <label for="f-logoinspiratie" style="font-size:.85rem;">Logo's die je mooi vindt <span class="form-optional">(optioneel)</span></label>
-                        <textarea id="f-logoinspiratie" name="Logo inspiratie" rows="2" placeholder="Namen van merken of links naar logo's die je aanspreken..."></textarea>
-                      </div>
-
-                      <!-- Overige wensen -->
-                      <input type="text" name="Logo stijlwensen" placeholder="Andere wensen, bijv. een blad verwerken, initialen gebruiken..." style="width:100%;margin-top:14px;padding:10px 13px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.84rem;color:var(--clr-text);background:var(--clr-light);">
-                      <input type="hidden" name="Logo stijl chips" id="logoStijlChipsHidden">
-                      <input type="hidden" name="Logo kleur chips" id="logoKleurChipsHidden">
+                    <div id="logoStijlWrap" style="display:none;margin-top:14px;">
+                      <label for="f-logoidee" style="font-size:.85rem;font-weight:600;display:block;margin-bottom:6px;color:var(--clr-heading);">Heb je al een idee hoe het eruit moet komen te zien? <span class="form-optional">(optioneel)</span></label>
+                      <textarea id="f-logoidee" name="Logo idee" rows="3" placeholder="Laat het gerust weten: een stijl, kleur, symbool of voorbeeld dat je aanspreekt..."></textarea>
                     </div>
                   </div>
                 </div>
@@ -830,12 +753,12 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                 <!-- Zelf beheren -->
                 <div class="form-section-divider"><span>Zelf beheren</span></div>
                 <div class="form-group" style="margin-bottom:14px;">
-                  <label>Wil je later zelf dingen op de website kunnen aanpassen?</label>
-                  <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:12px;">Denk aan teksten wijzigen, foto's vervangen, een vacature plaatsen of een nieuw project toevoegen.</p>
+                  <label>Wilt u zelf de controle houden over onderdelen die aangepast kunnen worden?</label>
+                  <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:12px;">Denk aan het zelf toevoegen van projecten, vacatures, teksten of foto's, zonder dat u daarvoor een developer nodig heeft.</p>
                   <div class="concept-type-btns" style="grid-template-columns:1fr;">
                     <label class="type-btn">
                       <input type="radio" name="Zelf aanpassen" value="Ja, zelf aanpassen">
-                      <span><strong>Ja, dat wil ik zelf kunnen</strong><small>Wij adviseren hiervoor een eigen klantportaal</small></span>
+                      <span><strong>Ja, ik wil zelf de controle houden</strong><small>Wij adviseren hiervoor een eigen klantportaal</small></span>
                     </label>
                     <label class="type-btn">
                       <input type="radio" name="Zelf aanpassen" value="Nee, niet nodig">
@@ -853,7 +776,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                   <div class="portaal-advies__icon">&#128161;</div>
                   <div>
                     <strong>Ons advies: een eigen klantportaal</strong>
-                    <p>Omdat je zelf dingen wilt kunnen aanpassen, raden we een klantportaal sterk aan. Daarmee beheer je teksten, foto's en pagina's helemaal zelf, zonder ons of een developer nodig te hebben. We hebben deze optie alvast voor je aangevinkt.</p>
+                    <p>Omdat je zelf de controle wilt houden, raden we een klantportaal sterk aan. Daarmee beheer je teksten, foto's en pagina's helemaal zelf, zonder ons of een developer nodig te hebben. We hebben dit alvast voor je genoteerd.</p>
                   </div>
                 </div>
 
@@ -866,15 +789,11 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                   </div>
                 </div>
 
-                <!-- Extra opties -->
-                <div class="form-section-divider"><span>Extra opties</span></div>
-                <label class="extra-row">
-                  <input type="checkbox" name="Klantportaal gewenst" value="Ja" id="portaalOptie">
-                  <div><strong>Klantportaal</strong><small>Beheer later zelf teksten, foto's en pagina's, bijvoorbeeld een vacature plaatsen of een project toevoegen, zonder een developer nodig te hebben.</small></div>
-                </label>
+                <!-- Verborgen, functioneel: wordt automatisch gezet op basis van de keuze hierboven -->
+                <input type="checkbox" name="Klantportaal gewenst" value="Ja" id="portaalOptie" style="display:none;" aria-hidden="true" tabindex="-1">
               </div>
               <div class="price-footer" style="margin-top:16px;">
-                <button type="button" class="btn btn--outline" id="step2Back">&#8592; Terug</button>
+                <button type="button" class="btn btn--outline" id="step2Back">Terug</button>
                 <button type="button" class="btn btn--primary" id="step2Next">Volgende stap</button>
               </div>
             </div>
@@ -917,7 +836,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                 <p class="prijs-samenvatting__note">Dit is een richtprijs op basis van je keuzes. De definitieve prijs stemmen we samen af in je concept. Heb je meerdere projecten? Dan bespreken we graag een passende korting.</p>
               </div>
               <div class="price-footer price-footer--final" style="margin-top:16px;">
-                <button type="button" class="btn btn--outline" id="step3Back">&#8592; Terug</button>
+                <button type="button" class="btn btn--outline" id="step3Back">Terug</button>
                 <button type="submit" class="btn btn--primary" id="submitBtn">Verstuur aanvraag &#128640;</button>
               </div>
             </div>

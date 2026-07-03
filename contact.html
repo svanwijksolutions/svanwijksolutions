@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | S. van Wijk Solutions</title>
-  <meta name="description" content="Neem contact op met S. van Wijk Solutions. Wij zijn bereikbaar via e-mail en reageren binnen 24 uur op werkdagen.">
+  <title>Gratis Website Concept | S. van Wijk Solutions</title>
+  <meta name="description" content="Ontvang gratis een professioneel website concept op maat. Vul het formulier in en ontvang binnen 5 werkdagen een concept in je inbox — geheel vrijblijvend.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="canonical" href="https://www.svanwijksolutions.nl/contact.html">
+  <link rel="canonical" href="https://www.svanwijksolutions.nl/concept.html">
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="assets/images/site.webmanifest">
-  <meta property="og:title" content="Contact | S. van Wijk Solutions">
-  <meta property="og:description" content="Neem contact op met S. van Wijk Solutions. Wij zijn bereikbaar via e-mail en reageren binnen 24 uur op werkdagen.">
-  <meta property="og:url" content="https://www.svanwijksolutions.nl/contact.html">
+  <meta property="og:title" content="Gratis Website Concept | S. van Wijk Solutions">
+  <meta property="og:description" content="Ontvang gratis een professioneel website concept op maat — binnen 5 werkdagen, geen verplichtingen.">
+  <meta property="og:url" content="https://www.svanwijksolutions.nl/concept.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.svanwijksolutions.nl/assets/images/og-image.jpg">
   <meta property="og:locale" content="nl_NL">
@@ -31,106 +31,608 @@
 
     <section class="page-hero">
       <div class="container">
-        <span class="tag">CONTACT</span>
-        <h1>Neem contact op</h1>
-        <p>Heb je een vraag of wil je meer informatie? Wij reageren binnen 24 uur op werkdagen.</p>
+        <span class="tag">100% GRATIS</span>
+        <h1>Ontvang jouw gratis<br>website concept</h1>
+        <p>Vertel ons over jouw bedrijf en wensen. Binnen 5 werkdagen ontvang je een professioneel concept — volledig op maat, zonder verplichtingen.</p>
       </div>
     </section>
 
     <section class="section section--alt">
       <div class="container">
-        <div class="contact-split reveal">
 
-          <!-- Links: kaart + gegevens -->
-          <div>
-            <div class="contact-info">
-              <h3>Onze gegevens</h3>
-              <div class="info-item">
-                <div class="info-icon">📧</div>
-                <div>
-                  <h4>E-mail</h4>
-                  <a href="mailto:info@svanwijksolutions.nl">info@svanwijksolutions.nl</a>
-                </div>
+        <div class="concept-wrapper">
+
+          <form id="conceptForm" action="https://formspree.io/f/mbdplbjk" method="POST" novalidate>
+            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Gratis concept aanvraag via svanwijksolutions.nl">
+            <input type="hidden" name="prijsindicatie_eenmalig" id="hiddenPriceOnce" value="€649,95">
+            <input type="hidden" name="geselecteerde_paginas" id="hiddenPages" value="">
+            <input type="hidden" name="geselecteerde_talen" id="hiddenTalen" value="Nederlands">
+
+            <!-- Step indicator -->
+            <div class="concept-steps" id="stepIndicator">
+              <div class="concept-step active" data-step="1">
+                <span class="concept-step__num">1</span>
+                <span class="concept-step__label">Bedrijf &amp; project</span>
               </div>
-              <div class="info-item">
-                <div class="info-icon">📍</div>
-                <div>
-                  <h4>Locatie</h4>
-                  <p>Nederland, Regio Westland</p>
-                </div>
+              <div class="concept-step__line"></div>
+              <div class="concept-step" data-step="2">
+                <span class="concept-step__num">2</span>
+                <span class="concept-step__label">Je website</span>
               </div>
-              <div class="info-item">
-                <div class="info-icon">🕐</div>
-                <div>
-                  <h4>Openingstijden</h4>
-                  <p>Maandag t/m vrijdag: 08:00 – 17:00</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">⚡</div>
-                <div>
-                  <h4>Reactietijd</h4>
-                  <p>Binnen 24 uur op werkdagen</p>
-                </div>
+              <div class="concept-step__line"></div>
+              <div class="concept-step" data-step="3">
+                <span class="concept-step__num">3</span>
+                <span class="concept-step__label">Afronden</span>
               </div>
             </div>
 
-            <!-- website.jpg sfeerbeeld -->
-            <div class="contact-sfeer">
-              <img
-                src="assets/images/website.jpg"
-                alt="Persoon werkt aan een website op laptop — S. van Wijk Solutions"
-                loading="lazy"
-                width="600"
-                height="400"
-                class="contact-sfeer__img">
-            </div>
-          </div>
+            <!-- ═══════════════════════════════ STAP 2 ═══════════════════════════════ -->
+            <div class="form-step" id="step1">
+              <div class="step-content">
+                <h2>Je bedrijf &amp; je project</h2>
+                <p class="step-subtitle">Vertel kort wie je bent en wat voor project je zoekt.</p>
 
-          <!-- Rechts: contactformulier -->
-          <div class="contact-form-wrap">
-            <h3>Stuur een bericht</h3>
-            <p style="margin-bottom:24px;font-size:.93rem;">Heb je een vraag, wil je een offerte of gewoon kennismaken? Vul het formulier in en wij nemen zo snel mogelijk contact met je op.</p>
-
-            <form id="contactForm" action="https://formspree.io/f/mbdplbjk" method="POST" novalidate>
-              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
-              <input type="hidden" name="_subject" value="Contactbericht via svanwijksolutions.nl">
-
-              <div class="form-row">
                 <div class="form-group">
-                  <label for="voornaam">Voornaam</label>
-                  <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name">
+                  <label for="c-bedrijf">Bedrijfsnaam</label>
+                  <input type="text" id="c-bedrijf" name="bedrijfsnaam" placeholder="Jansen & Zo" required autocomplete="organization">
                 </div>
                 <div class="form-group">
-                  <label for="achternaam">Achternaam</label>
-                  <input type="text" id="achternaam" name="achternaam" placeholder="Jansen" required autocomplete="family-name">
+                  <label for="c-branche">Branche / sector</label>
+                  <input type="text" id="c-branche" name="branche" placeholder="Bijv. horeca, bouw, coaching…" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Type project</label>
+                  <div class="concept-type-btns">
+                    <label class="type-btn">
+                      <input type="radio" name="project_type" value="nieuwe-website" required>
+                      <span>
+                        <strong>🌐 Nieuwe website</strong>
+                        <small>Ik heb nog geen website</small>
+                      </span>
+                    </label>
+                    <label class="type-btn">
+                      <input type="radio" name="project_type" value="redesign">
+                      <span>
+                        <strong>✏️ Redesign</strong>
+                        <small>Mijn huidige site moet moderner</small>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group" id="huidigeUrlWrap" style="display:none;">
+                  <label for="c-url">URL huidige website</label>
+                  <input type="url" id="c-url" name="huidige_website" placeholder="https://www.jouwsite.nl">
+                </div>
+
+                <div class="form-group">
+                  <label for="c-doelgroep">Wie is jouw doelgroep?</label>
+                  <textarea id="c-doelgroep" name="doelgroep" rows="3" placeholder="Bijv. particulieren in de regio, MKB-bedrijven, starters…" required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Gewenste stijl <span class="form-optional">(meerdere mogelijk)</span></label>
+                  <div class="stijl-kaarten">
+                    <label class="stijl-kaart">
+                      <input type="checkbox" name="stijl[]" value="minimalistisch">
+                      <span>
+                        <span class="stijl-kaart__preview stijl-kaart__preview--min"></span>
+                        <strong>Minimalistisch</strong>
+                        <small>Clean, witruimte, rustig</small>
+                      </span>
+                    </label>
+                    <label class="stijl-kaart">
+                      <input type="checkbox" name="stijl[]" value="speels">
+                      <span>
+                        <span class="stijl-kaart__preview stijl-kaart__preview--spe"></span>
+                        <strong>Speels & Creatief</strong>
+                        <small>Kleurrijk, dynamisch</small>
+                      </span>
+                    </label>
+                    <label class="stijl-kaart">
+                      <input type="checkbox" name="stijl[]" value="luxe">
+                      <span>
+                        <span class="stijl-kaart__preview stijl-kaart__preview--lux"></span>
+                        <strong>Luxe & Elegant</strong>
+                        <small>Donker, verfijnd, premium</small>
+                      </span>
+                    </label>
+                    <label class="stijl-kaart">
+                      <input type="checkbox" name="stijl[]" value="krachtig">
+                      <span>
+                        <span class="stijl-kaart__preview stijl-kaart__preview--kra"></span>
+                        <strong>Krachtig & Zakelijk</strong>
+                        <small>Sterk, direct, professioneel</small>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="c-wensen">Aanvullende wensen <span class="form-optional">(optioneel)</span></label>
+                  <textarea id="c-wensen" name="aanvullende_wensen" rows="4" placeholder="Bijv. 'Ik wil een contactformulier en een galerij', of 'Donkere stijl met groene accenten'…"></textarea>
+                </div>
+
+                <!-- Logo-optie bij nieuwe website -->
+                <div id="logo-optie-wrap" style="display:none;">
+                  <div class="logo-optie-box">
+                    <p class="logo-optie-box__title">🎨 Logo nodig?</p>
+                    <p class="logo-optie-box__sub">Je hebt gekozen voor een nieuwe website. Wil je ook dat wij een logo ontwerpen? Wij sturen je <strong>meerdere opties</strong> zodat je kunt kiezen wat het beste bij je past.</p>
+                    <div class="logo-optie-box__naam">
+                      Bedrijfsnaam: <strong id="logoNaamPreview" style="color:var(--clr-accent);">—</strong>
+                      <small>Klopt deze naam niet? Pas hem aan in stap 1.</small>
+                    </div>
+                    <label class="extra-row" style="margin-top:12px;">
+                      <input type="checkbox" name="extras[]" value="Logo ontwerp gewenst" id="logoOptie" class="price-option" data-price="124.95">
+                      <div>
+                        <strong>✏️ Logo laten ontwerpen</strong>
+                        <small>Meerdere unieke opties, jij kiest de beste</small>
+                      </div>
+                      <span class="extra-row__price">+ €124,95</span>
+                    </label>
+                    <div id="logoStijlWrap" style="display:none;margin-top:16px;">
+                      <label style="font-size:.88rem;font-weight:600;display:block;margin-bottom:10px;color:var(--clr-heading);">Welke stijl of elementen mag het logo uitstralen?</label>
+
+                      <!-- Stijl chips -->
+                      <div class="logo-stijl-chips" id="logoStijlChips">
+                        <button type="button" class="logo-chip" data-waarde="Minimalistisch">Minimalistisch</button>
+                        <button type="button" class="logo-chip" data-waarde="Modern">Modern</button>
+                        <button type="button" class="logo-chip" data-waarde="Speels">Speels</button>
+                        <button type="button" class="logo-chip" data-waarde="Zakelijk">Zakelijk</button>
+                        <button type="button" class="logo-chip" data-waarde="Luxe">Luxe</button>
+                        <button type="button" class="logo-chip" data-waarde="Retro / Vintage">Retro / Vintage</button>
+                        <button type="button" class="logo-chip" data-waarde="Handgeschreven">Handgeschreven</button>
+                        <button type="button" class="logo-chip" data-waarde="Geometrisch">Geometrisch</button>
+                        <button type="button" class="logo-chip" data-waarde="Organisch / Natuur">Organisch / Natuur</button>
+                        <button type="button" class="logo-chip" data-waarde="Strak & Technisch">Strak & Technisch</button>
+                      </div>
+
+                      <!-- Kleur chips -->
+                      <label style="font-size:.82rem;font-weight:600;display:block;margin:14px 0 8px;color:var(--clr-muted);">Voorkeur kleur(en):</label>
+                      <div class="logo-stijl-chips" id="logoKleurChips">
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Blauw" style="--chip-clr:#3b82f6;">Blauw</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Groen" style="--chip-clr:#22c55e;">Groen</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Rood" style="--chip-clr:#ef4444;">Rood</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Zwart / Wit" style="--chip-clr:#111;">Zwart / Wit</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Goud" style="--chip-clr:#d97706;">Goud</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Paars" style="--chip-clr:#8b5cf6;">Paars</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Oranje" style="--chip-clr:#f97316;">Oranje</button>
+                        <button type="button" class="logo-chip logo-chip--kleur" data-waarde="Mijn huisstijlkleuren" style="--chip-clr:#6366f1;">Huisstijl</button>
+                      </div>
+
+                      <!-- Vrij tekstveld -->
+                      <label style="font-size:.82rem;font-weight:600;display:block;margin:14px 0 8px;color:var(--clr-muted);">Aanvullende wensen of elementen:</label>
+                      <input type="text" id="c-logo-stijl" name="logo_stijl_wensen" placeholder="Bijv. een blad verwerken, initialen, slogan eronder…" style="width:100%;padding:11px 14px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.88rem;color:var(--clr-text);background:var(--clr-light);transition:border-color .2s;">
+                      <input type="hidden" name="logo_stijl_chips" id="logoStijlChipsHidden">
+                      <input type="hidden" name="logo_kleur_chips" id="logoKleurChipsHidden">
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="email">E-mailadres</label>
-                <input type="email" id="email" name="email" placeholder="jan@jouwbedrijf.nl" required autocomplete="email">
-              </div>
-              <div class="form-group">
-                <label for="bericht">Jouw bericht</label>
-                <textarea id="bericht" name="message" rows="6" placeholder="Stel gerust je vraag…" required></textarea>
-              </div>
-              <button type="submit" class="form-submit" id="submitBtn">Verstuur Bericht →</button>
-            </form>
 
-            <!-- Gratis concept CTA -->
-            <div class="contact-concept-tip">
-              <p>💡 Wil je een website laten bouwen? Vraag dan direct een <a href="concept.html">gratis website concept</a> aan — binnen 5 werkdagen in je inbox.</p>
+              <div class="price-footer price-footer--nav-only">
+                <div></div>
+                <button type="button" class="btn btn--primary" id="step1Next">Volgende stap →</button>
+              </div>
             </div>
+
+            <!-- ═══════════════════════════════ STAP 3 ═══════════════════════════════ -->
+            <div class="form-step" id="step2" style="display:none;">
+              <div class="step-content">
+                <h2>Stel je website samen</h2>
+                <p class="step-subtitle">Kies de pagina's en opties die jij nodig hebt.</p>
+
+                <!-- Altijd inbegrepen -->
+                <div class="inbegrepen-box">
+                  <div class="inbegrepen-box__title">✅ Altijd inbegrepen</div>
+                  <ul class="inbegrepen-list">
+                    <li><span>🎨</span> Professioneel design op maat</li>
+                    <li><span>🔍</span> SEO-optimalisatie</li>
+                    <li><span>✨</span> Vloeiende animaties</li>
+                    <li><span>📍</span> Google Maps integratie</li>
+                    <li><span>📩</span> Contactformulier</li>
+                    <li><span>📱</span> Volledig responsive (mobiel &amp; desktop)</li>
+                  </ul>
+                </div>
+
+                <!-- Pagina's kiezen -->
+                <div class="form-group" style="margin-top:28px;">
+                  <label style="font-weight:700;font-size:.95rem;color:var(--clr-heading);display:block;margin-bottom:10px;">Welke pagina's wil je op jouw website?</label>
+                  <div class="paginas-lijst" id="paginasLijst">
+
+                    <!-- HOMEPAGINA -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Homepagina" class="pagina-check" checked>
+                        <span class="pagina-item__naam">🏠 Homepagina</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="true">▴</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:block;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="home_el[]" value="Hero / banner met tekst" checked> Hero / banner met tekst</label>
+                          <label><input type="checkbox" name="home_el[]" value="Over ons snippet"> Over ons snippet</label>
+                          <label><input type="checkbox" name="home_el[]" value="Diensten overzicht"> Diensten overzicht</label>
+                          <label><input type="checkbox" name="home_el[]" value="Testimonials / reviews"> Testimonials / reviews</label>
+                          <label><input type="checkbox" name="home_el[]" value="Call-to-action sectie"> Call-to-action sectie</label>
+                          <label><input type="checkbox" name="home_el[]" value="Stats / cijfers blok"> Stats / cijfers blok</label>
+                          <label><input type="checkbox" name="home_el[]" value="Video sectie"> Video sectie</label>
+                          <label><input type="checkbox" name="home_el[]" value="Nieuwsbrief inschrijving"> Nieuwsbrief inschrijving</label>
+                        </div>
+                        <textarea name="home_toelichting" rows="2" placeholder="Extra toelichting voor de homepagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- DIENSTEN -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Diensten pagina" class="pagina-check">
+                        <span class="pagina-item__naam">⚙️ Diensten</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="diensten_el[]" value="Overzicht van alle diensten"> Overzicht van alle diensten</label>
+                          <label><input type="checkbox" name="diensten_el[]" value="Prijzen / tarieven tabel"> Prijzen / tarieven tabel</label>
+                          <label><input type="checkbox" name="diensten_el[]" value="Werkproces stappen"> Werkproces stappen</label>
+                          <label><input type="checkbox" name="diensten_el[]" value="FAQ sectie"> FAQ sectie</label>
+                          <label><input type="checkbox" name="diensten_el[]" value="Call-to-action onderaan"> Call-to-action onderaan</label>
+                        </div>
+                        <textarea name="diensten_toelichting" rows="2" placeholder="Extra toelichting voor de dienstenpagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- OVER ONS -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Over Ons pagina" class="pagina-check">
+                        <span class="pagina-item__naam">👤 Over Ons</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="over_el[]" value="Teamfoto's &amp; namen"> Teamfoto's &amp; namen</label>
+                          <label><input type="checkbox" name="over_el[]" value="Missie &amp; visie tekst"> Missie &amp; visie tekst</label>
+                          <label><input type="checkbox" name="over_el[]" value="Bedrijfsgeschiedenis / tijdlijn"> Bedrijfsgeschiedenis / tijdlijn</label>
+                          <label><input type="checkbox" name="over_el[]" value="Certificaten &amp; awards"> Certificaten &amp; awards</label>
+                          <label><input type="checkbox" name="over_el[]" value="Kernwaarden blok"> Kernwaarden blok</label>
+                          <label><input type="checkbox" name="over_el[]" value="Call-to-action onderaan"> Call-to-action onderaan</label>
+                        </div>
+                        <textarea name="over_toelichting" rows="2" placeholder="Extra toelichting voor de over-ons pagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- TEAM -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Team pagina" class="pagina-check">
+                        <span class="pagina-item__naam">👥 Team</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="team_el[]" value="Profielfoto's per medewerker"> Profielfoto's per medewerker</label>
+                          <label><input type="checkbox" name="team_el[]" value="Naam &amp; functie"> Naam &amp; functie</label>
+                          <label><input type="checkbox" name="team_el[]" value="Korte bio per persoon"> Korte bio per persoon</label>
+                          <label><input type="checkbox" name="team_el[]" value="LinkedIn-links per medewerker"> LinkedIn-links per medewerker</label>
+                          <label><input type="checkbox" name="team_el[]" value="Vacatures sectie"> Vacatures sectie</label>
+                        </div>
+                        <textarea name="team_toelichting" rows="2" placeholder="Extra toelichting voor de teampagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Contact pagina" class="pagina-check">
+                        <span class="pagina-item__naam">📬 Contact</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="contact_el[]" value="Contactformulier"> Contactformulier</label>
+                          <label><input type="checkbox" name="contact_el[]" value="Google Maps kaart"> Google Maps kaart</label>
+                          <label><input type="checkbox" name="contact_el[]" value="Openingstijden"> Openingstijden</label>
+                          <label><input type="checkbox" name="contact_el[]" value="WhatsApp knop"> WhatsApp knop</label>
+                          <label><input type="checkbox" name="contact_el[]" value="Telefoonnummer &amp; e-mail zichtbaar"> Telefoonnummer &amp; e-mail</label>
+                          <label><input type="checkbox" name="contact_el[]" value="Social media links" id="socialCheck"> Social media links</label>
+                        </div>
+
+                        <!-- Social media links — verschijnt als "Social media links" is aangevinkt -->
+                        <div id="socialLinksWrap" style="display:none;margin-top:12px;">
+                          <p style="font-size:.82rem;color:var(--clr-muted);margin-bottom:10px;font-weight:600;">Plak de links naar jouw social media profielen:</p>
+                          <div class="social-inputs">
+                            <div class="social-input-row">
+                              <span class="social-input-icon">in</span>
+                              <input type="url" name="social_linkedin" placeholder="LinkedIn URL (bijv. linkedin.com/in/jouwprofiel)">
+                            </div>
+                            <div class="social-input-row">
+                              <span class="social-input-icon" style="background:#e1306c;">📷</span>
+                              <input type="url" name="social_instagram" placeholder="Instagram URL (bijv. instagram.com/jouwpagina)">
+                            </div>
+                            <div class="social-input-row">
+                              <span class="social-input-icon" style="background:#1877f2;">f</span>
+                              <input type="url" name="social_facebook" placeholder="Facebook URL (bijv. facebook.com/jouwpagina)">
+                            </div>
+                            <div class="social-input-row">
+                              <span class="social-input-icon" style="background:#010101;">♪</span>
+                              <input type="url" name="social_tiktok" placeholder="TikTok URL (bijv. tiktok.com/@jouwaccount)">
+                            </div>
+                            <div class="social-input-row">
+                              <span class="social-input-icon" style="background:#ff0000;">▶</span>
+                              <input type="url" name="social_youtube" placeholder="YouTube URL (optioneel)">
+                            </div>
+                          </div>
+                        </div>
+
+                        <textarea name="contact_toelichting" rows="2" placeholder="Extra toelichting voor de contactpagina (optioneel)…" style="margin-top:12px;"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- PORTFOLIO -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Portfolio / Projecten" class="pagina-check">
+                        <span class="pagina-item__naam">🖼️ Portfolio / Projecten</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="portfolio_el[]" value="Projecten galerij / grid"> Projecten galerij / grid</label>
+                          <label><input type="checkbox" name="portfolio_el[]" value="Voor &amp; na vergelijking"> Voor &amp; na vergelijking</label>
+                          <label><input type="checkbox" name="portfolio_el[]" value="Filter op categorie"> Filter op categorie</label>
+                          <label><input type="checkbox" name="portfolio_el[]" value="Project detail pagina's"> Project detail pagina's</label>
+                          <label><input type="checkbox" name="portfolio_el[]" value="Klantlogo's / referenties"> Klantlogo's / referenties</label>
+                          <label><input type="checkbox" name="portfolio_el[]" value="Korte beschrijving per project"> Korte beschrijving per project</label>
+                        </div>
+                        <textarea name="portfolio_toelichting" rows="2" placeholder="Extra toelichting voor de portfolio pagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- BLOG -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Blog pagina" class="pagina-check">
+                        <span class="pagina-item__naam">📝 Blog</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="blog_el[]" value="Artikel overzicht"> Artikel overzicht</label>
+                          <label><input type="checkbox" name="blog_el[]" value="Zoekfunctie"> Zoekfunctie</label>
+                          <label><input type="checkbox" name="blog_el[]" value="Categorieën"> Categorieën</label>
+                          <label><input type="checkbox" name="blog_el[]" value="Uitgelicht artikel bovenaan"> Uitgelicht artikel bovenaan</label>
+                          <label><input type="checkbox" name="blog_el[]" value="Nieuwsbrief inschrijving"> Nieuwsbrief inschrijving</label>
+                        </div>
+                        <textarea name="blog_toelichting" rows="2" placeholder="Extra toelichting voor de blog (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="FAQ pagina" class="pagina-check">
+                        <span class="pagina-item__naam">❓ FAQ</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="faq_el[]" value="Uitklapbare vragen (accordeon)"> Uitklapbare vragen (accordeon)</label>
+                          <label><input type="checkbox" name="faq_el[]" value="Zoekfunctie door vragen"> Zoekfunctie door vragen</label>
+                          <label><input type="checkbox" name="faq_el[]" value="Categorieën per onderwerp"> Categorieën per onderwerp</label>
+                          <label><input type="checkbox" name="faq_el[]" value="Link naar contactformulier"> Link naar contactformulier</label>
+                        </div>
+                        <textarea name="faq_toelichting" rows="2" placeholder="Extra toelichting voor de FAQ pagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- PRIJZEN -->
+                    <div class="pagina-item">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Prijzen pagina" class="pagina-check">
+                        <span class="pagina-item__naam">💰 Prijzen</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <div class="pagina-elementen">
+                          <label><input type="checkbox" name="prijzen_el[]" value="Prijskaarten (pakketten)"> Prijskaarten (pakketten)</label>
+                          <label><input type="checkbox" name="prijzen_el[]" value="Vergelijkingstabel"> Vergelijkingstabel</label>
+                          <label><input type="checkbox" name="prijzen_el[]" value="Jaarlijks / maandelijks toggle"> Jaarlijks / maandelijks toggle</label>
+                          <label><input type="checkbox" name="prijzen_el[]" value="Wat is inbegrepen overzicht"> Wat is inbegrepen overzicht</label>
+                          <label><input type="checkbox" name="prijzen_el[]" value="Call-to-action per pakket"> Call-to-action per pakket</label>
+                        </div>
+                        <textarea name="prijzen_toelichting" rows="2" placeholder="Extra toelichting voor de prijzenpagina (optioneel)…"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- ANDERE PAGINA'S -->
+                    <div class="pagina-item pagina-item--custom">
+                      <label class="pagina-item__header">
+                        <input type="checkbox" name="paginas[]" value="Anders" class="pagina-check" id="andersCheck">
+                        <span class="pagina-item__naam">➕ Andere pagina(s)</span>
+                        <button type="button" class="pagina-item__toggle" aria-expanded="false">▾</button>
+                      </label>
+                      <div class="pagina-item__detail" style="display:none;">
+                        <textarea name="anders_paginas" rows="3" placeholder="Beschrijf zelf welke pagina's je nog meer nodig hebt…"></textarea>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Talen — dropdown + eigen invoer -->
+                <div class="form-group" style="margin-top:28px;">
+                  <label style="font-weight:700;font-size:.95rem;color:var(--clr-heading);display:block;margin-bottom:10px;">In welke talen moet de website beschikbaar zijn?</label>
+                  <p style="font-size:.83rem;color:var(--clr-muted);margin-bottom:12px;">Nederlands is altijd standaard inbegrepen. Selecteer extra talen of type er zelf een in.</p>
+
+                  <div class="taal-selectie">
+                    <div class="taal-tags" id="taalTags">
+                      <span class="taal-tag taal-tag--fixed"><img class="taal-tag__vlag" src="https://flagcdn.com/nl.svg" alt="" width="20" height="14"> Nederlands</span>
+                    </div>
+                    <div class="taal-input-wrap">
+                      <select id="taalDropdown" class="taal-dropdown">
+                        <option value="">＋ Selecteer een taal…</option>
+                        <option value="Engels">🇬🇧 Engels</option>
+                        <option value="Duits">🇩🇪 Duits</option>
+                        <option value="Frans">🇫🇷 Frans</option>
+                        <option value="Spaans">🇪🇸 Spaans</option>
+                        <option value="Italiaans">🇮🇹 Italiaans</option>
+                        <option value="Portugees">🇵🇹 Portugees</option>
+                        <option value="Pools">🇵🇱 Pools</option>
+                        <option value="Turks">🇹🇷 Turks</option>
+                        <option value="Arabisch">🇸🇦 Arabisch</option>
+                        <option value="Chinees">🇨🇳 Chinees</option>
+                        <option value="Russisch">🇷🇺 Russisch</option>
+                        <option value="Oekraïens">🇺🇦 Oekraïens</option>
+                        <option value="Grieks">🇬🇷 Grieks</option>
+                        <option value="Zweeds">🇸🇪 Zweeds</option>
+                        <option value="Noors">🇳🇴 Noors</option>
+                        <option value="Deens">🇩🇰 Deens</option>
+                        <option value="Fins">🇫🇮 Fins</option>
+                        <option value="Japans">🇯🇵 Japans</option>
+                        <option value="Koreaans">🇰🇷 Koreaans</option>
+                        <option value="Hindi">🇮🇳 Hindi</option>
+                      </select>
+                      <div class="taal-eigen-wrap">
+                        <input type="text" id="taalEigen" class="taal-eigen" placeholder="Of type zelf een taal…" maxlength="40">
+                        <button type="button" id="taalEigenAdd" class="taal-eigen-btn">Toevoegen</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Extra optie: snelle oplevering -->
+                <div class="form-group" style="margin-top:28px;">
+                  <label style="font-weight:700;font-size:.95rem;color:var(--clr-heading);display:block;margin-bottom:10px;">Extra optie</label>
+                  <div class="extras-list">
+                    <label class="extra-row">
+                      <input type="checkbox" name="extras[]" value="Snelle oplevering (binnen 7 dagen)" class="price-option" data-price="150" id="snelCheck">
+                      <div>
+                        <strong>⚡ Snelle oplevering</strong>
+                        <small>Binnen 7 werkdagen live</small>
+                      </div>
+                      <span class="extra-row__price">+ €150</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="price-footer price-footer--nav-only">
+                <button type="button" class="btn btn--outline" id="step2Back">← Terug</button>
+                <div></div>
+                <button type="button" class="btn btn--primary" id="step2Next">Volgende stap →</button>
+              </div>
+            </div>
+
+            <!-- ═══════════════════════════════ STAP 4 ═══════════════════════════════ -->
+            <div class="form-step" id="step3" style="display:none;">
+              <div class="step-content">
+                <h2>Bijna klaar! 🎉</h2>
+                <p class="step-subtitle">Waar mogen we je gratis concept naartoe sturen?</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-voornaam">Voornaam</label>
+                    <input type="text" id="c-voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="c-achternaam">Achternaam</label>
+                    <input type="text" id="c-achternaam" name="achternaam" placeholder="Jansen" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="c-email">E-mailadres</label>
+                  <input type="email" id="c-email" name="email" placeholder="jan@jouwbedrijf.nl" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="c-telefoon">Telefoonnummer</label>
+                  <input type="tel" id="c-telefoon" name="telefoon" placeholder="+31 6 00 000 000" required autocomplete="tel">
+                </div>
+
+                <!-- Logo & foto's — simpel uitgelegd -->
+                <div class="form-group">
+                  <label>Logo en foto's <span class="form-optional">(optioneel)</span></label>
+                  <div style="background:var(--clr-soft);border-radius:var(--radius-md);padding:16px 18px;">
+                    <p style="font-size:.88rem;color:var(--clr-text);margin-bottom:6px;">Heb je al een logo of foto's? Geen zorgen — je hoeft nu niets te uploaden.</p>
+                    <p style="font-size:.85rem;color:var(--clr-muted);margin:0;">Je kunt ze ná je aanvraag gewoon mailen naar <a href="mailto:info@svanwijksolutions.nl" style="color:var(--clr-accent);font-weight:600;">info@svanwijksolutions.nl</a>. Heb je nog geen logo of foto's? Dan halen wij die waar mogelijk van je huidige website, of we voegen ze later samen toe. Wil je toch alvast een link delen (Google Drive, WeTransfer of Dropbox)? Plak die hieronder:</p>
+                    <input type="url" name="bestanden_link" placeholder="Link naar je bestanden (optioneel)" style="width:100%;margin-top:10px;padding:11px 14px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.88rem;color:var(--clr-text);background:#fff;transition:border-color .2s;">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="c-refs">Websites die jij mooi vindt <span class="form-optional">(optioneel)</span></label>
+                  <textarea id="c-refs" name="referentiesites" rows="3" placeholder="Plak hier 1 of meerdere URL's van sites die jou aanspreken…"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="privacy_akkoord" id="privacyCheck" value="ja" required>
+                    <span>Ik ga akkoord met de <a href="privacy.html" target="_blank">privacyverklaring</a> van S. van Wijk Solutions.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="price-footer price-footer--final">
+                <button type="button" class="btn btn--outline" id="step3Back">← Terug</button>
+                <div class="price-footer__info">
+                  <div class="price-footer__label">Indicatieve prijs</div>
+                  <div class="price-footer__amount" id="priceDisplay">€649,95</div>
+                </div>
+                <button type="submit" class="btn btn--primary" id="submitBtn">Verstuur aanvraag 🚀</button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- BEDANKT-PANEEL — vervangt het formulier na indienen -->
+          <div class="concept-bedankt" id="conceptBedankt" style="display:none;">
+            <div class="concept-bedankt__icon">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" stroke="#6366f1" stroke-width="3"/>
+                <path d="M22 40 L34 52 L58 28" stroke="#14b8a6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2>Bedankt voor je aanvraag! 🚀</h2>
+            <p>Wij hebben je concept aanvraag in goede orde ontvangen. Binnen <strong>5 werkdagen</strong> ontvang je een professioneel concept op maat in je inbox.</p>
+            <div class="concept-bedankt__details">
+              <div><span>📧</span> Bevestiging onderweg naar je inbox</div>
+              <div><span>⏱️</span> Reactie binnen 5 werkdagen</div>
+              <div><span>💡</span> Volledig op maat, zonder verplichtingen</div>
+            </div>
+            <a href="index.html" class="btn btn--primary">Terug naar de homepagina →</a>
           </div>
 
         </div>
+
       </div>
     </section>
 
   </main>
 
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-label="Aanvraag verzonden">
+    <div class="success-card">
+      <div class="success-rockets" id="successRockets" aria-hidden="true"></div>
+      <div class="success-icon" id="successIcon">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="38" stroke="#6366f1" stroke-width="3" class="success-circle"/>
+          <path d="M22 40 L34 52 L58 28" stroke="#14b8a6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="success-check"/>
+        </svg>
+      </div>
+      <h2 class="success-title">Aanvraag ontvangen! 🚀</h2>
+      <p class="success-sub">Wij hebben je concept aanvraag in goede orde ontvangen. Binnen <strong>5 werkdagen</strong> ontvang je een professioneel concept in je inbox.</p>
+      <div class="success-details">
+        <div class="success-detail-item"><span>📧</span><span>Bevestiging onderweg naar je inbox</span></div>
+        <div class="success-detail-item"><span>⏱️</span><span>Reactie binnen 5 werkdagen</span></div>
+        <div class="success-detail-item"><span>💡</span><span>Volledig op maat, zonder verplichtingen</span></div>
+      </div>
+      <button class="success-close-btn" id="successClose">Super, bedankt! →</button>
+    </div>
+  </div>
+
   <div id="footer-placeholder"></div>
   <script src="js/script.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/concept.js"></script>
 </body>
 </html>
