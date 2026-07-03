@@ -108,9 +108,6 @@
 .type-btn span{display:block;}
 .type-btn span strong{display:block;font-size:.94rem;color:var(--clr-heading);margin-bottom:3px;}
 .type-btn span small{font-size:.8rem;color:var(--clr-muted);line-height:1.4;}
-.type-btn--icon{display:flex;align-items:center;gap:14px;padding-left:16px;}
-.type-btn__icon{flex-shrink:0;width:42px;height:42px;border-radius:11px;background:var(--clr-soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:background .2s;}
-.type-btn--icon:has(input:checked) .type-btn__icon{background:var(--clr-accent);}
 /* Custom radio-indicator rechtsboven */
 .type-btn::after{content:'';position:absolute;top:50%;right:16px;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;border:2px solid var(--clr-border);transition:border-color .2s,background .2s;background:var(--clr-white);}
 .type-btn::before{content:'';position:absolute;top:50%;right:22px;transform:translateY(-50%) scale(0);width:8px;height:8px;border-radius:50%;background:#fff;z-index:1;transition:transform .2s;}
@@ -193,6 +190,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 .inbegrepen-list li{font-size:.83rem;color:var(--clr-text);display:flex;align-items:center;gap:8px;}
 /* ── Logo opties ── */
 .logo-optie-box{background:var(--clr-soft);border-radius:var(--radius-md);padding:20px;margin-top:8px;}
+#f-logoidee:focus{outline:none;border-color:var(--clr-accent);box-shadow:0 0 0 3px rgba(99,102,241,.12);background:#fff;}
 .logo-optie-box__title{font-weight:700;font-size:.9rem;color:var(--clr-heading);margin-bottom:6px;}
 .logo-optie-box__sub{font-size:.83rem;color:var(--clr-muted);margin-bottom:12px;}
 .logo-optie-box__naam{font-size:.8rem;color:var(--clr-muted);margin-bottom:6px;}
@@ -344,14 +342,12 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                 <div class="form-group">
                   <label>Type project <span style="color:#ef4444">*</span></label>
                   <div class="concept-type-btns">
-                    <label class="type-btn type-btn--icon">
+                    <label class="type-btn">
                       <input type="radio" name="Type project" value="Nieuwe website" required>
-                      <span class="type-btn__icon">&#10024;</span>
                       <span><strong>Nieuwe website</strong><small>Ik heb nog geen website</small></span>
                     </label>
-                    <label class="type-btn type-btn--icon">
+                    <label class="type-btn">
                       <input type="radio" name="Type project" value="Redesign">
-                      <span class="type-btn__icon">&#128260;</span>
                       <span><strong>Redesign</strong><small>Mijn huidige site moet moderner</small></span>
                     </label>
                   </div>
@@ -387,7 +383,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                     </label>
                     <div id="logoStijlWrap" style="display:none;margin-top:14px;">
                       <label for="f-logoidee" style="font-size:.85rem;font-weight:600;display:block;margin-bottom:6px;color:var(--clr-heading);">Heb je al een idee hoe het eruit moet komen te zien? <span class="form-optional">(optioneel)</span></label>
-                      <textarea id="f-logoidee" name="Logo idee" rows="3" placeholder="Laat het gerust weten: een stijl, kleur, symbool of voorbeeld dat je aanspreekt..."></textarea>
+                      <textarea id="f-logoidee" name="Logo idee" rows="3" placeholder="Laat het gerust weten: een stijl, kleur, symbool of voorbeeld dat je aanspreekt..." style="width:100%;padding:11px 14px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.9rem;color:var(--clr-text);background:var(--clr-light);resize:vertical;min-height:80px;transition:border-color .2s,box-shadow .2s;"></textarea>
                     </div>
                   </div>
                 </div>

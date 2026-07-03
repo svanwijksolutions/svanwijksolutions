@@ -402,14 +402,6 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/[\u00f9-\u00fc]/g,'u').replace(/[^a-z0-9 ]/g,'');
   }
 
-  // Standaard paginavoorstel voor onbekende branche (custom invoer)
-  var DEFAULT_PAGINAS = [
-    { id:'home',     waarom:'De basis van je website: een sterke eerste indruk en een duidelijke volgende stap voor bezoekers.' },
-    { id:'overons',  waarom:'Mensen doen zaken met mensen. Jouw verhaal schept vertrouwen.' },
-    { id:'diensten', waarom:'Een helder overzicht van wat je aanbiedt, zodat bezoekers snel vinden wat ze zoeken.' },
-    { id:'contact',  waarom:'Een makkelijke manier om contact op te nemen of een offerte aan te vragen.' }
-  ];
-
   function matchBranche(nq) {
     // Score elke branche op basis van keyword-match
     var scored = [];
@@ -455,7 +447,7 @@ document.addEventListener('DOMContentLoaded', function () {
     custom.innerHTML = 'Gebruik <strong>&ldquo;' + trimmed + '&rdquo;</strong> als mijn bedrijfstype';
     custom.addEventListener('mousedown', function (ev) {
       ev.preventDefault();
-      kiesBranche({ naam: trimmed, cat: null, paginas: DEFAULT_PAGINAS, custom: true });
+      kiesBranche({ naam: trimmed, cat: null, paginas: [], custom: true });
     });
     sugList.appendChild(custom);
 
@@ -504,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (e.key === 'Enter') {
       e.preventDefault();
       if (focusedIndex >= 0 && items[focusedIndex]) items[focusedIndex].dispatchEvent(new MouseEvent('mousedown'));
-      else if (this.value.trim()) kiesBranche({ naam: this.value.trim(), cat: null, paginas: DEFAULT_PAGINAS, custom: true });
+      else if (this.value.trim()) kiesBranche({ naam: this.value.trim(), cat: null, paginas: [], custom: true });
     } else if (e.key === 'Escape') { sugList.style.display = 'none'; }
   });
   clearBtn.addEventListener('click', function () {
@@ -531,20 +523,26 @@ document.addEventListener('DOMContentLoaded', function () {
   function laadPaginaVoorstel(b) {
     var banner = document.getElementById('paginaVoorstelBanner');
     var tekst  = document.getElementById('paginaVoorstelTekst');
-    var namen  = b.paginas.map(function (p) { return PAGINA_LABELS[p.id] || p.id; });
-
-    if (b.custom) {
-      tekst.innerHTML = '<strong>Bedrijfstype: ' + b.naam + '.</strong> ' +
-        'We kennen dit type niet exact, maar hebben een sterke standaardset klaargezet: <strong>' + namen.join(', ') +
-        '</strong>. Elke pagina hieronder legt uit waarom die zinvol is. Pas het gerust aan naar jouw situatie.';
-    } else {
-      tekst.innerHTML = '<strong>Ons voorstel voor ' + b.naam + '.</strong> ' +
-        'Op basis van jouw type bedrijf hebben we deze pagina\u2019s aanbevolen: <strong>' + namen.join(', ') +
-        '</strong>. Bij elke pagina lees je waarom die juist voor jou belangrijk is. Alles is aan te passen.';
-    }
-    banner.classList.add('visible');
 
     resetAllePaginas();
+
+    if (b.custom) {
+      // Onbekende/onduidelijke branche: niets aanvinken, klant kiest zelf
+      tekst.innerHTML = '<strong>Bedrijfstype: ' + b.naam + '.</strong> ' +
+        'Dit type bedrijf kennen we niet precies, dus we laten de keuze bewust aan jou over. ' +
+        'Vink hieronder zelf aan welke pagina\u2019s je wilt. Klik op "Onderdelen kiezen" bij een pagina voor meer uitleg en opties.';
+      banner.classList.add('visible');
+      calcPrijs();
+      updateHiddenPages();
+      toonCrmAdvies();
+      return;
+    }
+
+    var namen = b.paginas.map(function (p) { return PAGINA_LABELS[p.id] || p.id; });
+    tekst.innerHTML = '<strong>Ons voorstel voor ' + b.naam + '.</strong> ' +
+      'Op basis van jouw type bedrijf hebben we deze pagina\u2019s aanbevolen: <strong>' + namen.join(', ') +
+      '</strong>. Bij elke pagina lees je waarom die juist voor jou belangrijk is. Alles is aan te passen.';
+    banner.classList.add('visible');
 
     b.paginas.forEach(function (p) {
       var formId = PAGINA_FORM_ID[p.id];
