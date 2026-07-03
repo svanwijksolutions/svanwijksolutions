@@ -25,16 +25,20 @@
   <style>
 /* ── Stap indicator ── */
 .concept-wrapper{max-width:780px;margin-inline:auto;}
-.concept-steps{display:flex;align-items:center;margin-bottom:36px;padding:0 4px;}
-.concept-step{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600;color:var(--clr-muted);transition:color .3s;}
-.concept-step__num{width:34px;height:34px;border-radius:50%;background:var(--clr-border);color:var(--clr-muted);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;transition:background .3s,color .3s;}
-.concept-step.active .concept-step__num{background:var(--clr-accent);color:#fff;}
-.concept-step.active{color:var(--clr-accent);}
-.concept-step.completed .concept-step__num{background:var(--clr-teal);color:#fff;}
-.concept-step.completed{color:var(--clr-teal-dark);}
-.concept-step__line{flex:1;height:2px;background:var(--clr-border);margin:0 10px;}
-.concept-step__label{display:none;}
-@media(min-width:560px){.concept-step__label{display:inline;}}
+.concept-steps{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:34px;padding:0;position:relative;}
+.concept-step{display:flex;flex-direction:column;align-items:center;gap:9px;flex:1;position:relative;z-index:2;}
+.concept-step__num{width:40px;height:40px;border-radius:50%;background:var(--clr-white);border:2px solid var(--clr-border);color:var(--clr-muted);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.92rem;flex-shrink:0;transition:background .3s,color .3s,border-color .3s,box-shadow .3s;}
+.concept-step.active .concept-step__num{background:var(--clr-accent);border-color:var(--clr-accent);color:#fff;box-shadow:0 0 0 4px rgba(99,102,241,.15);}
+.concept-step.active .concept-step__label{color:var(--clr-accent);}
+.concept-step.completed .concept-step__num{background:var(--clr-teal);border-color:var(--clr-teal);color:#fff;}
+.concept-step.completed .concept-step__label{color:var(--clr-heading);}
+.concept-step__label{font-size:.8rem;font-weight:600;color:var(--clr-muted);transition:color .3s;text-align:center;}
+/* Verbindingslijn achter de cirkels */
+.concept-step__line{position:absolute;top:20px;height:2px;background:var(--clr-border);z-index:1;transition:background .3s;}
+.concept-step__line--1{left:16.66%;right:50%;}
+.concept-step__line--2{left:50%;right:16.66%;}
+.concept-step__line.is-done{background:var(--clr-teal);}
+@media(max-width:420px){.concept-step__num{width:36px;height:36px;font-size:.85rem;}.concept-step__label{font-size:.72rem;}.concept-step__line{top:18px;}}
 /* ── Form stap ── */
 .form-step{animation:fadeInUp .3s ease;}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -54,12 +58,18 @@
 .branche-search-wrap{position:relative;}
 .branche-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--clr-muted);font-size:1rem;padding:4px;line-height:1;display:none;}
 .branche-suggestions{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--clr-white);border:1.5px solid var(--clr-accent);border-radius:var(--radius-sm);box-shadow:var(--shadow-md);z-index:50;max-height:220px;overflow-y:auto;display:none;}
-.branche-suggestions li{padding:10px 14px;cursor:pointer;font-size:.88rem;color:var(--clr-text);transition:background .15s;list-style:none;border-bottom:1px solid var(--clr-border);}
+.branche-suggestions li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;cursor:pointer;font-size:.88rem;color:var(--clr-text);transition:background .15s,color .15s;list-style:none;border-bottom:1px solid var(--clr-border);}
 .branche-suggestions li:last-child{border-bottom:none;}
 .branche-suggestions li:hover,.branche-suggestions li.focused{background:var(--clr-soft);color:var(--clr-accent);}
-.branche-suggestions li .sug-cat{font-size:.73rem;color:var(--clr-muted);margin-left:6px;font-weight:400;}
-.branche-tag{display:inline-flex;align-items:center;gap:6px;background:var(--clr-soft);color:var(--clr-accent);border-radius:24px;padding:5px 12px;font-size:.8rem;font-weight:600;margin-top:8px;}
-.branche-tag button{background:none;border:none;cursor:pointer;color:var(--clr-accent);font-size:1rem;line-height:1;padding:0;}
+.branche-suggestions li>span:first-child{font-weight:600;}
+.branche-suggestions li .sug-cat{font-size:.72rem;color:var(--clr-muted);font-weight:500;white-space:nowrap;flex-shrink:0;}
+.branche-suggestions li:hover .sug-cat,.branche-suggestions li.focused .sug-cat{color:var(--clr-accent);opacity:.7;}
+.branche-suggestions li.sug-custom{display:block;font-weight:400;color:var(--clr-muted);background:var(--clr-light);}
+.branche-suggestions li.sug-custom:hover,.branche-suggestions li.sug-custom.focused{background:var(--clr-soft);color:var(--clr-accent);}
+.branche-suggestions li.sug-custom strong{color:var(--clr-accent);}
+.branche-tag{display:inline-flex;align-items:center;gap:8px;background:var(--clr-soft);color:var(--clr-accent);border:1.5px solid var(--clr-accent);border-radius:24px;padding:7px 8px 7px 14px;font-size:.82rem;font-weight:600;margin-top:10px;}
+.branche-tag button{display:flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--clr-accent);border:none;border-radius:50%;cursor:pointer;color:#fff;font-size:.75rem;line-height:1;padding:0;transition:background .2s;}
+.branche-tag button:hover{background:var(--clr-accent-h);}
 /* ── Pagina voorstel banner ── */
 .pagina-voorstel-banner{background:linear-gradient(135deg,var(--clr-soft) 0%,#f0fdf4 100%);border:1.5px solid var(--clr-accent);border-radius:var(--radius-md);padding:16px 18px;margin-bottom:18px;display:none;}
 .pagina-voorstel-banner.visible{display:block;animation:fadeInUp .3s ease;}
@@ -86,26 +96,40 @@
 .pagina-item__detail textarea:focus{outline:none;border-color:var(--clr-accent);}
 /* ── Type knoppen ── */
 .concept-type-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.type-btn{border:2px solid var(--clr-border);border-radius:var(--radius-md);padding:16px 14px;cursor:pointer;transition:var(--tr);background:var(--clr-light);display:flex;align-items:flex-start;gap:10px;}
-.type-btn input[type=radio]{accent-color:var(--clr-accent);margin-top:3px;flex-shrink:0;}
-.type-btn span strong{display:block;font-size:.9rem;color:var(--clr-heading);margin-bottom:3px;}
-.type-btn span small{font-size:.78rem;color:var(--clr-muted);}
-.type-btn:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);}
+@media(max-width:480px){.concept-type-btns{grid-template-columns:1fr;}}
+.type-btn{position:relative;border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:16px 44px 16px 18px;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s;background:var(--clr-white);display:block;}
+.type-btn input[type=radio]{position:absolute;opacity:0;pointer-events:none;}
+.type-btn span{display:block;}
+.type-btn span strong{display:block;font-size:.94rem;color:var(--clr-heading);margin-bottom:3px;}
+.type-btn span small{font-size:.8rem;color:var(--clr-muted);line-height:1.4;}
+/* Custom radio-indicator rechtsboven */
+.type-btn::after{content:'';position:absolute;top:50%;right:16px;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;border:2px solid var(--clr-border);transition:border-color .2s,background .2s;background:var(--clr-white);}
+.type-btn::before{content:'';position:absolute;top:50%;right:22px;transform:translateY(-50%) scale(0);width:8px;height:8px;border-radius:50%;background:#fff;z-index:1;transition:transform .2s;}
+.type-btn:hover{border-color:var(--clr-accent);background:var(--clr-light);}
+.type-btn:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);box-shadow:0 0 0 3px rgba(99,102,241,.1);}
+.type-btn:has(input:checked)::after{border-color:var(--clr-accent);background:var(--clr-accent);}
+.type-btn:has(input:checked)::before{transform:translateY(-50%) scale(1);}
+.type-btn:has(input:focus-visible){box-shadow:0 0 0 3px rgba(99,102,241,.25);}
 .type-btn--error{border-color:#ef4444!important;}
 /* ── Stijl kaarten ── */
-.stijl-kaarten{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.stijl-kaarten{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:460px){.stijl-kaarten{grid-template-columns:1fr;}}
-.stijl-kaart{border:2px solid var(--clr-border);border-radius:var(--radius-md);padding:14px 12px;cursor:pointer;transition:var(--tr);background:var(--clr-light);display:flex;align-items:flex-start;gap:10px;}
-.stijl-kaart input{accent-color:var(--clr-accent);margin-top:3px;flex-shrink:0;}
-.stijl-kaart span{display:flex;flex-direction:column;gap:4px;}
-.stijl-kaart__preview{width:100%;height:36px;border-radius:6px;display:block;margin-bottom:5px;}
-.stijl-kaart__preview--min{background:linear-gradient(135deg,#f8fafc,#e2e8f0);}
-.stijl-kaart__preview--spe{background:linear-gradient(135deg,#fef3c7,#fce7f3);}
-.stijl-kaart__preview--lux{background:linear-gradient(135deg,#1e1b4b,#4c1d95);}
-.stijl-kaart__preview--kra{background:linear-gradient(135deg,#0f172a,#1e3a5f);}
-.stijl-kaart strong{font-size:.88rem;color:var(--clr-heading);}
-.stijl-kaart small{font-size:.75rem;color:var(--clr-muted);}
-.stijl-kaart:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);}
+.stijl-kaart{position:relative;border:1.5px solid var(--clr-border);border-radius:var(--radius-md);padding:12px;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s;background:var(--clr-white);display:block;overflow:hidden;}
+.stijl-kaart input{position:absolute;opacity:0;pointer-events:none;}
+.stijl-kaart>span{display:block;}
+.stijl-kaart__preview{position:relative;width:100%;height:52px;border-radius:8px;display:block;margin-bottom:10px;}
+/* Vinkje in de hoek van de preview bij selectie */
+.stijl-kaart__preview::after{content:'\2713';position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;background:var(--clr-accent);color:#fff;font-size:.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.5);transition:opacity .2s,transform .2s;}
+.stijl-kaart__preview--min{background:linear-gradient(135deg,#f1f5f9,#cbd5e1);}
+.stijl-kaart__preview--spe{background:linear-gradient(135deg,#fde68a,#f9a8d4);}
+.stijl-kaart__preview--lux{background:linear-gradient(135deg,#1e1b4b,#5b21b6);}
+.stijl-kaart__preview--kra{background:linear-gradient(135deg,#0f172a,#1e40af);}
+.stijl-kaart strong{display:block;font-size:.88rem;color:var(--clr-heading);margin-bottom:2px;}
+.stijl-kaart small{display:block;font-size:.76rem;color:var(--clr-muted);line-height:1.4;}
+.stijl-kaart:hover{border-color:var(--clr-accent);}
+.stijl-kaart:has(input:checked){border-color:var(--clr-accent);background:var(--clr-soft);box-shadow:0 0 0 3px rgba(99,102,241,.1);}
+.stijl-kaart:has(input:checked) .stijl-kaart__preview::after{opacity:1;transform:scale(1);}
+.stijl-kaart:has(input:focus-visible){box-shadow:0 0 0 3px rgba(99,102,241,.25);}
 /* ── Talen ── */
 .taal-selectie{display:flex;flex-direction:column;gap:10px;}
 .taal-tags{display:flex;flex-wrap:wrap;gap:7px;min-height:36px;align-items:center;}
@@ -266,16 +290,16 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
             <input type="hidden" name="Prijsopbouw" id="hiddenPriceOpbouw" value="">
             <!-- Stap indicator -->
             <div class="concept-steps" id="stepIndicator">
+              <div class="concept-step__line concept-step__line--1" id="stepLine1"></div>
+              <div class="concept-step__line concept-step__line--2" id="stepLine2"></div>
               <div class="concept-step active" data-step="1">
                 <span class="concept-step__num">1</span>
                 <span class="concept-step__label">Je bedrijf</span>
               </div>
-              <div class="concept-step__line"></div>
               <div class="concept-step" data-step="2">
                 <span class="concept-step__num">2</span>
                 <span class="concept-step__label">Je website</span>
               </div>
-              <div class="concept-step__line"></div>
               <div class="concept-step" data-step="3">
                 <span class="concept-step__num">3</span>
                 <span class="concept-step__label">Afronden</span>
@@ -860,6 +884,6 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
   </div>
   <div id="footer-placeholder"></div>
   <script src="js/script.js"></script>
-  <script src="js/concept.js"></script>
+  <script src="js/concept.js?v=2"></script>
 </body>
 </html>

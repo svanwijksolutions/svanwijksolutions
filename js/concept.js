@@ -18,57 +18,56 @@ document.addEventListener('DOMContentLoaded', function () {
      paginas = interne id's (zie PAGINA_FORM_ID)
   ───────────────────────────────────────────── */
   var BRANCHES = [
-    { naam: 'Kapper / Barbershop', cat: 'Beauty en verzorging', paginas: ['home','overons','behandelingen','prijzen','reviews','contact'], reden: 'Voor een kapper draait alles om je behandelingen, tarieven en een makkelijke manier om een afspraak te maken. Reviews geven nieuwe klanten net dat extra zetje.' },
-    { naam: 'Schoonheidsspecialist', cat: 'Beauty en verzorging', paginas: ['home','overons','behandelingen','prijzen','reviews','contact'], reden: 'Behandelingen, voor-en-na resultaten en een duidelijke prijslijst zijn onmisbaar. Reviews van tevreden klanten geven de doorslag.' },
-    { naam: 'Nagelstudio', cat: 'Beauty en verzorging', paginas: ['home','overons','behandelingen','prijzen','portfolio','contact'], reden: 'Een portfolio met sfeervolle foto\u2019s van je werk trekt klanten aan. Behandelingen en prijzen maken meteen duidelijk wat iemand kan verwachten.' },
-    { naam: 'Massagepraktijk', cat: 'Beauty en verzorging', paginas: ['home','overons','behandelingen','prijzen','reviews','contact'], reden: 'Vertrouwen staat centraal. Een persoonlijke over-ons, je behandelingen en klantreviews zijn samen het fundament van de site.' },
-    { naam: 'Fysiotherapeut', cat: 'Gezondheid en zorg', paginas: ['home','overons','diensten','behandelingen','faq','contact'], reden: 'Pati\u00ebnten willen weten met wie ze te maken krijgen en wat een behandeling inhoudt. Een FAQ neemt twijfels alvast weg voor het eerste contact.' },
-    { naam: 'Huisarts / praktijk', cat: 'Gezondheid en zorg', paginas: ['home','overons','diensten','faq','contact'], reden: 'Praktische informatie staat voorop: openingstijden, welke zorg je biedt en hoe iemand een afspraak maakt. Een FAQ scheelt veel telefoontjes.' },
-    { naam: 'Tandarts', cat: 'Gezondheid en zorg', paginas: ['home','overons','behandelingen','prijzen','faq','contact'], reden: 'Behandelingen en tarieven nemen onzekerheid weg. Een FAQ over kosten en procedures helpt nieuwe pati\u00ebnten over de drempel.' },
-    { naam: 'Psycholoog / therapeut', cat: 'Gezondheid en zorg', paginas: ['home','overons','diensten','faq','contact'], reden: 'Herkenning en vertrouwen zijn cruciaal. Een persoonlijke over-ons en een heldere uitleg van je aanpak vormen de kern.' },
-    { naam: 'Di\u00ebtist / voedingscoach', cat: 'Gezondheid en zorg', paginas: ['home','overons','diensten','prijzen','reviews','contact'], reden: 'Mensen zoeken resultaat en begeleiding. Je aanpak, pakketten en ervaringen van eerdere cli\u00ebnten overtuigen het beste.' },
-    { naam: 'Coach / lifecoach', cat: 'Coaching en advies', paginas: ['home','overons','diensten','prijzen','reviews','contact'], reden: 'Als coach verkoop je vertrouwen. Een sterke over-ons, jouw aanpak en klantreviews zijn het hart van de site.' },
-    { naam: 'Business coach', cat: 'Coaching en advies', paginas: ['home','overons','diensten','portfolio','prijzen','contact'], reden: 'Resultaten spreken. Cases en een duidelijk aanbod met pakketten geven bedrijven het vertrouwen om contact op te nemen.' },
-    { naam: 'Loopbaancoach', cat: 'Coaching en advies', paginas: ['home','overons','diensten','prijzen','reviews','faq','contact'], reden: 'Mensen in een carri\u00e8reswitch zoeken houvast. Een heldere aanpak, pakketten en veelgestelde vragen nemen twijfel weg.' },
-    { naam: 'Consultant / adviseur', cat: 'Coaching en advies', paginas: ['home','overons','diensten','portfolio','blog','contact'], reden: 'Expertise tonen is alles. Cases en een kennisblog positioneren je als autoriteit in je vakgebied.' },
-    { naam: 'Loodgieter', cat: 'Technische dienstverlening', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Wie een loodgieter zoekt heeft vaak snel iemand nodig. Duidelijke diensten, goede bereikbaarheid en reviews zijn doorslaggevend.' },
-    { naam: 'Elektricien', cat: 'Technische dienstverlening', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Betrouwbaarheid uitstralen via eerder werk en reviews. Je diensten en contactgegevens moeten meteen duidelijk zijn.' },
-    { naam: 'Schilder', cat: 'Technische dienstverlening', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Foto\u2019s van eerder werk zijn je sterkste verkoopargument. Een portfolio in combinatie met reviews levert aanvragen op.' },
-    { naam: 'Klusbedrijf / handyman', cat: 'Technische dienstverlening', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Laat via een portfolio zien wat je allemaal kunt. Reviews maken duidelijk dat je afspraken nakomt.' },
-    { naam: 'Aannemer / bouwbedrijf', cat: 'Bouw en renovatie', paginas: ['home','overons','diensten','portfolio','reviews','vacatures','contact'], reden: 'Bouwbedrijven leven van referenties. Een uitgebreid portfolio, reviews en openstaande vacatures maken het beeld compleet.' },
-    { naam: 'Dakdekker', cat: 'Bouw en renovatie', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Portfolio en reviews geven huiseigenaren de zekerheid die ze zoeken voor zo\u2019n grote investering.' },
-    { naam: 'Installatiebedrijf', cat: 'Bouw en renovatie', paginas: ['home','overons','diensten','portfolio','faq','contact'], reden: 'Uitleg over je werkgebied en diensten, samen met een FAQ over garanties en processen, wekt vertrouwen.' },
-    { naam: 'Stukadoor / tegelzetter', cat: 'Bouw en renovatie', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Vakmanschap zie je pas als je het toont. Een portfolio met strak afgewerkt werk overtuigt direct.' },
-    { naam: 'Hovenier / tuinman', cat: 'Groen en buitenruimte', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Mooie foto\u2019s van tuinen die je hebt aangelegd zijn je beste visitekaartje. Diensten en reviews doen de rest.' },
-    { naam: 'Schoonmaakbedrijf', cat: 'Dienstverlening', paginas: ['home','overons','diensten','prijzen','reviews','contact'], reden: 'Betrouwbaarheid staat centraal. Duidelijke diensten, transparante tarieven en reviews geven nieuwe klanten vertrouwen.' },
-    { naam: 'Beveiligingsbedrijf', cat: 'Dienstverlening', paginas: ['home','overons','diensten','portfolio','faq','contact'], reden: 'Klanten willen zekerheid. Uitleg over je diensten, referenties en antwoorden op veelgestelde vragen zijn essentieel.' },
-    { naam: 'Restaurant / eetcafe', cat: 'Horeca', paginas: ['home','overons','behandelingen','reviews','contact'], reden: 'Een overzichtelijke kaart, sfeerbeelden en de mogelijkheid om te reserveren vormen het hart van een horecasite. Reviews trekken nieuwe gasten aan.' },
-    { naam: 'Bakkerij', cat: 'Horeca en food', paginas: ['home','overons','behandelingen','portfolio','contact'], reden: 'Foto\u2019s van je producten en een duidelijk aanbod trekken klanten binnen. Voor een ambachtelijke bakkerij is het verhaal achter het bedrijf goud waard.' },
-    { naam: 'Catering', cat: 'Horeca en food', paginas: ['home','overons','diensten','portfolio','prijzen','reviews','contact'], reden: 'Arrangementen met foto\u2019s, pakketten en referenties van eerdere events geven opdrachtgevers het vertrouwen om te boeken.' },
-    { naam: 'Advocatenkantoor', cat: 'Juridisch en financieel', paginas: ['home','overons','diensten','blog','faq','contact'], reden: 'Expertise en betrouwbaarheid uitstralen via duidelijke vakgebieden, een kennisblog en een FAQ. Persoonlijke aanpak spreekt mensen aan.' },
-    { naam: 'Accountant / boekhouder', cat: 'Juridisch en financieel', paginas: ['home','overons','diensten','blog','faq','contact'], reden: 'Ondernemers zoeken iemand die hen begrijpt. Diensten, een blog met kennis en een FAQ nemen drempels weg.' },
-    { naam: 'Verzekeringsadviseur', cat: 'Juridisch en financieel', paginas: ['home','overons','diensten','faq','reviews','contact'], reden: 'Vertrouwen en duidelijkheid zijn alles. Een heldere uitleg van je diensten en een FAQ helpen twijfels wegnemen.' },
-    { naam: 'Makelaar', cat: 'Vastgoed', paginas: ['home','overons','diensten','portfolio','blog','reviews','contact'], reden: 'Woningen als portfolio, marktinzicht via een blog en persoonlijkheid via over-ons zijn de pijlers van een sterke makelaarssite.' },
-    { naam: 'Architectenbureau', cat: 'Ontwerp en creatief', paginas: ['home','overons','portfolio','diensten','blog','contact'], reden: 'Portfolio is alles voor een architect. Laat je werk spreken, ondersteund door je visie en een selectie diensten.' },
-    { naam: 'Grafisch ontwerper', cat: 'Ontwerp en creatief', paginas: ['home','overons','portfolio','diensten','prijzen','contact'], reden: 'Je portfolio is je cv. Aanvullen met een helder dienstenoverzicht en transparante tarieven maakt de keuze makkelijk.' },
-    { naam: 'Fotograaf', cat: 'Ontwerp en creatief', paginas: ['home','overons','portfolio','behandelingen','prijzen','reviews','contact'], reden: 'Beelden overtuigen. Een sterk portfolio per specialisatie, pakketten en reviews trekken de juiste klanten aan.' },
-    { naam: 'Videograaf', cat: 'Ontwerp en creatief', paginas: ['home','overons','portfolio','diensten','prijzen','contact'], reden: 'Je werk tonen spreekt voor zich. Een duidelijk aanbod en een selectie eerdere projecten zijn genoeg om te overtuigen.' },
-    { naam: 'Webdesigner / developer', cat: 'IT en technologie', paginas: ['home','overons','portfolio','diensten','blog','contact'], reden: 'Laat zien wat je kunt via een portfolio. Een blog over vakkennis positioneert je als expert en trekt organisch bezoekers.' },
-    { naam: 'IT-bedrijf', cat: 'IT en technologie', paginas: ['home','overons','diensten','portfolio','blog','faq','contact'], reden: 'Techniek uitleggen in begrijpelijke taal is een kunst. Een FAQ en blog helpen klanten over de drempel.' },
-    { naam: 'Sportschool / gym', cat: 'Sport en gezondheid', paginas: ['home','overons','behandelingen','prijzen','reviews','vacatures','contact'], reden: 'Lidmaatschappen, een overzicht van lessen en openingstijden vormen de kern. Reviews en vacatures maken het compleet.' },
-    { naam: 'Personal trainer', cat: 'Sport en gezondheid', paginas: ['home','overons','diensten','prijzen','reviews','contact'], reden: 'Vertrouwen en resultaat tonen. Je aanpak, pakketten en klantresultaten via reviews zijn de sterkste overtuigers.' },
-    { naam: 'Yoga / pilates studio', cat: 'Sport en gezondheid', paginas: ['home','overons','behandelingen','prijzen','reviews','contact'], reden: 'Rust en sfeer uitstralen. Een duidelijk rooster, lessen en tarieven samen met reviews trekken nieuwe leden aan.' },
-    { naam: 'Kinderopvang', cat: 'Onderwijs en opvang', paginas: ['home','overons','diensten','prijzen','faq','vacatures','contact'], reden: 'Ouders willen weten wie er voor hun kind zorgt. Een warme over-ons, uitleg over de opvang, tarieven en een FAQ zijn essentieel.' },
-    { naam: 'Evenementenbureau', cat: 'Evenementen', paginas: ['home','overons','diensten','portfolio','prijzen','reviews','contact'], reden: 'Cases van eerdere events zijn je sterkste verkoopargument. Diensten en pakketten maken het aanbod concreet.' },
-    { naam: 'Trouwfotograaf', cat: 'Fotografie en evenementen', paginas: ['home','overons','portfolio','behandelingen','prijzen','reviews','contact'], reden: 'Koppels kiezen op gevoel en stijl. Een sterk portfolio, pakketten en reviews van eerdere bruidsparen zijn onmisbaar.' },
-    { naam: 'Dierenarts / kliniek', cat: 'Dieren en natuur', paginas: ['home','overons','diensten','faq','vacatures','contact'], reden: 'Diereneigenaren willen snel weten welke zorg je biedt en hoe ze een afspraak maken. Een FAQ scheelt veel vragen.' },
-    { naam: 'Dierenpension / trimsalon', cat: 'Dieren en natuur', paginas: ['home','overons','diensten','prijzen','reviews','contact'], reden: 'Vertrouwen is alles als iemand hun huisdier achterlaat. Sfeerbeelden, tarieven en reviews van tevreden baasjes geven zekerheid.' },
-    { naam: 'Transportbedrijf', cat: 'Transport en logistiek', paginas: ['home','overons','diensten','reviews','vacatures','contact'], reden: 'Betrouwbaarheid en capaciteit uitstralen. Diensten, openstaande chauffeursvacatures en reviews zijn de kern.' },
-    { naam: 'Verhuisbedrijf', cat: 'Transport en logistiek', paginas: ['home','overons','diensten','prijzen','reviews','contact'], reden: 'Mensen vergelijken actief. Duidelijke tarieven, diensten en veel reviews geven de doorslag.' },
-    { naam: 'Autogarage / dealer', cat: 'Auto en mobiliteit', paginas: ['home','overons','diensten','portfolio','reviews','contact'], reden: 'Laat je diensten en occasions zien. Reviews over eerlijkheid en vakwerk overtuigen nieuwe klanten.' },
-    { naam: 'Rijschool', cat: 'Onderwijs en opvang', paginas: ['home','overons','diensten','prijzen','reviews','faq','contact'], reden: 'Leerlingen vergelijken op slagingspercentage en prijs. Pakketten, reviews en een FAQ over het traject overtuigen het beste.' },
-    { naam: 'Webshop / retail', cat: 'Retail en e-commerce', paginas: ['home','overons','behandelingen','reviews','faq','contact'], reden: 'Producten helder presenteren, vertrouwen wekken met reviews en veelgestelde vragen over levering en retour beantwoorden.' },
-    { naam: 'Reisorganisatie', cat: 'Reizen en toerisme', paginas: ['home','overons','behandelingen','portfolio','reviews','blog','contact'], reden: 'Je verkoopt dromen. Mooie reisverhalen, bestemmingen als portfolio en ervaringen van reizigers maken je site onweerstaanbaar.' }
+    { naam: 'Kapper / kapsalon', cat: 'Beauty en verzorging', keywords: ['kapper','kapsalon','barbershop','barbier','haar','knippen','haarstylist','hairstylist','coiffure'], paginas: [{id:'home',waarom:'De etalage van je salon: sfeer, stijl en meteen een knop om een afspraak te maken.'},{id:'behandelingen',waarom:'Laat per behandeling zien wat je doet (knippen, kleuren, styling), zodat klanten weten wat ze kunnen verwachten.'},{id:'prijzen',waarom:'Een heldere prijslijst voorkomt verrassingen en trekt juist de klanten die bij je passen.'},{id:'reviews',waarom:'Ervaringen van tevreden klanten geven nieuwe bezoekers net dat laatste zetje om te boeken.'},{id:'overons',waarom:'Mensen kiezen een kapper op gevoel. Jouw verhaal en team maken het persoonlijk.'},{id:'contact',waarom:'Adres, openingstijden en een kaart, zodat mensen je makkelijk vinden en langskomen.'}] },
+    { naam: 'Schoonheidsspecialist / schoonheidssalon', cat: 'Beauty en verzorging', keywords: ['schoonheidsspecialist','schoonheidssalon','beauty','huidverzorging','gezichtsbehandeling','cosmetisch','beautysalon'], paginas: [{id:'home',waarom:'Een verzorgde eerste indruk die meteen rust en professionaliteit uitstraalt.'},{id:'behandelingen',waarom:'Per behandeling uitleg en resultaten, zodat klanten precies weten waarvoor ze komen.'},{id:'prijzen',waarom:'Transparante tarieven wekken vertrouwen en trekken de juiste klanten.'},{id:'reviews',waarom:'Voor- en na-resultaten en ervaringen overtuigen twijfelaars.'},{id:'overons',waarom:'Jouw expertise en aanpak maken het verschil in een vak waarin vertrouwen telt.'},{id:'contact',waarom:'Makkelijk een afspraak maken en je salon vinden.'}] },
+    { naam: 'Nagelstudio', cat: 'Beauty en verzorging', keywords: ['nagelstudio','nagels','nail','manicure','pedicure','nagelstyliste'], paginas: [{id:'home',waarom:'Visueel en sfeervol: jouw werk spreekt direct aan.'},{id:'portfolio',waarom:'Een galerij met jouw mooiste sets is je sterkste verkoopargument.'},{id:'behandelingen',waarom:'Overzicht van wat je aanbiedt, van gellak tot acryl.'},{id:'prijzen',waarom:'Duidelijke tarieven per behandeling voorkomen onduidelijkheid.'},{id:'overons',waarom:'Jouw stijl en persoonlijkheid onderscheiden je van de studio om de hoek.'},{id:'contact',waarom:'Snel een afspraak maken en je studio vinden.'}] },
+    { naam: 'Massagepraktijk / masseur', cat: 'Beauty en verzorging', keywords: ['massage','masseur','massagepraktijk','ontspanning','wellness','masseuse'], paginas: [{id:'home',waarom:'Een rustige, vertrouwenwekkende uitstraling die past bij ontspanning.'},{id:'behandelingen',waarom:'Uitleg per massagevorm, zodat klanten de juiste keuze maken.'},{id:'prijzen',waarom:'Heldere tarieven en de duur per sessie scheppen duidelijkheid.'},{id:'reviews',waarom:'Ervaringen van klanten nemen de drempel weg voor een eerste bezoek.'},{id:'overons',waarom:'Vertrouwen is alles: jouw achtergrond en aanpak stellen mensen gerust.'},{id:'contact',waarom:'Eenvoudig een afspraak maken.'}] },
+    { naam: 'Fysiotherapeut', cat: 'Gezondheid en zorg', keywords: ['fysiotherapeut','fysio','fysiotherapie','manueel','revalidatie','therapie'], paginas: [{id:'home',waarom:'Een professionele, geruststellende eerste indruk met een duidelijke route naar een afspraak.'},{id:'diensten',waarom:'Overzicht van je specialisaties (bijv. sport, rug, revalidatie), zodat pati\u00ebnten de juiste zorg vinden.'},{id:'behandelingen',waarom:'Uitleg over hoe een behandeling verloopt, wat onzekerheid wegneemt.'},{id:'faq',waarom:'Antwoorden op vragen over vergoeding, verwijzing en aanpak schelen veel telefoontjes.'},{id:'overons',waarom:'Pati\u00ebnten willen weten wie hen behandelt. Jouw team en aanpak scheppen vertrouwen.'},{id:'contact',waarom:'Praktijkgegevens, openingstijden en een makkelijke afspraakoptie.'}] },
+    { naam: 'Huisarts / huisartsenpraktijk', cat: 'Gezondheid en zorg', keywords: ['huisarts','huisartsenpraktijk','dokter','praktijk','medisch'], paginas: [{id:'home',waarom:'Duidelijke, toegankelijke informatie staat voorop voor pati\u00ebnten van alle leeftijden.'},{id:'diensten',waarom:'Welke zorg biedt de praktijk, en hoe werkt het spreekuur.'},{id:'faq',waarom:'Veelgestelde vragen over afspraken, herhaalrecepten en spoed schelen de balie veel werk.'},{id:'overons',waarom:'Het team voorstellen maakt de praktijk persoonlijk en herkenbaar.'},{id:'contact',waarom:'Openingstijden, telefoonnummers en hoe je een afspraak maakt, meteen vindbaar.'}] },
+    { naam: 'Tandarts / tandartspraktijk', cat: 'Gezondheid en zorg', keywords: ['tandarts','tandartspraktijk','gebit','mondzorg','orthodontie','dentaal'], paginas: [{id:'home',waarom:'Een verzorgde, vertrouwenwekkende uitstraling die angst wegneemt.'},{id:'behandelingen',waarom:'Uitleg per behandeling neemt onzekerheid weg bij nieuwe pati\u00ebnten.'},{id:'prijzen',waarom:'Inzicht in tarieven en vergoedingen voorkomt verrassingen.'},{id:'faq',waarom:'Antwoorden op vragen over kosten, angst en procedures verlagen de drempel.'},{id:'overons',waarom:'Het team leren kennen maakt een bezoek minder spannend.'},{id:'contact',waarom:'Praktijkinfo, openingstijden en afspraak maken.'}] },
+    { naam: 'Psycholoog / therapeut', cat: 'Gezondheid en zorg', keywords: ['psycholoog','therapeut','psychotherapie','coach','ggz','counseling','hulpverlening'], paginas: [{id:'home',waarom:'Een rustige, veilige uitstraling waarin mensen zich herkend voelen.'},{id:'diensten',waarom:'Welke klachten en trajecten je behandelt, helder uitgelegd.'},{id:'faq',waarom:'Vragen over vergoeding, wachttijd en werkwijze beantwoorden neemt drempels weg.'},{id:'overons',waarom:'Een persoonlijke kennismaking is cruciaal: mensen kiezen jou op gevoel.'},{id:'contact',waarom:'Een laagdrempelige manier om contact op te nemen of aan te melden.'}] },
+    { naam: 'Di\u00ebtist / voedingsdeskundige', cat: 'Gezondheid en zorg', keywords: ['dietist','voedingsdeskundige','voeding','dieet','gewicht','voedingscoach'], paginas: [{id:'home',waarom:'Een frisse, gezonde uitstraling die motiveert.'},{id:'diensten',waarom:'Je specialisaties en aanpak, zodat cli\u00ebnten weten of je bij hun doel past.'},{id:'prijzen',waarom:'Duidelijkheid over trajecten en vergoeding.'},{id:'reviews',waarom:'Resultaten en ervaringen van cli\u00ebnten werken aanstekelijk.'},{id:'overons',waarom:'Jouw achtergrond en visie op voeding scheppen vertrouwen.'},{id:'contact',waarom:'Makkelijk een eerste afspraak inplannen.'}] },
+    { naam: 'Coach / lifecoach', cat: 'Coaching en advies', keywords: ['coach','lifecoach','coaching','persoonlijke ontwikkeling','begeleiding','mentor'], paginas: [{id:'home',waarom:'Als coach verkoop je vertrouwen. De homepagina moet meteen resoneren met je doelgroep.'},{id:'overons',waarom:'Jouw eigen verhaal en aanpak zijn je belangrijkste verkoopargument.'},{id:'diensten',waarom:'Helder omschreven trajecten, zodat mensen weten wat ze krijgen.'},{id:'prijzen',waarom:'Transparante pakketten nemen twijfel weg en trekken serieuze cli\u00ebnten.'},{id:'reviews',waarom:'Ervaringen van eerdere cli\u00ebnten maken je aanpak tastbaar en geloofwaardig.'},{id:'contact',waarom:'Een laagdrempelig kennismakingsgesprek als eerste stap.'}] },
+    { naam: 'Business coach / zakelijk coach', cat: 'Coaching en advies', keywords: ['business coach','zakelijk coach','ondernemerscoach','leiderschap','teamcoach'], paginas: [{id:'home',waarom:'Een professionele uitstraling die ondernemers en managers aanspreekt.'},{id:'overons',waarom:'Jouw ervaring en trackrecord geven bedrijven vertrouwen om met je in zee te gaan.'},{id:'diensten',waarom:'Concrete trajecten en programma\'s, helder omschreven.'},{id:'portfolio',waarom:'Cases en resultaten laten zien dat jouw aanpak werkt.'},{id:'prijzen',waarom:'Duidelijke pakketten maken de investering bespreekbaar.'},{id:'contact',waarom:'Een makkelijke manier om een strategiegesprek in te plannen.'}] },
+    { naam: 'Consultant / adviseur', cat: 'Coaching en advies', keywords: ['consultant','adviseur','advies','consultancy','interim','expert'], paginas: [{id:'home',waarom:'Autoriteit uitstralen vanaf de eerste seconde.'},{id:'overons',waarom:'Jouw expertise en aanpak onderscheiden je van de rest.'},{id:'diensten',waarom:'Welke vraagstukken je oplost, concreet en herkenbaar.'},{id:'portfolio',waarom:'Cases bewijzen je waarde beter dan woorden.'},{id:'blog',waarom:'Kennisartikelen positioneren je als expert en trekken organisch bezoekers.'},{id:'contact',waarom:'Een directe route naar een adviesgesprek.'}] },
+    { naam: 'Loodgieter', cat: 'Technische dienstverlening', keywords: ['loodgieter','loodgieterswerk','sanitair','cv','verwarming','lekkage','installateur'], paginas: [{id:'home',waarom:'Wie een loodgieter zoekt heeft vaak haast. Meteen duidelijk wat je doet en hoe je bereikbaar bent.'},{id:'diensten',waarom:'Overzicht van je werkzaamheden, van lekkage tot complete badkamer.'},{id:'portfolio',waarom:'Foto\'s van uitgevoerd werk bewijzen je vakmanschap.'},{id:'reviews',waarom:'Reviews over snelheid en betrouwbaarheid geven de doorslag.'},{id:'overons',waarom:'Een gezicht en verhaal maken een vakman betrouwbaar.'},{id:'contact',waarom:'Telefoonnummer en aanvraagformulier prominent in beeld.'}] },
+    { naam: 'Elektricien', cat: 'Technische dienstverlening', keywords: ['elektricien','elektra','installatie','groepenkast','verlichting','zonnepanelen'], paginas: [{id:'home',waarom:'Snel duidelijk wat je doet en dat je betrouwbaar en bereikbaar bent.'},{id:'diensten',waarom:'Van storing tot complete installatie: laat je hele aanbod zien.'},{id:'portfolio',waarom:'Uitgevoerde projecten tonen je vakmanschap.'},{id:'reviews',waarom:'Ervaringen over netheid en vakwerk overtuigen nieuwe klanten.'},{id:'overons',waarom:'Persoonlijkheid en betrouwbaarheid maken het verschil.'},{id:'contact',waarom:'Makkelijk een offerte of storing melden.'}] },
+    { naam: 'Schilder / schildersbedrijf', cat: 'Technische dienstverlening', keywords: ['schilder','schildersbedrijf','schilderwerk','verf','buitenschilderwerk','binnenschilderwerk'], paginas: [{id:'home',waarom:'Een verzorgde uitstraling die meteen kwaliteit uitademt.'},{id:'portfolio',waarom:'Foto\'s van eerder werk zijn je sterkste verkoopargument.'},{id:'diensten',waarom:'Binnen, buiten, behang: laat zien wat je allemaal doet.'},{id:'reviews',waarom:'Tevreden klanten overtuigen twijfelaars.'},{id:'overons',waarom:'Vakmanschap met een gezicht erachter wekt vertrouwen.'},{id:'contact',waarom:'Eenvoudig een vrijblijvende offerte aanvragen.'}] },
+    { naam: 'Klusbedrijf / handyman', cat: 'Technische dienstverlening', keywords: ['klusbedrijf','klusjesman','handyman','allround','onderhoud','timmerman','klussen'], paginas: [{id:'home',waarom:'Laat meteen zien dat je van vele markten thuis bent.'},{id:'diensten',waarom:'Een overzicht van alle klussen die je aanpakt.'},{id:'portfolio',waarom:'Foto\'s van uiteenlopende klussen tonen je veelzijdigheid.'},{id:'reviews',waarom:'Betrouwbaarheid en afspraken nakomen: dat bewijzen reviews.'},{id:'overons',waarom:'Een persoonlijk verhaal maakt je benaderbaar.'},{id:'contact',waarom:'Snel een klus aanvragen.'}] },
+    { naam: 'Aannemer / bouwbedrijf', cat: 'Bouw en renovatie', keywords: ['aannemer','bouwbedrijf','bouw','verbouwing','nieuwbouw','renovatie','aanbouw'], paginas: [{id:'home',waarom:'Vertrouwen en vakmanschap uitstralen bij een grote investering.'},{id:'diensten',waarom:'Van verbouwing tot nieuwbouw: laat je volledige aanbod zien.'},{id:'portfolio',waarom:'Een uitgebreid portfolio van projecten is doorslaggevend.'},{id:'reviews',waarom:'Referenties van eerdere opdrachtgevers geven zekerheid.'},{id:'overons',waarom:'Het bedrijf en team achter het werk scheppen vertrouwen.'},{id:'vacatures',waarom:'Groeiende bouwbedrijven zoeken vakmensen. Toon je openstaande functies.'},{id:'contact',waarom:'Een makkelijke route naar een offerte of kennismaking.'}] },
+    { naam: 'Dakdekker', cat: 'Bouw en renovatie', keywords: ['dakdekker','dak','dakbedekking','dakwerk','daklekkage','dakrenovatie'], paginas: [{id:'home',waarom:'Snel duidelijk dat je betrouwbaar bent voor een belangrijke klus.'},{id:'diensten',waarom:'Platte daken, hellende daken, reparaties: laat je specialismen zien.'},{id:'portfolio',waarom:'Foto\'s van daken die je hebt aangepakt geven zekerheid.'},{id:'reviews',waarom:'Ervaringen nemen twijfel weg bij zo\'n grote investering.'},{id:'overons',waarom:'Een betrouwbaar gezicht achter het bedrijf.'},{id:'contact',waarom:'Eenvoudig een inspectie of offerte aanvragen.'}] },
+    { naam: 'Installatiebedrijf', cat: 'Bouw en renovatie', keywords: ['installatiebedrijf','installatie','cv','warmtepomp','airco','ventilatie','duurzaam'], paginas: [{id:'home',waarom:'Duidelijk wat je installeert en dat je betrouwbaar bent.'},{id:'diensten',waarom:'Van warmtepomp tot airco: laat je hele aanbod zien.'},{id:'portfolio',waarom:'Uitgevoerde installaties tonen je expertise.'},{id:'faq',waarom:'Vragen over garantie, subsidie en onderhoud beantwoorden schept vertrouwen.'},{id:'overons',waarom:'Het team en de aanpak achter het bedrijf.'},{id:'contact',waarom:'Makkelijk een adviesgesprek of offerte aanvragen.'}] },
+    { naam: 'Stukadoor / tegelzetter', cat: 'Bouw en renovatie', keywords: ['stukadoor','tegelzetter','stucwerk','tegels','betegelen','stuc','pleisterwerk'], paginas: [{id:'home',waarom:'Strak afgewerkt werk vraagt om een strakke presentatie.'},{id:'portfolio',waarom:'Vakmanschap zie je pas als je het toont: foto\'s overtuigen direct.'},{id:'diensten',waarom:'Welke technieken en afwerkingen je aanbiedt.'},{id:'reviews',waarom:'Tevreden klanten bevestigen je kwaliteit.'},{id:'overons',waarom:'Een persoonlijk verhaal achter het vakwerk.'},{id:'contact',waarom:'Eenvoudig een offerte aanvragen.'}] },
+    { naam: 'Hovenier / tuinman', cat: 'Groen en buitenruimte', keywords: ['hovenier','tuinman','tuin','tuinaanleg','tuinonderhoud','bestrating','groenvoorziening'], paginas: [{id:'home',waarom:'Groen en sfeervol: laat meteen zien wat je maakt.'},{id:'portfolio',waarom:'Foto\'s van aangelegde tuinen zijn je beste visitekaartje.'},{id:'diensten',waarom:'Aanleg, onderhoud, bestrating: toon je hele aanbod.'},{id:'reviews',waarom:'Ervaringen van tuinbezitters overtuigen nieuwe klanten.'},{id:'overons',waarom:'Passie voor groen met een gezicht erachter.'},{id:'contact',waarom:'Makkelijk een ontwerp of onderhoudsafspraak aanvragen.'}] },
+    { naam: 'Schoonmaakbedrijf', cat: 'Dienstverlening', keywords: ['schoonmaakbedrijf','schoonmaak','reiniging','glazenwasser','poetsbedrijf'], paginas: [{id:'home',waarom:'Betrouwbaarheid en netheid stralen meteen af.'},{id:'diensten',waarom:'Kantoor, particulier, glas: laat zien wat je schoonmaakt.'},{id:'prijzen',waarom:'Transparante tarieven of pakketten wekken vertrouwen.'},{id:'reviews',waarom:'Ervaringen bevestigen dat je betrouwbaar en grondig bent.'},{id:'overons',waarom:'Een betrouwbaar team achter de dienst.'},{id:'contact',waarom:'Snel een offerte of proefschoonmaak aanvragen.'}] },
+    { naam: 'Beveiligingsbedrijf', cat: 'Dienstverlening', keywords: ['beveiliging','beveiligingsbedrijf','security','alarm','camera','bewaking'], paginas: [{id:'home',waarom:'Zekerheid en professionaliteit uitstralen.'},{id:'diensten',waarom:'Van camerabeveiliging tot surveillance: toon je aanbod.'},{id:'portfolio',waarom:'Referenties en projecten geven vertrouwen.'},{id:'faq',waarom:'Vragen over aanpak, certificering en kosten beantwoorden.'},{id:'overons',waarom:'Betrouwbaarheid staat centraal in dit vak.'},{id:'contact',waarom:'Een directe route naar een adviesgesprek.'}] },
+    { naam: 'Restaurant / eetcafe', cat: 'Horeca', keywords: ['restaurant','eetcafe','eten','dineren','bistro','brasserie','horeca','cafe'], paginas: [{id:'home',waarom:'Sfeer proef je met je ogen: mooie beelden en meteen kunnen reserveren.'},{id:'behandelingen',waarom:'Je menukaart overzichtelijk gepresenteerd is het hart van de site.'},{id:'reviews',waarom:'Ervaringen van gasten trekken nieuwe bezoekers.'},{id:'overons',waarom:'Het verhaal achter je zaak en keuken maakt het persoonlijk.'},{id:'contact',waarom:'Openingstijden, reserveren en je locatie op de kaart.'}] },
+    { naam: 'Bakkerij', cat: 'Horeca en food', keywords: ['bakkerij','bakker','brood','banket','gebak','patisserie'], paginas: [{id:'home',waarom:'Verse producten in beeld maken meteen trek.'},{id:'behandelingen',waarom:'Je assortiment overzichtelijk tonen, van brood tot taarten.'},{id:'portfolio',waarom:'Foto\'s van je mooiste creaties, bijvoorbeeld bruidstaarten.'},{id:'overons',waarom:'Het ambacht en verhaal achter de bakkerij zijn goud waard.'},{id:'contact',waarom:'Openingstijden, bestellen en je winkel vinden.'}] },
+    { naam: 'Catering', cat: 'Horeca en food', keywords: ['catering','cateraar','bedrijfscatering','partycatering','buffet','hapjes'], paginas: [{id:'home',waarom:'Smaakvolle presentatie die zin geeft in meer.'},{id:'diensten',waarom:'Welke arrangementen en gelegenheden je verzorgt.'},{id:'portfolio',waarom:'Foto\'s van eerdere events en buffetten overtuigen.'},{id:'prijzen',waarom:'Pakketten en arrangementen helder in beeld.'},{id:'reviews',waarom:'Ervaringen van opdrachtgevers geven vertrouwen om te boeken.'},{id:'contact',waarom:'Makkelijk een offerte op maat aanvragen.'}] },
+    { naam: 'Advocaat / advocatenkantoor', cat: 'Juridisch en financieel', keywords: ['advocaat','advocatenkantoor','juridisch','recht','jurist','rechtsbijstand'], paginas: [{id:'home',waarom:'Betrouwbaarheid en deskundigheid vanaf de eerste indruk.'},{id:'diensten',waarom:'Je rechtsgebieden helder benoemd, zodat mensen de juiste hulp vinden.'},{id:'overons',waarom:'Persoonlijke profielen scheppen vertrouwen in een gevoelig vak.'},{id:'blog',waarom:'Kennisartikelen tonen expertise en trekken bezoekers via Google.'},{id:'faq',waarom:'Vragen over kosten, procedures en aanpak beantwoorden verlaagt de drempel.'},{id:'contact',waarom:'Een discrete, laagdrempelige manier om contact op te nemen.'}] },
+    { naam: 'Accountant / boekhouder', cat: 'Juridisch en financieel', keywords: ['accountant','boekhouder','administratie','belasting','boekhouding','fiscaal'], paginas: [{id:'home',waarom:'Betrouwbaarheid en overzicht: precies wat ondernemers zoeken.'},{id:'diensten',waarom:'Van aangifte tot advies: toon je volledige dienstenpakket.'},{id:'overons',waarom:'Een persoonlijke klik is belangrijk. Laat het team zien.'},{id:'blog',waarom:'Fiscale tips en updates positioneren je als expert.'},{id:'faq',waarom:'Veelgestelde vragen over tarieven en werkwijze nemen drempels weg.'},{id:'contact',waarom:'Makkelijk een kennismaking inplannen.'}] },
+    { naam: 'Verzekeringsadviseur / financieel adviseur', cat: 'Juridisch en financieel', keywords: ['verzekering','verzekeringsadviseur','financieel adviseur','hypotheek','assurantie','pensioen'], paginas: [{id:'home',waarom:'Vertrouwen en duidelijkheid staan centraal.'},{id:'diensten',waarom:'Welke verzekeringen en adviezen je biedt, helder uitgelegd.'},{id:'faq',waarom:'Vragen over aanpak en onafhankelijkheid beantwoorden schept vertrouwen.'},{id:'reviews',waarom:'Ervaringen van klanten bevestigen je betrouwbaarheid.'},{id:'overons',waarom:'Een persoonlijk gezicht in een vak dat om vertrouwen draait.'},{id:'contact',waarom:'Een laagdrempelig adviesgesprek als eerste stap.'}] },
+    { naam: 'Makelaar', cat: 'Vastgoed', keywords: ['makelaar','makelaardij','vastgoed','woning','huizen','verkoop','taxatie'], paginas: [{id:'home',waarom:'Een sterke eerste indruk met uitgelicht aanbod.'},{id:'portfolio',waarom:'Je woningaanbod is letterlijk je etalage.'},{id:'diensten',waarom:'Verkoop, aankoop, taxatie: toon je volledige dienstverlening.'},{id:'blog',waarom:'Marktinzichten en tips positioneren je als lokale expert.'},{id:'reviews',waarom:'Ervaringen van kopers en verkopers geven vertrouwen.'},{id:'overons',waarom:'Persoonlijkheid en lokale kennis maken het verschil.'},{id:'contact',waarom:'Makkelijk een waardebepaling of kennismaking aanvragen.'}] },
+    { naam: 'Architect / architectenbureau', cat: 'Ontwerp en creatief', keywords: ['architect','architectenbureau','architectuur','ontwerp','bouwkundig'], paginas: [{id:'home',waarom:'Beeld vertelt alles: laat je visie en stijl direct zien.'},{id:'portfolio',waarom:'Je projecten zijn je belangrijkste verkoopargument.'},{id:'diensten',waarom:'Van schetsontwerp tot begeleiding: toon je werkwijze.'},{id:'overons',waarom:'Jouw visie en filosofie onderscheiden je.'},{id:'blog',waarom:'Inzichten in ontwerp en duurzaamheid tonen expertise.'},{id:'contact',waarom:'Een uitnodigende manier om een project te bespreken.'}] },
+    { naam: 'Grafisch ontwerper / vormgever', cat: 'Ontwerp en creatief', keywords: ['grafisch ontwerper','vormgever','graphic designer','huisstijl','logo','branding','dtp'], paginas: [{id:'home',waarom:'Je site is meteen een showcase van je eigen stijl.'},{id:'portfolio',waarom:'Je portfolio is je cv: laat je beste werk zien.'},{id:'diensten',waarom:'Van logo tot complete huisstijl: toon je aanbod.'},{id:'prijzen',waarom:'Transparante tarieven of pakketten maken de keuze makkelijk.'},{id:'overons',waarom:'Jouw stijl en aanpak maken je herkenbaar.'},{id:'contact',waarom:'Een makkelijke route naar een projectaanvraag.'}] },
+    { naam: 'Fotograaf', cat: 'Ontwerp en creatief', keywords: ['fotograaf','fotografie','fotostudio','shoot','portret','bruiloft','photographer'], paginas: [{id:'home',waarom:'Beeld overtuigt: je sterkste foto\'s meteen in beeld.'},{id:'portfolio',waarom:'Een portfolio per specialisatie laat je bereik zien.'},{id:'behandelingen',waarom:'Je pakketten of shoots helder omschreven.'},{id:'prijzen',waarom:'Duidelijke tarieven trekken de juiste klanten.'},{id:'reviews',waarom:'Ervaringen van klanten bevestigen je kwaliteit.'},{id:'contact',waarom:'Makkelijk een shoot aanvragen of datum checken.'}] },
+    { naam: 'Videograaf / videoproductie', cat: 'Ontwerp en creatief', keywords: ['videograaf','video','videoproductie','film','montage','reclamefilm','content'], paginas: [{id:'home',waarom:'Bewegend beeld trekt meteen de aandacht.'},{id:'portfolio',waarom:'Je showreel en projecten spreken voor zich.'},{id:'diensten',waarom:'Van bedrijfsfilm tot social content: toon je aanbod.'},{id:'prijzen',waarom:'Pakketten geven potenti\u00eble klanten houvast.'},{id:'overons',waarom:'Jouw stijl en visie maken je uniek.'},{id:'contact',waarom:'Een directe route naar een projectaanvraag.'}] },
+    { naam: 'Webdesigner / webdeveloper', cat: 'IT en technologie', keywords: ['webdesigner','webdeveloper','website','webdesign','developer','programmeur','webbureau'], paginas: [{id:'home',waarom:'Je eigen site is het levende bewijs van wat je kunt.'},{id:'portfolio',waarom:'Gerealiseerde websites laten je stijl en kwaliteit zien.'},{id:'diensten',waarom:'Van webdesign tot onderhoud: toon je volledige aanbod.'},{id:'prijzen',waarom:'Transparante pakketten maken de keuze makkelijk.'},{id:'blog',waarom:'Artikelen over web en techniek trekken organisch bezoekers.'},{id:'contact',waarom:'Een makkelijke route naar een projectaanvraag.'}] },
+    { naam: 'IT-bedrijf / systeembeheer', cat: 'IT en technologie', keywords: ['it bedrijf','systeembeheer','ict','support','netwerk','cloud','automatisering'], paginas: [{id:'home',waarom:'Betrouwbaarheid en deskundigheid vanaf de eerste indruk.'},{id:'diensten',waarom:'Van beheer tot cloud: toon je volledige dienstverlening.'},{id:'portfolio',waarom:'Referenties en cases bewijzen je expertise.'},{id:'blog',waarom:'Techniek begrijpelijk uitleggen positioneert je als expert.'},{id:'faq',waarom:'Vragen over support en aanpak beantwoorden schept vertrouwen.'},{id:'contact',waarom:'Een directe route naar een adviesgesprek.'}] },
+    { naam: 'Sportschool / fitness', cat: 'Sport en gezondheid', keywords: ['sportschool','fitness','gym','sportcentrum','crossfit','training'], paginas: [{id:'home',waarom:'Energie en sfeer stralen meteen af.'},{id:'behandelingen',waarom:'Je lessen en faciliteiten overzichtelijk in beeld.'},{id:'prijzen',waarom:'Lidmaatschappen en abonnementen helder gepresenteerd.'},{id:'reviews',waarom:'Ervaringen van leden werken motiverend.'},{id:'vacatures',waarom:'Groeiende clubs zoeken trainers. Toon je vacatures.'},{id:'contact',waarom:'Openingstijden, proefles aanvragen en je locatie vinden.'}] },
+    { naam: 'Personal trainer', cat: 'Sport en gezondheid', keywords: ['personal trainer','pt','fitnesscoach','krachttraining','afvallen','personal training'], paginas: [{id:'home',waarom:'Jouw energie en aanpak spreken meteen aan.'},{id:'overons',waarom:'Als PT ben jij het product: jouw verhaal overtuigt.'},{id:'diensten',waarom:'Je trainingsvormen en trajecten helder omschreven.'},{id:'prijzen',waarom:'Pakketten maken de investering duidelijk.'},{id:'reviews',waarom:'Transformaties en ervaringen van klanten zijn je sterkste bewijs.'},{id:'contact',waarom:'Een laagdrempelig kennismakingsgesprek.'}] },
+    { naam: 'Yoga / pilatesstudio', cat: 'Sport en gezondheid', keywords: ['yoga','pilates','yogastudio','meditatie','mindfulness','yogadocent'], paginas: [{id:'home',waarom:'Rust en balans stralen af, precies zoals je lessen.'},{id:'behandelingen',waarom:'Je lesrooster en soorten lessen overzichtelijk.'},{id:'prijzen',waarom:'Losse lessen of abonnementen helder in beeld.'},{id:'reviews',waarom:'Ervaringen van deelnemers trekken nieuwe leden.'},{id:'overons',waarom:'Jouw achtergrond en stijl maken de studio persoonlijk.'},{id:'contact',waarom:'Makkelijk een proefles boeken.'}] },
+    { naam: 'Kinderopvang / kinderdagverblijf', cat: 'Onderwijs en opvang', keywords: ['kinderopvang','kinderdagverblijf','kdv','bso','peuterspeelzaal','gastouder','opvang'], paginas: [{id:'home',waarom:'Een warme, veilige uitstraling die ouders geruststelt.'},{id:'diensten',waarom:'Welke opvang je biedt en voor welke leeftijden.'},{id:'prijzen',waarom:'Tarieven en uren helder, zodat ouders weten waar ze aan toe zijn.'},{id:'faq',waarom:'Vragen over wennen, voeding en veiligheid beantwoorden neemt zorgen weg.'},{id:'vacatures',waarom:'Opvang zoekt vaak personeel. Toon je vacatures.'},{id:'overons',waarom:'Het team leren kennen is voor ouders essentieel.'},{id:'contact',waarom:'Een rondleiding of plek aanvragen.'}] },
+    { naam: 'Rijschool', cat: 'Onderwijs en opvang', keywords: ['rijschool','rijles','autorijles','rijinstructeur','theorie','praktijk'], paginas: [{id:'home',waarom:'Betrouwbaar en benaderbaar: precies wat leerlingen zoeken.'},{id:'diensten',waarom:'Je lespakketten en opleidingen helder in beeld.'},{id:'prijzen',waarom:'Transparante pakketten waarmee leerlingen kunnen vergelijken.'},{id:'reviews',waarom:'Slagingspercentages en ervaringen geven de doorslag.'},{id:'faq',waarom:'Vragen over het traject, examens en kosten beantwoorden.'},{id:'contact',waarom:'Makkelijk een proefles aanvragen.'}] },
+    { naam: 'Dierenarts / dierenkliniek', cat: 'Dieren en natuur', keywords: ['dierenarts','dierenkliniek','dierenartspraktijk','huisdier','veterinair'], paginas: [{id:'home',waarom:'Een zorgzame, vertrouwenwekkende uitstraling voor baasjes.'},{id:'diensten',waarom:'Welke zorg je biedt, van vaccinatie tot operatie.'},{id:'faq',waarom:'Vragen over spoed, kosten en afspraken beantwoorden scheelt telefoontjes.'},{id:'vacatures',waarom:'Klinieken zoeken vaak personeel. Toon je vacatures.'},{id:'overons',waarom:'Het team leren kennen stelt baasjes gerust.'},{id:'contact',waarom:'Openingstijden, spoedinfo en afspraak maken.'}] },
+    { naam: 'Dierenpension / trimsalon', cat: 'Dieren en natuur', keywords: ['dierenpension','trimsalon','hondenpension','kattenpension','trimmen','hondenkapper','dagopvang'], paginas: [{id:'home',waarom:'Een warme uitstraling die baasjes vertrouwen geeft.'},{id:'diensten',waarom:'Wat je aanbiedt: pension, trimmen, dagopvang.'},{id:'prijzen',waarom:'Tarieven per dienst helder in beeld.'},{id:'reviews',waarom:'Ervaringen van tevreden baasjes geven zekerheid.'},{id:'overons',waarom:'Jouw liefde voor dieren en aanpak stellen gerust.'},{id:'contact',waarom:'Makkelijk een plek of afspraak reserveren.'}] },
+    { naam: 'Transportbedrijf / koerier', cat: 'Transport en logistiek', keywords: ['transportbedrijf','transport','koerier','logistiek','vervoer','distributie','expediteur'], paginas: [{id:'home',waarom:'Betrouwbaarheid en capaciteit stralen meteen af.'},{id:'diensten',waarom:'Welk vervoer en welke routes je verzorgt.'},{id:'reviews',waarom:'Ervaringen van opdrachtgevers bevestigen je betrouwbaarheid.'},{id:'vacatures',waarom:'De sector zoekt chauffeurs. Toon je vacatures prominent.'},{id:'overons',waarom:'Het bedrijf achter de wielen.'},{id:'contact',waarom:'Een makkelijke route naar een offerte.'}] },
+    { naam: 'Verhuisbedrijf', cat: 'Transport en logistiek', keywords: ['verhuisbedrijf','verhuizen','verhuizing','verhuisservice','meubeltransport'], paginas: [{id:'home',waarom:'Ontzorging uitstralen bij een stressvolle klus.'},{id:'diensten',waarom:'Van inpakken tot opslag: toon je volledige service.'},{id:'prijzen',waarom:'Duidelijke tarieven waarmee mensen kunnen vergelijken.'},{id:'reviews',waarom:'Ervaringen nemen twijfel weg bij het kiezen.'},{id:'overons',waarom:'Een betrouwbaar team achter de verhuizing.'},{id:'contact',waarom:'Snel een offerte op maat aanvragen.'}] },
+    { naam: 'Autogarage / autobedrijf', cat: 'Auto en mobiliteit', keywords: ['garage','autogarage','autobedrijf','apk','onderhoud auto','occasion','automonteur'], paginas: [{id:'home',waarom:'Betrouwbaarheid en vakmanschap stralen meteen af.'},{id:'diensten',waarom:'APK, onderhoud, reparatie: toon je volledige aanbod.'},{id:'portfolio',waarom:'Je occasionaanbod als etalage, indien van toepassing.'},{id:'reviews',waarom:'Ervaringen over eerlijkheid en service overtuigen.'},{id:'overons',waarom:'Een betrouwbaar gezicht achter de garage.'},{id:'contact',waarom:'Makkelijk een afspraak of offerte aanvragen.'}] },
+    { naam: 'Webshop / winkel', cat: 'Retail en e-commerce', keywords: ['webshop','winkel','retail','online shop','verkoop','e-commerce','boetiek'], paginas: [{id:'home',waarom:'Je producten en aanbiedingen meteen aantrekkelijk in beeld.'},{id:'behandelingen',waarom:'Je productcategorie\u00ebn helder gepresenteerd.'},{id:'reviews',waarom:'Klantbeoordelingen verhogen vertrouwen en verkoop.'},{id:'faq',waarom:'Vragen over levering, retour en betaling beantwoorden verlaagt drempels.'},{id:'overons',waarom:'Het verhaal achter je merk schept een band.'},{id:'contact',waarom:'Een makkelijke route naar klantenservice.'}] },
+    { naam: 'Evenementenbureau', cat: 'Evenementen', keywords: ['evenementenbureau','evenementen','events','organisatie','feest','congres','bruiloft'], paginas: [{id:'home',waarom:'Sfeer en creativiteit stralen meteen af.'},{id:'diensten',waarom:'Welke soorten events je organiseert.'},{id:'portfolio',waarom:'Cases van eerdere events zijn je sterkste verkoopargument.'},{id:'prijzen',waarom:'Pakketten of arrangementen geven houvast.'},{id:'reviews',waarom:'Ervaringen van opdrachtgevers geven vertrouwen.'},{id:'contact',waarom:'Een uitnodigende manier om een event te bespreken.'}] },
+    { naam: 'Trouwfotograaf / bruiloftfotograaf', cat: 'Fotografie en evenementen', keywords: ['trouwfotograaf','bruiloftfotograaf','bruiloft','trouwen','weddingfotograaf'], paginas: [{id:'home',waarom:'Emotie en stijl meteen voelbaar via je beste beelden.'},{id:'portfolio',waarom:'Koppels kiezen op gevoel: je portfolio is doorslaggevend.'},{id:'behandelingen',waarom:'Je pakketten en wat erbij zit, helder omschreven.'},{id:'prijzen',waarom:'Transparante tarieven trekken de juiste koppels.'},{id:'reviews',waarom:'Ervaringen van bruidsparen zijn onmisbaar.'},{id:'contact',waarom:'Makkelijk je datum checken en aanvragen.'}] },
+    { naam: 'Reisorganisatie / reisbureau', cat: 'Reizen en toerisme', keywords: ['reisbureau','reisorganisatie','reizen','vakantie','touroperator','reisadvies'], paginas: [{id:'home',waarom:'Dromen verkopen begint met prikkelende beelden.'},{id:'behandelingen',waarom:'Je reizen en bestemmingen aantrekkelijk gepresenteerd.'},{id:'portfolio',waarom:'Bestemmingen als inspiratiegalerij.'},{id:'reviews',waarom:'Ervaringen van reizigers geven vertrouwen om te boeken.'},{id:'blog',waarom:'Reisverhalen en tips trekken bezoekers via Google.'},{id:'contact',waarom:'Een makkelijke route naar een reisadvies op maat.'}] },
   ];
 
   /* Vlagcodes per taal (flagcdn) */
@@ -107,6 +106,11 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.toggle('active',    i === current);
       el.classList.toggle('completed', i < current);
     });
+    // Verbindingslijnen kleuren op basis van voortgang
+    var line1 = document.getElementById('stepLine1');
+    var line2 = document.getElementById('stepLine2');
+    if (line1) line1.classList.toggle('is-done', current >= 1);
+    if (line2) line2.classList.toggle('is-done', current >= 2);
     var wrap = document.querySelector('.concept-wrapper');
     if (wrap) window.scrollTo({ top: wrap.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
   }
@@ -171,33 +175,63 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/[\u00f9-\u00fc]/g,'u').replace(/[^a-z0-9 ]/g,'');
   }
 
+  // Standaard paginavoorstel voor onbekende branche (custom invoer)
+  var DEFAULT_PAGINAS = [
+    { id:'home',     waarom:'De basis van je website: een sterke eerste indruk en een duidelijke volgende stap voor bezoekers.' },
+    { id:'overons',  waarom:'Mensen doen zaken met mensen. Jouw verhaal schept vertrouwen.' },
+    { id:'diensten', waarom:'Een helder overzicht van wat je aanbiedt, zodat bezoekers snel vinden wat ze zoeken.' },
+    { id:'contact',  waarom:'Een makkelijke manier om contact op te nemen of een offerte aan te vragen.' }
+  ];
+
+  function matchBranche(nq) {
+    // Score elke branche op basis van keyword-match
+    var scored = [];
+    BRANCHES.forEach(function (b) {
+      var score = 0;
+      // naam-match telt zwaar
+      if (normaliseer(b.naam).indexOf(nq) !== -1) score += 10;
+      // keyword-match
+      for (var i = 0; i < b.keywords.length; i++) {
+        var kw = normaliseer(b.keywords[i]);
+        if (kw.indexOf(nq) !== -1 || nq.indexOf(kw) !== -1) { score += 6; break; }
+      }
+      // categorie-match telt licht mee
+      if (normaliseer(b.cat).indexOf(nq) !== -1) score += 2;
+      if (score > 0) scored.push({ b: b, score: score });
+    });
+    scored.sort(function (a, c) { return c.score - a.score; });
+    return scored.map(function (s) { return s.b; });
+  }
+
   function showSuggestions(q) {
     sugList.innerHTML = '';
     focusedIndex = -1;
-    if (!q || !q.trim()) { sugList.style.display = 'none'; return; }
-    var nq = normaliseer(q);
-    var results = BRANCHES.filter(function (b) {
-      return normaliseer(b.naam).indexOf(nq) !== -1 || normaliseer(b.cat).indexOf(nq) !== -1;
-    }).slice(0, 8);
+    var trimmed = (q || '').trim();
+    if (!trimmed) { sugList.style.display = 'none'; return; }
+    var nq = normaliseer(trimmed);
+    if (!nq) { sugList.style.display = 'none'; return; }
 
-    if (results.length === 0) {
-      var li = document.createElement('li');
-      li.setAttribute('role', 'option');
-      li.innerHTML = 'Gebruik "<strong>' + q.trim() + '</strong>" als bedrijfstype';
-      li.addEventListener('click', function () {
-        kiesBranche({ naam: q.trim(), paginas: ['home','overons','diensten','contact'], reden: null });
-      });
-      sugList.appendChild(li);
-      sugList.style.display = 'block';
-      return;
-    }
+    var results = matchBranche(nq).slice(0, 8);
+
     results.forEach(function (b) {
       var li = document.createElement('li');
       li.setAttribute('role', 'option');
-      li.innerHTML = b.naam + '<span class="sug-cat">' + b.cat + '</span>';
-      li.addEventListener('click', function () { kiesBranche(b); });
+      li.innerHTML = '<span>' + b.naam + '</span><span class="sug-cat">' + b.cat + '</span>';
+      li.addEventListener('mousedown', function (ev) { ev.preventDefault(); kiesBranche(b); });
       sugList.appendChild(li);
     });
+
+    // Altijd de mogelijkheid om eigen invoer te gebruiken
+    var custom = document.createElement('li');
+    custom.className = 'sug-custom';
+    custom.setAttribute('role', 'option');
+    custom.innerHTML = 'Gebruik <strong>&ldquo;' + trimmed + '&rdquo;</strong> als mijn bedrijfstype';
+    custom.addEventListener('mousedown', function (ev) {
+      ev.preventDefault();
+      kiesBranche({ naam: trimmed, cat: null, paginas: DEFAULT_PAGINAS, custom: true });
+    });
+    sugList.appendChild(custom);
+
     sugList.style.display = 'block';
   }
 
@@ -205,13 +239,15 @@ document.addEventListener('DOMContentLoaded', function () {
     hiddenBranche.value = b.naam;
     zoekInput.value = '';
     sugList.style.display = 'none';
+    sugList.innerHTML = '';
     clearBtn.style.display = 'none';
     zoekInput.classList.remove('input-error');
 
     tagWrap.innerHTML = '';
     var tag = document.createElement('span');
     tag.className = 'branche-tag';
-    tag.innerHTML = b.naam + ' <button type="button" aria-label="Wijzig bedrijfstype">\u2715</button>';
+    var label = b.cat ? (b.naam + ' \u00b7 ' + b.cat) : b.naam;
+    tag.innerHTML = '<span>' + label + '</span> <button type="button" aria-label="Wijzig bedrijfstype">\u2715</button>';
     tag.querySelector('button').addEventListener('click', function () {
       hiddenBranche.value = '';
       tagWrap.innerHTML = '';
@@ -227,6 +263,9 @@ document.addEventListener('DOMContentLoaded', function () {
     clearBtn.style.display = this.value ? 'block' : 'none';
     showSuggestions(this.value);
   });
+  zoekInput.addEventListener('focus', function () {
+    if (this.value.trim()) showSuggestions(this.value);
+  });
   zoekInput.addEventListener('keydown', function (e) {
     var items = sugList.querySelectorAll('li');
     if (e.key === 'ArrowDown') {
@@ -237,33 +276,19 @@ document.addEventListener('DOMContentLoaded', function () {
       items.forEach(function (li, i) { li.classList.toggle('focused', i === focusedIndex); });
     } else if (e.key === 'Enter') {
       e.preventDefault();
-      if (focusedIndex >= 0 && items[focusedIndex]) items[focusedIndex].click();
-      else if (this.value.trim()) kiesBranche({ naam: this.value.trim(), paginas: ['home','overons','diensten','contact'], reden: null });
+      if (focusedIndex >= 0 && items[focusedIndex]) items[focusedIndex].dispatchEvent(new MouseEvent('mousedown'));
+      else if (this.value.trim()) kiesBranche({ naam: this.value.trim(), cat: null, paginas: DEFAULT_PAGINAS, custom: true });
     } else if (e.key === 'Escape') { sugList.style.display = 'none'; }
   });
   clearBtn.addEventListener('click', function () {
-    zoekInput.value = ''; clearBtn.style.display = 'none'; sugList.style.display = 'none'; zoekInput.focus();
+    zoekInput.value = ''; clearBtn.style.display = 'none'; sugList.style.display = 'none'; sugList.innerHTML = ''; zoekInput.focus();
   });
   document.addEventListener('click', function (e) {
     if (!zoekInput.contains(e.target) && !sugList.contains(e.target)) sugList.style.display = 'none';
   });
 
   /* ── Paginavoorstel ── */
-  function laadPaginaVoorstel(b) {
-    var banner = document.getElementById('paginaVoorstelBanner');
-    var tekst  = document.getElementById('paginaVoorstelTekst');
-    var namen  = b.paginas.map(function (id) { return PAGINA_LABELS[id] || id; });
-
-    if (b.reden) {
-      tekst.innerHTML = '<strong>Ons voorstel voor ' + b.naam + ':</strong> ' + b.reden +
-        ' Wij hebben deze pagina\u2019s vast voor je aangevinkt: <strong>' + namen.join(', ') +
-        '</strong>. Je kunt alles aanpassen naar wat bij jou past.';
-    } else {
-      tekst.innerHTML = '<strong>Bedrijfstype: ' + b.naam + '.</strong> Hieronder staan de meest gebruikelijke pagina\u2019s. ' +
-        'We hebben een logische basis aangevinkt \u2014 pas het gerust aan naar jouw wensen.';
-    }
-    banner.classList.add('visible');
-
+  function resetAllePaginas() {
     document.querySelectorAll('.pagina-item').forEach(function (item) {
       if (item.id === 'pi-anders') return;
       var cb    = item.querySelector('.pagina-check');
@@ -271,12 +296,31 @@ document.addEventListener('DOMContentLoaded', function () {
       var badge = item.querySelector('.pagina-item__badge');
       if (cb) cb.checked = false;
       item.classList.remove('is-recommended');
-      if (why) { why.style.display = 'none'; }
-      if (badge && item.id !== 'pi-anders') { badge.textContent = 'Optioneel'; badge.className = 'pagina-item__badge'; }
+      if (why) { why.style.display = 'none'; why.textContent = ''; }
+      if (badge) { badge.textContent = 'Optioneel'; badge.className = 'pagina-item__badge'; }
     });
+  }
 
-    b.paginas.forEach(function (pid) {
-      var formId = PAGINA_FORM_ID[pid];
+  function laadPaginaVoorstel(b) {
+    var banner = document.getElementById('paginaVoorstelBanner');
+    var tekst  = document.getElementById('paginaVoorstelTekst');
+    var namen  = b.paginas.map(function (p) { return PAGINA_LABELS[p.id] || p.id; });
+
+    if (b.custom) {
+      tekst.innerHTML = '<strong>Bedrijfstype: ' + b.naam + '.</strong> ' +
+        'We kennen dit type niet exact, maar hebben een sterke standaardset klaargezet: <strong>' + namen.join(', ') +
+        '</strong>. Elke pagina hieronder legt uit waarom die zinvol is. Pas het gerust aan naar jouw situatie.';
+    } else {
+      tekst.innerHTML = '<strong>Ons voorstel voor ' + b.naam + '.</strong> ' +
+        'Op basis van jouw type bedrijf hebben we deze pagina\u2019s aanbevolen: <strong>' + namen.join(', ') +
+        '</strong>. Bij elke pagina lees je waarom die juist voor jou belangrijk is. Alles is aan te passen.';
+    }
+    banner.classList.add('visible');
+
+    resetAllePaginas();
+
+    b.paginas.forEach(function (p) {
+      var formId = PAGINA_FORM_ID[p.id];
       if (!formId) return;
       var item = document.getElementById(formId);
       if (!item) return;
@@ -285,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var badge = item.querySelector('.pagina-item__badge');
       if (cb) cb.checked = true;
       item.classList.add('is-recommended');
-      if (why) why.style.display = 'block';
+      if (why) { why.textContent = p.waarom || ''; why.style.display = 'block'; }
       if (badge) { badge.textContent = 'Aanbevolen'; badge.className = 'pagina-item__badge badge-aanbevolen'; }
     });
 
@@ -296,16 +340,18 @@ document.addEventListener('DOMContentLoaded', function () {
   function resetPaginaVoorstel() {
     var banner = document.getElementById('paginaVoorstelBanner');
     banner.classList.remove('visible');
-    document.querySelectorAll('.pagina-item').forEach(function (item) {
-      if (item.id === 'pi-anders') return;
-      var cb    = item.querySelector('.pagina-check');
-      var why   = item.querySelector('.pagina-item__why');
-      var badge = item.querySelector('.pagina-item__badge');
-      item.classList.remove('is-recommended');
-      if (cb) cb.checked = (item.id === 'pi-home');
-      if (item.id === 'pi-home') { item.classList.add('is-recommended'); if (why) why.style.display = 'block'; if (badge) { badge.textContent = 'Aanbevolen'; badge.className = 'pagina-item__badge badge-aanbevolen'; } }
-      else { if (why) why.style.display = 'none'; if (badge) { badge.textContent = 'Optioneel'; badge.className = 'pagina-item__badge'; } }
-    });
+    resetAllePaginas();
+    // Home blijft standaard aangevinkt
+    var home = document.getElementById('pi-home');
+    if (home) {
+      var cb = home.querySelector('.pagina-check');
+      var why = home.querySelector('.pagina-item__why');
+      var badge = home.querySelector('.pagina-item__badge');
+      if (cb) cb.checked = true;
+      home.classList.add('is-recommended');
+      if (why) { why.textContent = 'De basis van je website: een sterke eerste indruk en een duidelijke volgende stap voor bezoekers.'; why.style.display = 'block'; }
+      if (badge) { badge.textContent = 'Aanbevolen'; badge.className = 'pagina-item__badge badge-aanbevolen'; }
+    }
     calcPrijs();
     updateHiddenPages();
   }
