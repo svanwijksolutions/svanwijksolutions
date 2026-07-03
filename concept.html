@@ -222,6 +222,23 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 .form-section-divider{display:flex;align-items:center;gap:12px;margin:28px 0 22px;}
 .form-section-divider span{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--clr-muted);white-space:nowrap;}
 .form-section-divider::before,.form-section-divider::after{content:'';flex:1;height:1px;background:var(--clr-border);}
+
+/* ── Portaal advies / uitleg (stap 2) ── */
+.portaal-advies,.portaal-uitleg{display:flex;gap:12px;align-items:flex-start;border-radius:var(--radius-md);padding:16px 18px;margin-bottom:16px;animation:fadeInUp .3s ease;}
+.portaal-advies{background:var(--clr-soft);border:1.5px solid var(--clr-accent);}
+.portaal-uitleg{background:var(--clr-light);border:1.5px solid var(--clr-border);}
+.portaal-advies__icon,.portaal-uitleg__icon{font-size:1.2rem;flex-shrink:0;line-height:1.4;}
+.portaal-advies strong,.portaal-uitleg strong{display:block;font-size:.88rem;color:var(--clr-heading);margin-bottom:4px;}
+.portaal-advies p,.portaal-uitleg p{font-size:.82rem;color:var(--clr-text);margin:0;line-height:1.6;}
+/* ── Prijs samenvatting (stap 3) ── */
+.prijs-samenvatting{background:linear-gradient(135deg,var(--clr-primary) 0%,var(--clr-accent) 100%);border-radius:var(--radius-lg);padding:24px 26px;margin-top:8px;color:#fff;}
+.prijs-samenvatting__row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.prijs-samenvatting__label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;opacity:.8;margin-bottom:4px;}
+.prijs-samenvatting__amount{font-size:2rem;font-weight:800;line-height:1;}
+.prijs-samenvatting__maand{text-align:right;}
+.prijs-samenvatting__maand-val{font-size:1.1rem;font-weight:700;line-height:1;}
+.prijs-samenvatting__note{font-size:.78rem;opacity:.85;margin:16px 0 0;line-height:1.6;}
+@media(max-width:440px){.prijs-samenvatting__row{flex-direction:column;align-items:flex-start;}.prijs-samenvatting__maand{text-align:left;}}
   </style>
 </head>
 <body>
@@ -245,6 +262,8 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
             <input type="hidden" name="Talen" id="hiddenTalen" value="Nederlands">
             <input type="hidden" name="Bedrijfstype" id="hiddenBranche" value="">
             <input type="hidden" name="Pakketten" id="hiddenPakketten" value="">
+            <input type="hidden" name="Maandelijks onderhoud" id="hiddenPriceMaand" value="">
+            <input type="hidden" name="Prijsopbouw" id="hiddenPriceOpbouw" value="">
             <!-- Stap indicator -->
             <div class="concept-steps" id="stepIndicator">
               <div class="concept-step active" data-step="1">
@@ -689,12 +708,56 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                   <label for="c-refs">Websites die je mooi vindt <span class="form-optional">(optioneel)</span></label>
                   <textarea id="c-refs" name="Referentiesites" rows="3" placeholder="Plak hier 1 of meer URL's van sites die je aanspreken, ook van andere branches..."></textarea>
                 </div>
+                <!-- Zelf beheren -->
+                <div class="form-section-divider"><span>Zelf beheren</span></div>
+                <div class="form-group" style="margin-bottom:14px;">
+                  <label>Wil je later zelf dingen op de website kunnen aanpassen?</label>
+                  <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:12px;">Denk aan teksten wijzigen, foto's vervangen, een vacature plaatsen of een nieuw project toevoegen.</p>
+                  <div class="concept-type-btns" style="grid-template-columns:1fr;">
+                    <label class="type-btn">
+                      <input type="radio" name="Zelf aanpassen" value="Ja, zelf aanpassen">
+                      <span><strong>Ja, dat wil ik zelf kunnen</strong><small>Wij adviseren hiervoor een eigen klantportaal</small></span>
+                    </label>
+                    <label class="type-btn">
+                      <input type="radio" name="Zelf aanpassen" value="Nee, niet nodig">
+                      <span><strong>Nee, niet nodig</strong><small>Aanpassingen laat ik aan jullie over</small></span>
+                    </label>
+                    <label class="type-btn">
+                      <input type="radio" name="Zelf aanpassen" value="Weet ik nog niet">
+                      <span><strong>Weet ik nog niet</strong><small>Vertel me er meer over</small></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Advies bij 'Ja' -->
+                <div class="portaal-advies" id="portaalAdvies" style="display:none;">
+                  <div class="portaal-advies__icon">&#128161;</div>
+                  <div>
+                    <strong>Ons advies: een eigen klantportaal</strong>
+                    <p>Omdat je zelf dingen wilt kunnen aanpassen, raden we een klantportaal sterk aan. Daarmee beheer je teksten, foto's en pagina's helemaal zelf, zonder ons of een developer nodig te hebben. We hebben deze optie alvast voor je aangevinkt.</p>
+                  </div>
+                </div>
+
+                <!-- Uitleg bij 'Weet ik nog niet' -->
+                <div class="portaal-uitleg" id="portaalUitleg" style="display:none;">
+                  <div class="portaal-uitleg__icon">&#8505;&#65039;</div>
+                  <div>
+                    <strong>Wat is een klantportaal?</strong>
+                    <p>Een klantportaal is een eenvoudige, beveiligde omgeving waar je zelf kunt inloggen om je website bij te werken. Je past teksten aan, wisselt foto's, of plaatst een nieuwe vacature of project, precies wanneer jij dat wilt. Zonder technische kennis en zonder dat je ons hoeft in te schakelen. Handig als je website regelmatig verandert.</p>
+                  </div>
+                </div>
+
                 <!-- Extra opties -->
                 <div class="form-section-divider"><span>Extra opties</span></div>
                 <label class="extra-row">
-                  <input type="checkbox" name="Extras" value="Snelle oplevering binnen 7 werkdagen" class="price-option" data-price="150">
-                  <div><strong>Snelle oplevering</strong><small>Binnen 7 werkdagen live</small></div>
-                  <span class="extra-row__price">+ &#8364;150</span>
+                  <input type="checkbox" name="Klantportaal gewenst" value="Ja" id="portaalOptie">
+                  <div><strong>Klantportaal</strong><small>Beheer later zelf teksten, foto's en pagina's, bijvoorbeeld een vacature plaatsen of een project toevoegen, zonder een developer nodig te hebben.</small></div>
+                  <span class="extra-row__price">+ &#8364;350</span>
+                </label>
+                <label class="extra-row" style="margin-top:10px;">
+                  <input type="checkbox" name="Maandelijks onderhoud gewenst" value="Ja" id="onderhoudOptie">
+                  <div><strong>Maandelijks onderhoud</strong><small>Kleine aanpassingen, updates en support. Wij houden je site actueel en veilig.</small></div>
+                  <span class="extra-row__price">&#8364;29,95 /maand</span>
                 </label>
               </div>
               <div class="price-footer" style="margin-top:16px;">
@@ -735,12 +798,21 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                   </label>
                 </div>
               </div>
+              <div class="prijs-samenvatting" id="prijsSamenvatting">
+                <div class="prijs-samenvatting__row">
+                  <div>
+                    <div class="prijs-samenvatting__label">Indicatie eenmalig</div>
+                    <div class="prijs-samenvatting__amount" id="priceDisplay">&#8364;750,00</div>
+                  </div>
+                  <div class="prijs-samenvatting__maand">
+                    <div class="prijs-samenvatting__label">Onderhoud</div>
+                    <div class="prijs-samenvatting__maand-val" id="priceMaandDisplay">&#8212;</div>
+                  </div>
+                </div>
+                <p class="prijs-samenvatting__note">Dit is een richtprijs op basis van je keuzes. De definitieve prijs stemmen we samen af in je concept. Heb je meerdere projecten? Dan bespreken we graag een passende korting.</p>
+              </div>
               <div class="price-footer price-footer--final" style="margin-top:16px;">
                 <button type="button" class="btn btn--outline" id="step3Back">&#8592; Terug</button>
-                <div class="price-footer__info">
-                  <div class="price-footer__label">Indicatieve prijs</div>
-                  <div class="price-footer__amount" id="priceDisplay">&#8364;649,95</div>
-                </div>
                 <button type="submit" class="btn btn--primary" id="submitBtn">Verstuur aanvraag &#128640;</button>
               </div>
             </div>
