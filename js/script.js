@@ -1,16 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================================================
+     0. TAAL DETECTEREN UIT HET PAD
+     /en/... -> 'en', /de/... -> 'de', anders -> 'nl'
+  ============================================================ */
+  const detectLang = () => {
+    const m = window.location.pathname.match(/^\/(en|de)(\/|$)/);
+    return m ? m[1] : 'nl';
+  };
+  const currentLang = detectLang();
+
+  /* ============================================================
      1. LAAD HEADER & FOOTER
+     Pagina's die al server-side van een header/footer zijn voorzien
+     (de nieuwe meertalige pagina's) slaan de fetch over — dat scheelt
+     een verzoek en werkt zelfs zonder JavaScript. Oudere pagina's die
+     nog een lege placeholder hebben, halen de NL-componenten op zoals
+     voorheen.
   ============================================================ */
   const loadComponents = async () => {
+    // Wacht één microtask, zodat alle functies verderop in dit bestand
+    // (setActiveNavLink, initMobileMenu, enz.) gegarandeerd al zijn
+    // gedefinieerd voordat we ze hieronder aanroepen. Zonder deze regel
+    // gooit de synchrone tak (already-filled pagina's) een fout, omdat
+    // die functies verderop in het bestand pas worden toegekend.
+    await Promise.resolve();
+
     const headerEl = document.getElementById('header-placeholder');
     const footerEl = document.getElementById('footer-placeholder');
 
+    const headerAlreadyFilled = headerEl && headerEl.children.length > 0;
+    const footerAlreadyFilled = footerEl && footerEl.children.length > 0;
+
+    if (headerAlreadyFilled || footerAlreadyFilled) {
+      setActiveNavLink();
+      initMobileMenu();
+      initStickyHeader();
+      initLanguageSwitcher();
+      const yr = document.getElementById('footer-year');
+      if (yr) yr.textContent = new Date().getFullYear();
+      return;
+    }
+
     try {
       const [hRes, fRes] = await Promise.all([
-        fetch('components/header.html'),
-        fetch('components/footer.html')
+        fetch('/components/header.html'),
+        fetch('/components/footer.html')
       ]);
       if (!hRes.ok || !fRes.ok) throw new Error('Component niet gevonden');
 
@@ -21,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setActiveNavLink();
       initMobileMenu();
       initStickyHeader();
+      initLanguageSwitcher();
 
       const yr = document.getElementById('footer-year');
       if (yr) yr.textContent = new Date().getFullYear();
@@ -103,6 +139,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ============================================================
+     4b. TAALWISSELAAR
+     Navigeert naar dezelfde pagina onder een ander taalprefix
+     (/pagina.html <-> /en/pagina.html <-> /de/pagina.html).
+     Let op: een taalversie die nog niet bestaat geeft een 404 —
+     dat is verwacht zolang niet alle pagina's vertaald zijn.
+  ============================================================ */
+  const navigateToLanguage = (targetLang) => {
+    const path = window.location.pathname;
+    let rest = path.replace(/^\/(en|de)(\/|$)/, '/');
+    if (rest === '' || rest === '/') rest = '/index.html';
+    const prefix = targetLang === 'nl' ? '' : '/' + targetLang;
+    window.location.href = prefix + rest;
+  };
+
+  const initLanguageSwitcher = () => {
+    const wrap    = document.querySelector('.lang-switch');
+    const current = document.querySelector('.lang-switch__current');
+    if (wrap && current) {
+      current.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = wrap.classList.toggle('open');
+        current.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', (e) => {
+        if (!wrap.contains(e.target)) {
+          wrap.classList.remove('open');
+          current.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToLanguage(link.dataset.lang);
+      });
+    });
+  };
+
+
+  /* ============================================================
      5. REVEAL ON SCROLL
   ============================================================ */
   const initReveal = () => {
@@ -126,7 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ============================================================ */
   const twEl = document.getElementById('typewriter');
   if (twEl) {
-    const phrases = ['Moderne Websites', 'Sterke Logo’s', 'Converterende Landingspagina’s', 'SEO Succes', 'Website Redesigns', 'Maatwerk Code'];
+    // Gebruikt de vertaalde zinnen die de pagina zelf meegeeft
+    // (window.__TYPEWRITER_PHRASES__), met de NL-lijst als terugval.
+    const phrases = window.__TYPEWRITER_PHRASES__ || ['Moderne Websites', 'Sterke Logo\u2019s', 'Converterende Landingspagina\u2019s', 'SEO Succes', 'Website Redesigns', 'Maatwerk Code'];
     let i = 0, j = 0, deleting = false;
     const type = () => {
       const cur = phrases[i];
