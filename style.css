@@ -228,31 +228,37 @@ header .container {
 .lang-switch__current {
   display: flex;
   align-items: center;
-  gap: 7px;
-  background: transparent;
-  border: 1.5px solid rgba(255,255,255,.35);
+  gap: 8px;
+  background: rgba(255,255,255,.06);
+  border: 1.5px solid rgba(255,255,255,.22);
   color: #fff;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: .78rem;
   letter-spacing: .03em;
-  padding: 7px 11px;
-  border-radius: 7px;
+  padding: 8px 12px 8px 10px;
+  border-radius: 24px;
   cursor: pointer;
   transition: border-color .2s, background .2s;
+  line-height: 1;
 }
 .lang-switch__current:hover {
-  border-color: rgba(255,255,255,.7);
-  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.12);
+}
+.lang-switch.open .lang-switch__current {
+  border-color: var(--clr-accent, #6366f1);
+  background: rgba(255,255,255,.12);
 }
 .lang-switch__code { line-height: 1; }
 .lang-switch__chevron {
-  font-size: .7rem;
+  font-size: .65rem;
   line-height: 1;
   transition: transform .2s;
-  opacity: .85;
+  opacity: .75;
+  margin-left: -1px;
 }
-.lang-switch.open .lang-switch__chevron { transform: rotate(180deg); }
+.lang-switch.open .lang-switch__chevron { transform: rotate(180deg); opacity: 1; }
 
 .flag-icon {
   display: inline-flex;
@@ -260,28 +266,28 @@ header .container {
   justify-content: center;
   width: 20px;
   height: 14px;
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.12);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.25);
 }
 .flag-icon svg { width: 100%; height: 100%; display: block; }
 
 .lang-switch__menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 10px);
   right: 0;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 12px 32px rgba(15,10,46,.22);
-  min-width: 170px;
-  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(15,10,46,.28);
+  min-width: 180px;
+  padding: 7px;
   list-style: none;
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
   transition: opacity .18s, transform .18s;
-  z-index: 200;
+  z-index: 500;
 }
 .lang-switch.open .lang-switch__menu {
   opacity: 1;
@@ -291,14 +297,15 @@ header .container {
 .lang-switch__option {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 12px;
-  border-radius: 6px;
+  gap: 11px;
+  padding: 10px 12px;
+  border-radius: 8px;
   color: var(--clr-primary, #1e1b4b);
   text-decoration: none;
   font-size: .87rem;
   font-weight: 600;
   transition: background .15s;
+  position: relative;
 }
 .lang-switch__option:hover {
   background: var(--clr-soft, #eef2ff);
@@ -306,6 +313,12 @@ header .container {
 .lang-switch__option.active {
   background: var(--clr-soft, #eef2ff);
   color: var(--clr-accent, #6366f1);
+}
+.lang-switch__option.active::after {
+  content: '✓';
+  margin-left: auto;
+  font-size: .8rem;
+  font-weight: 700;
 }
 .lang-switch__option .flag-icon {
   box-shadow: 0 0 0 1px rgba(0,0,0,.15);
@@ -323,21 +336,21 @@ header .container {
   align-items: center;
   gap: 7px;
   border: 1.5px solid rgba(255,255,255,.3);
-  background: transparent;
+  background: rgba(255,255,255,.05);
   color: #fff;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
   font-size: .82rem;
   font-weight: 700;
-  padding: 8px 14px;
-  border-radius: 7px;
+  padding: 9px 15px;
+  border-radius: 24px;
   cursor: pointer;
   transition: border-color .2s, background .2s;
 }
 .lang-switch__mobile-btn:hover,
 .lang-switch__mobile-btn.active {
   border-color: rgba(255,255,255,.7);
-  background: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.15);
 }
 @media (max-width: 980px) {
   .lang-switch:not(.lang-switch--mobile) { display: none; }
