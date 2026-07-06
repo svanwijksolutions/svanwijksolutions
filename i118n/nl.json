@@ -1,0 +1,230 @@
+{
+  "lang": "nl",
+  "meta": {
+    "site_name": "S. van Wijk Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "diensten": "Diensten",
+    "over_ons": "Over Ons",
+    "contact": "Contact",
+    "cta_gratis": "Vraag hier een gratis website concept aan",
+    "menu_open": "Menu openen",
+    "menu_close": "Menu sluiten"
+  },
+  "footer": {
+    "tagline": "Wij bouwen de toekomst van het web.<br>Modern, snel en resultaatgericht.",
+    "links_label": "Menu",
+    "contact_label": "Contact",
+    "hours_label": "Openingstijden",
+    "hours_weekdays": "Maandag – Vrijdag",
+    "hours_weekday_time": "08:00 – 17:00",
+    "hours_saturday": "Zaterdag",
+    "hours_sunday": "Zondag",
+    "hours_closed": "Gesloten",
+    "location": "Nederland, Regio Westland",
+    "privacy": "Privacyverklaring",
+    "copy_rights": "Alle rechten voorbehouden.",
+    "blog": "Blog",
+    "concept": "Gratis Concept"
+  },
+  "home": {
+    "meta_title": "S. van Wijk Solutions | Moderne Websites & Maatwerk",
+    "meta_description": "S. van Wijk Solutions bouwt ultra-moderne, snelle en SEO-geoptimaliseerde websites voor bedrijven in heel Nederland.",
+    "hero": {
+      "badge": "S. van Wijk Solutions",
+      "title_prefix": "Wij bouwen",
+      "typewriter_phrases": [
+        "Moderne Websites",
+        "Sterke Logo’s",
+        "Converterende Landingspagina’s",
+        "SEO Succes",
+        "Website Redesigns",
+        "Maatwerk Code"
+      ],
+      "sub": "Jouw digitale visitekaartje verdient meer dan een template. Wij creëren high-performance websites die converteren, imponeren en groeien.",
+      "cta_primary": "Gratis Concept",
+      "cta_secondary": "Onze Diensten"
+    },
+    "stats": {
+      "s1_label": "Projecten afgerond",
+      "s2_label": "Toewijding aan kwaliteit",
+      "s3_label": "Gratis concept binnen",
+      "s3_suffix": " dgn",
+      "s4_label": "Reactietijd werkdagen",
+      "s4_suffix": "u"
+    },
+    "expertise": {
+      "tag": "WAT WE DOEN",
+      "title": "Onze Expertise",
+      "sub": "Alles wat je nodig hebt voor een dominante online aanwezigheid.",
+      "c1_title": "Website Redesign",
+      "c1_text": "Bestaande website aan vernieuwing toe? Wij moderniseren met behoud van SEO-waarde.",
+      "c2_title": "Nieuwe Websites",
+      "c2_text": "Een gloednieuwe website, volledig op maat gebouwd rond jouw merk, doelgroep en doelen.",
+      "c3_title": "Logo Design",
+      "c3_text": "Een uniek, professioneel logo dat past bij jouw merk — geleverd in alle gangbare bestandstypes (PNG, SVG, PDF).",
+      "c4_title": "SEO Geoptimaliseerd",
+      "c4_text": "Wij bouwen de technische fundering zodat jouw bedrijf direct vindbaar is in Google."
+    },
+    "spotlight": {
+      "tag": "KLANTVERHAAL",
+      "title": "Wat klanten ervaren",
+      "sub": "Een recent project — en wat de klant er zelf over zegt.",
+      "live_link": "Bekijk de live website →",
+      "hint": "Beweeg je muis over de site om door te scrollen",
+      "quote": "Sem dacht goed met ons mee en adviseerde eerlijk wat écht zinvol is. Geen standaard sjabloon, maar een site die helemaal bij ons past.",
+      "author_name": "Timo",
+      "author_role": "Eigenaar · Waterfords Cocktails"
+    },
+    "blog_preview": {
+      "tag": "KENNISBANK",
+      "title": "Tips & inzichten uit ons blog",
+      "sub": "Praktische artikelen over websites, SEO en online groeien.",
+      "cta": "Alle blog artikelen →",
+      "p1_cat": "Tips",
+      "p1_title": "5 redenen waarom jouw website traag is",
+      "p1_text": "Een trage website kost klanten. Ontdek de meest voorkomende oorzaken en wat je eraan kunt doen om dit op te lossen.",
+      "p1_date": "Januari 2026",
+      "p2_cat": "SEO",
+      "p2_title": "SEO basis voor MKB in 7 stappen",
+      "p2_text": "Geen technisch verhaal. Wij leggen uit wat SEO is en welke concrete stappen jij vandaag nog kunt zetten om hoger te scoren.",
+      "p2_date": "Februari 2026",
+      "p3_cat": "Lokaal",
+      "p3_title": "MKB Westland: zo groei je online",
+      "p3_text": "Lokale concurrentie wordt heftiger. Praktische tips voor ondernemers in het Westland om online zichtbaar te zijn.",
+      "p3_date": "April 2026",
+      "min_read": "min"
+    },
+    "garanties": {
+      "tag": "ONZE BELOFTES",
+      "title": "Waarom kiezen voor S. van Wijk Solutions?",
+      "sub": "Geen loze woorden — concrete garanties waar je op kunt rekenen.",
+      "g1_title": "100% Tevredenheidsgarantie",
+      "g1_text": "Niet tevreden? Wij blijven reviseren totdat het wél klopt. Geen extra kosten.",
+      "g2_title": "Binnen Afgesproken Deadline",
+      "g2_text": "Wij leveren op tijd. Altijd. Als wij een deadline afspreken, houden wij ons eraan.",
+      "g3_title": "Transparante Communicatie",
+      "g3_text": "Geen verrassingen achteraf. Heldere prijzen, eerlijke adviezen en direct contact.",
+      "g4_title": "Altijd Mobile Perfect",
+      "g4_text": "Elke website is gegarandeerd perfect op mobiel, tablet en desktop.",
+      "g5_title": "SEO-fundering Inbegrepen",
+      "g5_text": "Technische SEO, snelle laadtijden en correcte structuur — standaard inbegrepen.",
+      "g6_title": "Persoonlijk Aanspreekpunt",
+      "g6_text": "Direct contact met Sem — geen callcenter, geen tussenpersonen."
+    },
+    "cta_banner": {
+      "title": "Klaar voor een website die werkt?",
+      "text": "Ontvang vandaag nog gratis een concept op maat — binnen 5 werkdagen in je inbox.",
+      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_secondary": "Start Je Project"
+    }
+  },
+  "diensten": {
+    "meta_title": "Diensten | S. van Wijk Solutions",
+    "meta_description": "Bekijk alle diensten van S. van Wijk Solutions: websites, redesign, SEO, maatwerk en onderhoud.",
+    "hero": {
+      "tag": "DIENSTEN",
+      "title": "Wat wij voor jou bouwen",
+      "sub": "Van een zakelijke website tot een converterende redesign — wij leveren altijd kwaliteit op maat."
+    },
+    "intro": {
+      "tag": "ONZE AANPAK",
+      "title": "Maatwerk. Altijd. Zonder uitzondering.",
+      "p1": "Wij geloven niet in one-size-fits-all. Elk project begint met een gesprek: wat zijn jouw doelen, wie is jouw doelgroep en wat moet de website opleveren? Pas dan beginnen wij te bouwen.",
+      "p2": "Het resultaat? Een website die niet alleen mooi oogt, maar ook écht werkt voor jouw business.",
+      "cta": "Gratis concept aanvragen →"
+    },
+    "services": {
+      "s1_title": "Zakelijke Websites",
+      "s1_text": "Een professionele, snelle en SEO-geoptimaliseerde website die jouw bedrijf representeert en bezoekers omzet in klanten.",
+      "s2_title": "Website Redesign",
+      "s2_text": "Heb je al een website maar is het tijd voor een frisse look? Wij moderniseren jouw bestaande site met behoud van SEO-waarde.",
+      "s3_title": "SEO-optimalisatie",
+      "s3_text": "Technische SEO, snelheidsoptimalisatie en on-page verbeteringen zodat jij hoger in Google verschijnt dan de concurrentie.",
+      "s4_title": "Landingspagina's",
+      "s4_text": "Hoog-converterende landingspagina's voor campagnes of productlanceringen. Gericht op één doel: conversie.",
+      "s5_title": "Logo Design",
+      "s5_text": "Een sterk logo is de basis van jouw merk. Wij ontwerpen een uniek, professioneel logo dat past bij jouw bedrijf en doelgroep.",
+      "s6_title": "Onderhoud & Support",
+      "s6_text": "Maandelijks onderhoud, updates, beveiligingspatches en directe support. Standaard €37,95 per maand."
+    },
+    "process": {
+      "tag": "HOE WE WERKEN",
+      "title": "Van idee tot live website",
+      "sub": "Een helder en transparant proces in vier stappen.",
+      "p1_title": "Gesprek & Analyse",
+      "p1_text": "We bespreken jouw wensen, doelgroep en concurrenten. Geen aannames — alleen jouw input.",
+      "p2_title": "Design & Concept",
+      "p2_text": "Ons team maakt een op maat ontwerp. Feedback is altijd welkom — we gaan door totdat je 100% tevreden bent.",
+      "p3_title": "Ontwikkeling",
+      "p3_text": "Clean code, snelle laadtijden en geoptimaliseerd voor alle apparaten. SEO-fundering ingebakken.",
+      "p4_title": "Live & Nazorg",
+      "p4_text": "Na akkoord gaat de site live. Wij begeleiden de lancering en staan daarna klaar voor support."
+    },
+    "cta_banner": {
+      "title": "Klaar om te starten?",
+      "text": "Vraag vandaag nog gratis een website concept aan. Binnen 5 werkdagen in je inbox.",
+      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_secondary": "Start Je Project"
+    }
+  },
+  "over_ons": {
+    "meta_title": "Over Ons | S. van Wijk Solutions",
+    "meta_description": "Leer S. van Wijk Solutions kennen — opgericht door Sem van Wijk. Passie voor code, design en klantsucces.",
+    "hero": {
+      "tag": "OVER ONS",
+      "title": "Het verhaal achter<br>S. van Wijk Solutions",
+      "sub": "Gedreven door passie voor code, design en het succes van onze klanten."
+    },
+    "mission": {
+      "tag": "ONZE MISSIE",
+      "title": "Wij geloven dat elke ondernemer een geweldige website verdient.",
+      "p1": "S. van Wijk Solutions is opgericht vanuit een simpele overtuiging: te veel bedrijven hebben een website die hen niet laat groeien. Trage laadtijden, verouderd design en slechte SEO kosten klanten dagelijks geld.",
+      "p2": "Met meer dan <strong>5 jaar ervaring</strong> lossen wij dat op. Met maatwerk code, oog voor detail en een persoonlijke aanpak bouwen wij websites die écht presteren — en klanten opleveren.",
+      "p3_prefix": "Wil je direct met ons schakelen? Stuur een mail naar",
+      "v1_title": "Kwaliteit Eerst",
+      "v1_text": "Geen snelle oplossingen, alleen duurzame, schone code.",
+      "v2_title": "Persoonlijk Contact",
+      "v2_text": "Direct contact met ons team — altijd.",
+      "v3_title": "Resultaatgericht",
+      "v3_text": "Websites gebouwd om te converteren en te groeien.",
+      "v4_title": "Transparantie",
+      "v4_text": "Heldere prijzen en eerlijke communicatie.",
+      "cta_primary": "Gratis concept aanvragen →",
+      "cta_secondary": "Bekijk onze diensten"
+    },
+    "brand_band": {
+      "tag": "PERSOONLIJK &amp; BEREIKBAAR",
+      "title": "Een vast gezicht achter elk project",
+      "text": "Geen anoniem bureau en geen callcenter. Bij S. van Wijk Solutions heb je direct contact met de mens die jouw website bouwt — van het eerste idee tot de livegang en alles daarna.",
+      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_secondary": "Neem contact op"
+    },
+    "nederland": {
+      "tag": "HEEL NEDERLAND",
+      "title": "Wij bouwen websites voor bedrijven door heel Nederland",
+      "p1": "Vanuit de regio Westland werken wij voor klanten door heel Nederland. Afstand is voor ons geen belemmering — wij bedienen ondernemers van Noord tot Zuid, van Oost tot West.",
+      "p2": "Alles kan online én fysiek: van het eerste kennismakingsgesprek tot de oplevering. Flexibel, efficiënt en persoonlijk.",
+      "cta": "Neem contact op →",
+      "img_alt": "Luchtfoto van een Nederlandse stad met digitale verbindingen"
+    },
+    "garanties": {
+      "tag": "ONZE BELOFTES",
+      "title": "Waarom kiezen voor S. van Wijk Solutions?",
+      "sub": "Geen loze woorden — concrete garanties waar je op kunt rekenen.",
+      "g1_title": "100% Tevredenheidsgarantie",
+      "g1_text": "Niet tevreden? Wij blijven reviseren totdat het wél klopt. Geen extra kosten.",
+      "g2_title": "Binnen Afgesproken Deadline",
+      "g2_text": "Wij leveren op tijd. Altijd. Als wij een deadline afspreken, houden wij ons eraan.",
+      "g3_title": "Transparante Communicatie",
+      "g3_text": "Geen verrassingen achteraf. Heldere prijzen en eerlijke adviezen."
+    },
+    "cta_banner": {
+      "title": "Zin om samen iets moois te bouwen?",
+      "text": "Vraag gratis een website concept aan — binnen 5 werkdagen in je inbox.",
+      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_secondary": "Start Je Project"
+    }
+  }
+}
