@@ -1,0 +1,56 @@
+<header id="site-header">
+  <div class="container">
+    <nav class="nav">
+
+      <a href="/en/index.html" class="nav__logo" aria-label="S. van Wijk Solutions">
+        <img src="/assets/images/logowit.svg" alt="S. van Wijk Solutions" width="156" height="46" class="nav__logo-img">
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="/en/index.html" data-page="index" class="active" aria-current="page">Home</a></li>
+        <li><a href="/en/diensten.html" data-page="diensten">Services</a></li>
+        <li><a href="/en/over-ons.html" data-page="over-ons">About Us</a></li>
+        <li><a href="/en/contact.html" data-page="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <a href="/en/concept.html" class="nav__cta--gratis"><span>Request your free website concept here</span> <span class="nav__cta-arrow">→</span></a>
+        <div class="lang-switch" aria-label="Switch language">
+          <button class="lang-switch__current" aria-expanded="false" aria-haspopup="listbox" type="button">
+            <span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-cur"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-cur)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg></span>
+            <span class="lang-switch__code">EN</span>
+            <span class="lang-switch__chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-switch__menu" role="listbox" aria-label="Switch language">
+            <li role="option" aria-selected="false"><a href="#" data-lang="nl" class="lang-switch__option"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="2" fill="#AE1C28"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#21468B"/></svg></span><span>Nederlands</span></a></li>
+            <li role="option" aria-selected="true"><a href="#" data-lang="en" class="lang-switch__option active"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-d1"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-d1)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg></span><span>English</span></a></li>
+            <li role="option" aria-selected="false"><a href="#" data-lang="de" class="lang-switch__option"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></span><span>Deutsch</span></a></li>
+          </ul>
+        </div>
+        <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-overlay" role="dialog" aria-modal="true" aria-label="Open menu">
+  <button class="mobile-overlay__close" aria-label="Close menu">✕</button>
+  <nav>
+    <ul role="list">
+      <li><a href="/en/index.html">Home</a></li>
+      <li><a href="/en/diensten.html">Services</a></li>
+      <li><a href="/en/over-ons.html">About Us</a></li>
+      <li><a href="/en/contact.html">Contact</a></li>
+    </ul>
+    <a href="/en/concept.html" class="announce-mobile-cta">Request your free website concept here</a>
+    <div class="lang-switch lang-switch--mobile">
+      <button type="button" class="lang-switch__mobile-btn" data-lang="nl"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="2" fill="#AE1C28"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#21468B"/></svg></span><span>NL</span></button>
+      <button type="button" class="lang-switch__mobile-btn active" data-lang="en"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-m1"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-m1)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg></span><span>EN</span></button>
+      <button type="button" class="lang-switch__mobile-btn" data-lang="de"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></span><span>DE</span></button>
+    </div>
+
+  </nav>
+</div>

@@ -124,6 +124,7 @@ def build_header(lang):
       </ul>
 
       <div class="nav__right">
+        <a href="{prefix}/concept.html" class="nav__cta--gratis"><span>{n['cta_gratis']}</span> <span class="nav__cta-arrow">→</span></a>
         <div class="lang-switch" aria-label="{lang_label}">
           <button class="lang-switch__current" aria-expanded="false" aria-haspopup="listbox" type="button">
             {flag_icon(lang, 'cur')}
@@ -134,7 +135,6 @@ def build_header(lang):
 {switch_items_html}
           </ul>
         </div>
-        <a href="{prefix}/concept.html" class="nav__cta--gratis"><span>{n['cta_gratis']}</span> <span class="nav__cta-arrow">→</span></a>
         <button class="nav__burger" aria-label="{n['menu_open']}" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -1070,6 +1070,119 @@ def build_privacy(lang):
     return page_shell(lang, 'privacy.html', d['meta_title'], d['meta_description'], body, extra_head)
 
 
+def build_contact(lang):
+    d = DATA[lang]['contact']
+    hero, info, form = d['hero'], d['info'], d['form']
+    prefix = URL_PREFIX[lang]
+
+    tip_link_html = f'<a href="{prefix}/concept.html">{form["tip_link"]}</a>'
+    tip_html = form['tip'].replace('{link}', tip_link_html)
+
+    body = f'''    <section class="page-hero">
+      <div class="container">
+        <span class="tag">{hero['tag']}</span>
+        <h1>{hero['title']}</h1>
+        <p>{hero['sub']}</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="contact-split reveal">
+
+          <!-- Links: kaart + gegevens -->
+          <div>
+            <div class="contact-info">
+              <h3>{info['title']}</h3>
+              <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div>
+                  <h4>{info['email_label']}</h4>
+                  <a href="mailto:info@svanwijksolutions.nl">info@svanwijksolutions.nl</a>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                  <h4>{info['location_label']}</h4>
+                  <p>{info['location_value']}</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">🕐</div>
+                <div>
+                  <h4>{info['hours_label']}</h4>
+                  <p>{info['hours_value']}</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">⚡</div>
+                <div>
+                  <h4>{info['response_label']}</h4>
+                  <p>{info['response_value']}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- website.jpg sfeerbeeld -->
+            <div class="contact-sfeer">
+              <img
+                src="/assets/images/website.jpg"
+                alt="{info['img_alt']}"
+                loading="lazy"
+                width="600"
+                height="400"
+                class="contact-sfeer__img">
+            </div>
+          </div>
+
+          <!-- Rechts: contactformulier -->
+          <div class="contact-form-wrap">
+            <h3>{form['title']}</h3>
+            <p style="margin-bottom:24px;font-size:.93rem;">{form['intro']}</p>
+
+            <form id="contactForm" action="https://formspree.io/f/mbdplbjk" method="POST" novalidate>
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="_subject" value="Contactbericht via svanwijksolutions.nl">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="voornaam">{form['voornaam']}</label>
+                  <input type="text" id="voornaam" name="voornaam" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="achternaam">{form['achternaam']}</label>
+                  <input type="text" id="achternaam" name="achternaam" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">{form['email']}</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="bericht">{form['bericht_label']}</label>
+                <textarea id="bericht" name="message" rows="6" placeholder="{form['bericht_placeholder']}" required></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="submitBtn">{form['submit']}</button>
+            </form>
+
+            <!-- Gratis concept CTA -->
+            <div class="contact-concept-tip">
+              <p>{tip_html}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>'''
+
+    extra_head = '  <meta name="twitter:card" content="summary_large_image">\n'
+    html = page_shell(lang, 'contact.html', d['meta_title'], d['meta_description'], body, extra_head)
+    html = html.replace('<script src="/js/script.js"></script>\n</body>',
+                         '<script src="/js/script.js"></script>\n  <script src="/js/form.js"></script>\n</body>')
+    return html
+
+
 def write_page(lang, relpath, html):
     prefix = URL_PREFIX[lang].lstrip('/')
     outdir = os.path.join(OUT, prefix) if prefix else OUT
@@ -1089,6 +1202,7 @@ if __name__ == '__main__':
             ('blog.html', build_blog),
             ('start.html', build_start),
             ('privacy.html', build_privacy),
+            ('contact.html', build_contact),
         ]:
             html = builder(lang)
             path = write_page(lang, slug, html)

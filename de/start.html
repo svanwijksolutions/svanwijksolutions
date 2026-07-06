@@ -45,15 +45,19 @@
       </ul>
 
       <div class="nav__right">
+        <a href="/de/concept.html" class="nav__cta--gratis"><span>Kostenloses Website-Konzept anfragen</span> <span class="nav__cta-arrow">→</span></a>
         <div class="lang-switch" aria-label="Sprache wechseln">
-          <button class="lang-switch__current" aria-expanded="false" aria-haspopup="true">DE</button>
-          <ul class="lang-switch__menu" role="list">
-            <li><a href="#" data-lang="nl">Nederlands</a></li>
-            <li><a href="#" data-lang="en">English</a></li>
-            <li><a href="#" data-lang="de">Deutsch</a></li>
+          <button class="lang-switch__current" aria-expanded="false" aria-haspopup="listbox" type="button">
+            <span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></span>
+            <span class="lang-switch__code">DE</span>
+            <span class="lang-switch__chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-switch__menu" role="listbox" aria-label="Sprache wechseln">
+            <li role="option" aria-selected="false"><a href="#" data-lang="nl" class="lang-switch__option"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="2" fill="#AE1C28"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#21468B"/></svg></span><span>Nederlands</span></a></li>
+            <li role="option" aria-selected="false"><a href="#" data-lang="en" class="lang-switch__option"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-d1"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-d1)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg></span><span>English</span></a></li>
+            <li role="option" aria-selected="true"><a href="#" data-lang="de" class="lang-switch__option active"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></span><span>Deutsch</span></a></li>
           </ul>
         </div>
-        <a href="/de/concept.html" class="nav__cta--gratis"><span>Kostenloses Website-Konzept anfragen</span> <span class="nav__cta-arrow">→</span></a>
         <button class="nav__burger" aria-label="Menü öffnen" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -74,10 +78,11 @@
     </ul>
     <a href="/de/concept.html" class="announce-mobile-cta">Kostenloses Website-Konzept anfragen</a>
     <div class="lang-switch lang-switch--mobile">
-      <a href="#" data-lang="nl">Nederlands</a>
-      <a href="#" data-lang="en">English</a>
-      <a href="#" data-lang="de">Deutsch</a>
+      <button type="button" class="lang-switch__mobile-btn" data-lang="nl"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="2" fill="#AE1C28"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#21468B"/></svg></span><span>NL</span></button>
+      <button type="button" class="lang-switch__mobile-btn" data-lang="en"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-m1"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-m1)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg></span><span>EN</span></button>
+      <button type="button" class="lang-switch__mobile-btn active" data-lang="de"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></span><span>DE</span></button>
     </div>
+
   </nav>
 </div></div>
 
