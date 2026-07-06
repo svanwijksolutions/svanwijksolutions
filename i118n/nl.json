@@ -410,5 +410,37 @@
         "p": "Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd te vinden op deze pagina."
       }
     ]
+  },
+  "contact": {
+    "meta_title": "Contact | S. van Wijk Solutions",
+    "meta_description": "Neem contact op met S. van Wijk Solutions. Wij zijn bereikbaar via e-mail en reageren binnen 24 uur op werkdagen.",
+    "hero": {
+      "tag": "CONTACT",
+      "title": "Neem contact op",
+      "sub": "Heb je een vraag of wil je meer informatie? Wij reageren binnen 24 uur op werkdagen."
+    },
+    "info": {
+      "title": "Onze gegevens",
+      "email_label": "E-mail",
+      "location_label": "Locatie",
+      "location_value": "Nederland, Regio Westland",
+      "hours_label": "Openingstijden",
+      "hours_value": "Maandag t/m vrijdag: 08:00 – 17:00",
+      "response_label": "Reactietijd",
+      "response_value": "Binnen 24 uur op werkdagen",
+      "img_alt": "Persoon werkt aan een website op laptop — S. van Wijk Solutions"
+    },
+    "form": {
+      "title": "Stuur een bericht",
+      "intro": "Heb je een vraag, wil je een offerte of gewoon kennismaken? Vul het formulier in en wij nemen zo snel mogelijk contact met je op.",
+      "voornaam": "Voornaam",
+      "achternaam": "Achternaam",
+      "email": "E-mailadres",
+      "bericht_label": "Jouw bericht",
+      "bericht_placeholder": "Stel gerust je vraag…",
+      "submit": "Verstuur Bericht →",
+      "tip": "💡 Wil je een website laten bouwen? Vraag dan direct een {link} aan — binnen 5 werkdagen in je inbox.",
+      "tip_link": "gratis website concept"
+    }
   }
 }

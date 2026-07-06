@@ -410,5 +410,37 @@
         "p": "We reserve the right to change this privacy policy. The most current version can always be found on this page."
       }
     ]
+  },
+  "contact": {
+    "meta_title": "Contact | S. van Wijk Solutions",
+    "meta_description": "Get in touch with S. van Wijk Solutions. We're reachable by email and respond within 24 hours on working days.",
+    "hero": {
+      "tag": "CONTACT",
+      "title": "Get in touch",
+      "sub": "Have a question or want more information? We respond within 24 hours on working days."
+    },
+    "info": {
+      "title": "Our details",
+      "email_label": "Email",
+      "location_label": "Location",
+      "location_value": "The Netherlands, Westland Region",
+      "hours_label": "Opening hours",
+      "hours_value": "Monday to Friday: 08:00 – 17:00",
+      "response_label": "Response time",
+      "response_value": "Within 24 hours on working days",
+      "img_alt": "Person working on a website on a laptop — S. van Wijk Solutions"
+    },
+    "form": {
+      "title": "Send a message",
+      "intro": "Got a question, want a quote, or just want to say hello? Fill in the form and we'll get back to you as soon as possible.",
+      "voornaam": "First name",
+      "achternaam": "Last name",
+      "email": "Email address",
+      "bericht_label": "Your message",
+      "bericht_placeholder": "Feel free to ask your question…",
+      "submit": "Send Message →",
+      "tip": "💡 Want a website built? Request a {link} right away — in your inbox within 5 working days.",
+      "tip_link": "free website concept"
+    }
   }
 }

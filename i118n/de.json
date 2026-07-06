@@ -410,5 +410,37 @@
         "p": "Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern. Die aktuellste Version finden Sie stets auf dieser Seite."
       }
     ]
+  },
+  "contact": {
+    "meta_title": "Kontakt | S. van Wijk Solutions",
+    "meta_description": "Kontaktieren Sie S. van Wijk Solutions. Wir sind per E-Mail erreichbar und antworten innerhalb von 24 Stunden an Werktagen.",
+    "hero": {
+      "tag": "KONTAKT",
+      "title": "Kontakt aufnehmen",
+      "sub": "Haben Sie eine Frage oder möchten Sie mehr Informationen? Wir antworten innerhalb von 24 Stunden an Werktagen."
+    },
+    "info": {
+      "title": "Unsere Daten",
+      "email_label": "E-Mail",
+      "location_label": "Standort",
+      "location_value": "Niederlande, Region Westland",
+      "hours_label": "Öffnungszeiten",
+      "hours_value": "Montag bis Freitag: 08:00 – 17:00",
+      "response_label": "Reaktionszeit",
+      "response_value": "Innerhalb von 24 Stunden an Werktagen",
+      "img_alt": "Person arbeitet an einer Website auf einem Laptop — S. van Wijk Solutions"
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "intro": "Haben Sie eine Frage, möchten Sie ein Angebot oder einfach nur Hallo sagen? Füllen Sie das Formular aus, wir melden uns so schnell wie möglich.",
+      "voornaam": "Vorname",
+      "achternaam": "Nachname",
+      "email": "E-Mail-Adresse",
+      "bericht_label": "Ihre Nachricht",
+      "bericht_placeholder": "Stellen Sie ruhig Ihre Frage…",
+      "submit": "Nachricht Senden →",
+      "tip": "💡 Möchten Sie eine Website bauen lassen? Fordern Sie direkt ein {link} an — innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "tip_link": "kostenloses Website-Konzept"
+    }
   }
 }
