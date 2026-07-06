@@ -72,17 +72,42 @@ def nav_html(lang, active_page):
     }
 
 
+FLAG_SVG = {
+    'nl': '<svg viewBox="0 0 9 6" xmlns="http://www.w3.org/2000/svg"><rect width="9" height="2" fill="#AE1C28"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#21468B"/></svg>',
+    'en': '<svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-{u}"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-{u})" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>',
+    'de': '<svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>',
+}
+
+
+def flag_icon(lang_code, unique_id):
+    svg = FLAG_SVG[lang_code].replace('{u}', unique_id)
+    return f'<span class="flag-icon" aria-hidden="true">{svg}</span>'
+
+
 def build_header(lang):
     n = DATA[lang]['nav']
     prefix = URL_PREFIX[lang]
     nav = nav_html(lang, 'index')
     lang_names = {'nl': 'Nederlands', 'en': 'English', 'de': 'Deutsch'}
-    switch_items = "\n".join(
-        f'            <li><a href="#" data-lang="{l}">{lang_names[l]}</a></li>' for l in LANGS
-    )
-    switch_items_mobile = "\n".join(
-        f'      <a href="#" data-lang="{l}">{lang_names[l]}</a>' for l in LANGS
-    )
+    lang_label = {'nl': 'Taal wisselen', 'en': 'Switch language', 'de': 'Sprache wechseln'}[lang]
+
+    switch_items = []
+    for i, l in enumerate(LANGS):
+        active = ' active' if l == lang else ''
+        aria_sel = 'true' if l == lang else 'false'
+        switch_items.append(
+            f'            <li role="option" aria-selected="{aria_sel}"><a href="#" data-lang="{l}" class="lang-switch__option{active}">{flag_icon(l, "d" + str(i))}<span>{lang_names[l]}</span></a></li>'
+        )
+    switch_items_html = "\n".join(switch_items)
+
+    switch_items_mobile = []
+    for i, l in enumerate(LANGS):
+        active = ' active' if l == lang else ''
+        switch_items_mobile.append(
+            f'      <button type="button" class="lang-switch__mobile-btn{active}" data-lang="{l}">{flag_icon(l, "m" + str(i))}<span>{l.upper()}</span></button>'
+        )
+    switch_items_mobile_html = "\n".join(switch_items_mobile)
+
     return f'''<header id="site-header">
   <div class="container">
     <nav class="nav">
@@ -99,10 +124,14 @@ def build_header(lang):
       </ul>
 
       <div class="nav__right">
-        <div class="lang-switch" aria-label="{'Taal wisselen' if lang=='nl' else ('Switch language' if lang=='en' else 'Sprache wechseln')}">
-          <button class="lang-switch__current" aria-expanded="false" aria-haspopup="true">{lang.upper()}</button>
-          <ul class="lang-switch__menu" role="list">
-{switch_items}
+        <div class="lang-switch" aria-label="{lang_label}">
+          <button class="lang-switch__current" aria-expanded="false" aria-haspopup="listbox" type="button">
+            {flag_icon(lang, 'cur')}
+            <span class="lang-switch__code">{lang.upper()}</span>
+            <span class="lang-switch__chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-switch__menu" role="listbox" aria-label="{lang_label}">
+{switch_items_html}
           </ul>
         </div>
         <a href="{prefix}/concept.html" class="nav__cta--gratis"><span>{n['cta_gratis']}</span> <span class="nav__cta-arrow">→</span></a>
@@ -126,8 +155,9 @@ def build_header(lang):
     </ul>
     <a href="{prefix}/concept.html" class="announce-mobile-cta">{n['cta_gratis']}</a>
     <div class="lang-switch lang-switch--mobile">
-{switch_items_mobile}
+{switch_items_mobile_html}
     </div>
+
   </nav>
 </div>'''
 
@@ -837,6 +867,209 @@ def build_over_ons(lang):
     return page_shell(lang, 'over-ons.html', d['meta_title'], d['meta_description'], body)
 
 
+def build_blog(lang):
+    d = DATA[lang]['blog']
+    prefix = URL_PREFIX[lang]
+    hero, cta = d['hero'], d['cta_banner']
+
+    cards = []
+    delays = ['1', '2', '3', '1', '2']
+    for i, post in enumerate(d['posts']):
+        cards.append(f'''          <article class="blog-card reveal reveal--delay-{delays[i]}">
+            <a href="{prefix}/blog/{post['slug']}" class="blog-card__link">
+              <div class="blog-card__img" style="background-image:url('{post['img']}');"></div>
+              <div class="blog-card__body">
+                <span class="blog-card__cat">{post['cat']}</span>
+                <h2>{post['title']}</h2>
+                <p>{post['text']}</p>
+                <div class="blog-card__meta">
+                  <span>📅 {post['date']}</span>
+                  <span>⏱ {post['min']} {d['min_read']}</span>
+                </div>
+              </div>
+            </a>
+          </article>''')
+    cards_html = "\n\n".join(cards)
+
+    body = f'''    <section class="page-hero">
+      <div class="container">
+        <span class="tag">{hero['tag']}</span>
+        <h1>{hero['title']}</h1>
+        <p>{hero['sub']}</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="blog-grid">
+
+{cards_html}
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner reveal">
+      <div class="container">
+        <h2>{cta['title']}</h2>
+        <p>{cta['text']}</p>
+        <a href="{prefix}/concept.html" class="btn btn--white">{cta['cta']}</a>
+      </div>
+    </section>'''
+
+    return page_shell(lang, 'blog.html', d['meta_title'], d['meta_description'], body)
+
+
+def build_start(lang):
+    d = DATA[lang]['start']
+    hero, why, form = d['hero'], d['why'], d['form']
+    prefix = URL_PREFIX[lang]
+
+    checklist_html = "\n".join(f"              <li>{item}</li>" for item in why['checklist'])
+    opties_html = "\n".join(f'                  <option value="opt{i}">{opt}</option>' for i, opt in enumerate(form['dienst_opties']))
+
+    body = f'''    <section class="page-hero">
+      <div class="container">
+        <span class="tag">{hero['tag']}</span>
+        <h1>{hero['title']}</h1>
+        <p>{hero['sub']}</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="start-intro reveal">
+
+          <div>
+            <span class="tag">{why['tag']}</span>
+            <h2>{why['title']}</h2>
+            <p style="margin-top:16px;">{why['text']}</p>
+
+            <ul class="start-checklist">
+{checklist_html}
+            </ul>
+
+            <div style="margin-top:24px;background:var(--clr-soft);border-radius:var(--radius-lg);padding:24px 28px;">
+              <p style="font-size:.88rem;color:var(--clr-muted);margin-bottom:6px;">{why['box1_text']}</p>
+              <a href="{prefix}/concept.html" style="color:var(--clr-accent);font-weight:700;font-size:.95rem;text-decoration:none;">{why['box1_link']}</a>
+            </div>
+
+            <div style="margin-top:16px;background:var(--clr-soft);border-radius:var(--radius-lg);padding:24px 28px;">
+              <p style="font-size:.88rem;color:var(--clr-muted);margin-bottom:6px;">{why['box2_text']}</p>
+              <a href="{prefix}/contact.html" style="color:var(--clr-accent);font-weight:700;font-size:.95rem;text-decoration:none;">{why['box2_link']}</a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3>{form['title']}</h3>
+
+            <form id="contactForm" action="https://formspree.io/f/mbdplbjk" method="POST" novalidate>
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="_subject" value="Nieuw project via svanwijksolutions.nl">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="voornaam">{form['voornaam']}</label>
+                  <input type="text" id="voornaam" name="voornaam" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="achternaam">{form['achternaam']}</label>
+                  <input type="text" id="achternaam" name="achternaam" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">{form['email']}</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="telefoon">{form['telefoon']} <span style="font-weight:400;color:#94a3b8;">{form['telefoon_optioneel']}</span></label>
+                <input type="tel" id="telefoon" name="telefoon" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="dienst">{form['dienst_label']}</label>
+                <select id="dienst" name="dienst" required>
+                  <option value="" disabled selected>{form['dienst_placeholder']}</option>
+{opties_html}
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bericht">{form['bericht_label']}</label>
+                <textarea id="bericht" name="message" rows="5" placeholder="{form['bericht_placeholder']}" required></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="submitBtn">{form['submit']}</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>'''
+
+    extra_head = '  <meta name="twitter:card" content="summary_large_image">\n'
+    html = page_shell(lang, 'start.html', d['meta_title'], d['meta_description'], body, extra_head)
+    # form.js toevoegen naast script.js
+    html = html.replace('<script src="/js/script.js"></script>\n</body>',
+                         '<script src="/js/script.js"></script>\n  <script src="/js/form.js"></script>\n</body>')
+    return html
+
+
+def build_privacy(lang):
+    d = DATA[lang]['privacy']
+    hero = d['hero']
+
+    email_link = '<a href="mailto:info@svanwijksolutions.nl" style="color:var(--clr-accent);">info@svanwijksolutions.nl</a>'
+    links_map = {
+        'policies.google.com/privacy': ('https://policies.google.com/privacy', 'policies.google.com/privacy'),
+        'formspree.io': ('https://formspree.io/legal/privacy-policy', 'formspree.io'),
+        'autoriteitpersoonsgegevens.nl': ('https://www.autoriteitpersoonsgegevens.nl', 'autoriteitpersoonsgegevens.nl'),
+    }
+
+    def make_link(clause_index):
+        # Elke clausule met {link} heeft een eigen doel-URL, op basis van volgorde in de NL brontekst
+        targets = {
+            4: ('https://policies.google.com/privacy', 'policies.google.com/privacy'),
+            6: ('https://formspree.io/legal/privacy-policy', 'formspree.io'),
+            9: ('https://www.autoriteitpersoonsgegevens.nl', 'autoriteitpersoonsgegevens.nl'),
+        }
+        url, label = targets[clause_index]
+        return f'<a href="{url}" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent);">{label}</a>'
+
+    clauses_html = []
+    for i, c in enumerate(d['clauses']):
+        p = c['p'].replace('{email}', email_link)
+        if '{link}' in p:
+            p = p.replace('{link}', make_link(i))
+        block = f'          <h2{" style=\"margin-top:0;\"" if i == 0 else ""}>{c["h"]}</h2>\n          <p>{p}</p>'
+        if 'list' in c:
+            items = "\n".join(f"            <li>{item}</li>" for item in c['list'])
+            block += f'\n          <ul style="margin:12px 0 12px 24px;">\n{items}\n          </ul>'
+        if 'p2' in c:
+            p2 = c['p2'].replace('{email}', email_link)
+            block += f'\n          <p>{p2}</p>'
+        clauses_html.append(block)
+    clauses_joined = "\n\n".join(clauses_html)
+
+    body = f'''    <section class="page-hero">
+      <div class="container">
+        <span class="tag">{hero['tag']}</span>
+        <h1>{hero['title']}</h1>
+        <p>{hero['updated']}</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container" style="max-width:780px;">
+        <div style="line-height:1.9;color:var(--clr-text);">
+
+{clauses_joined}
+
+        </div>
+      </div>
+    </section>'''
+
+    extra_head = '  <meta name="robots" content="noindex">\n'
+    return page_shell(lang, 'privacy.html', d['meta_title'], d['meta_description'], body, extra_head)
+
+
 def write_page(lang, relpath, html):
     prefix = URL_PREFIX[lang].lstrip('/')
     outdir = os.path.join(OUT, prefix) if prefix else OUT
@@ -849,7 +1082,14 @@ def write_page(lang, relpath, html):
 
 if __name__ == '__main__':
     for lang in LANGS:
-        for slug, builder in [('index.html', build_home), ('diensten.html', build_diensten), ('over-ons.html', build_over_ons)]:
+        for slug, builder in [
+            ('index.html', build_home),
+            ('diensten.html', build_diensten),
+            ('over-ons.html', build_over_ons),
+            ('blog.html', build_blog),
+            ('start.html', build_start),
+            ('privacy.html', build_privacy),
+        ]:
             html = builder(lang)
             path = write_page(lang, slug, html)
             print(f"Gegenereerd: {path}")

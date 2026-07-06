@@ -226,5 +226,189 @@
       "cta_primary": "Gratis Concept Aanvragen →",
       "cta_secondary": "Start Je Project"
     }
+  },
+  "blog": {
+    "meta_title": "Blog | Tips over websites, SEO & online groei | S. van Wijk Solutions",
+    "meta_description": "Praktische tips over webdesign, SEO, online marketing en hoe je als ondernemer in Nederland groeit met een sterke website.",
+    "hero": {
+      "tag": "BLOG",
+      "title": "Tips, inzichten &amp; inspiratie",
+      "sub": "Praktische artikelen over websites, SEO en online groeien voor ondernemers."
+    },
+    "posts": [
+      {
+        "slug": "5-redenen-trage-website.html",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        "cat": "Tips",
+        "title": "5 redenen waarom jouw website traag is (en hoe je dat oplost)",
+        "text": "Een trage website kost klanten. Ontdek de meest voorkomende oorzaken en wat je eraan kunt doen.",
+        "date": "Januari 2026",
+        "min": 5
+      },
+      {
+        "slug": "seo-basis-mkb.html",
+        "img": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80",
+        "cat": "SEO",
+        "title": "SEO basis voor MKB: hoe je hoger in Google komt",
+        "text": "Geen technisch verhaal. Wij leggen uit wat SEO is en welke 7 stappen jij vandaag nog kunt zetten.",
+        "date": "Februari 2026",
+        "min": 7
+      },
+      {
+        "slug": "website-voor-coaches.html",
+        "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+        "cat": "Branche",
+        "title": "Website voor coaches: dit mag écht niet ontbreken",
+        "text": "Als coach verkoop je vertrouwen. Lees welke 6 elementen onmisbaar zijn op jouw site.",
+        "date": "Maart 2026",
+        "min": 6
+      },
+      {
+        "slug": "mkb-westland-online-groeien.html",
+        "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+        "cat": "Lokaal",
+        "title": "MKB in Westland: zo groei je online in 2026",
+        "text": "Lokale concurrentie wordt heftiger. Praktische tips voor ondernemers in het Westland.",
+        "date": "April 2026",
+        "min": 5
+      },
+      {
+        "slug": "website-voor-schilders.html",
+        "img": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+        "cat": "Branche",
+        "title": "Website voor schilders: zo trek je meer klussen aan",
+        "text": "Wat onderscheidt een schilder-website die werkt van eentje die alleen mooi is? Wij leggen het uit.",
+        "date": "Mei 2026",
+        "min": 6
+      }
+    ],
+    "min_read": "min",
+    "cta_banner": {
+      "title": "Klaar voor een website die werkt?",
+      "text": "Vraag gratis een website concept aan — binnen 5 werkdagen in je inbox.",
+      "cta": "Gratis Concept Aanvragen →"
+    }
+  },
+  "start": {
+    "meta_title": "Start Je Project | S. van Wijk Solutions",
+    "meta_description": "Start jouw webproject met S. van Wijk Solutions. Vertel ons over jouw wensen en wij nemen binnen 24 uur contact op.",
+    "hero": {
+      "tag": "START JE PROJECT",
+      "title": "Laten we iets moois bouwen",
+      "sub": "Vertel ons over jouw project. Ons team neemt binnen 24 uur contact met je op voor een vrijblijvend gesprek."
+    },
+    "why": {
+      "tag": "WAAROM S. VAN WIJK",
+      "title": "Een website die écht voor jou werkt",
+      "text": "Wij bouwen geen standaard templates. Elk project is maatwerk — afgestemd op jouw doelen, doelgroep en branche.",
+      "checklist": [
+        "Persoonlijk contact met ons team van begin tot eind",
+        "Snelle laadtijden en technisch sterke code",
+        "Volledig responsive — perfect op mobiel en desktop",
+        "SEO-geoptimaliseerd van de grond af aan",
+        "Transparante communicatie, geen verrassingen",
+        "Nazorg en support na de livegang"
+      ],
+      "box1_text": "Wil je eerst een gratis concept zien?",
+      "box1_link": "→ Vraag gratis een website concept aan",
+      "box2_text": "Liever eerst een vraag stellen?",
+      "box2_link": "→ Ga naar de contactpagina"
+    },
+    "form": {
+      "title": "Vertel ons over jouw project",
+      "voornaam": "Voornaam",
+      "achternaam": "Achternaam",
+      "email": "E-mailadres",
+      "telefoon": "Telefoonnummer",
+      "telefoon_optioneel": "(optioneel)",
+      "dienst_label": "Wat zoek je?",
+      "dienst_placeholder": "Kies een dienst…",
+      "dienst_opties": [
+        "Nieuwe Website",
+        "Redesign bestaande website",
+        "SEO-optimalisatie",
+        "Landingspagina",
+        "Onderhoud & Support",
+        "Anders / Weet ik nog niet"
+      ],
+      "bericht_label": "Vertel ons meer over je project",
+      "bericht_placeholder": "Wat is het doel van de website? Wie is je doelgroep? Heb je al een bestaande site?",
+      "submit": "Verstuur Aanvraag →"
+    }
+  },
+  "privacy": {
+    "meta_title": "Privacyverklaring | S. van Wijk Solutions",
+    "meta_description": "Privacyverklaring van S. van Wijk Solutions. Lees hoe wij omgaan met jouw persoonsgegevens.",
+    "hero": {
+      "tag": "JURIDISCH",
+      "title": "Privacyverklaring",
+      "updated": "Laatst bijgewerkt: mei 2026"
+    },
+    "clauses": [
+      {
+        "h": "1. Wie zijn wij?",
+        "p": "S. van Wijk Solutions is een webdesign- en ontwikkelbedrijf gevestigd in de regio Westland, Nederland. Wij zijn bereikbaar via {email}."
+      },
+      {
+        "h": "2. Welke gegevens verzamelen wij?",
+        "p": "Wij verzamelen persoonsgegevens uitsluitend wanneer jij deze actief aan ons verstrekt, bijvoorbeeld via het contactformulier of het projectaanvraagformulier op onze website. Het gaat om:",
+        "list": [
+          "Voor- en achternaam",
+          "E-mailadres",
+          "Telefoonnummer (optioneel)",
+          "De inhoud van jouw bericht of aanvraag"
+        ],
+        "p2": "Wij verzamelen geen gegevens via cookies of trackingscripts van derden, met uitzondering van Google Fonts (zie artikel 5)."
+      },
+      {
+        "h": "3. Waarom verwerken wij jouw gegevens?",
+        "p": "Wij gebruiken jouw gegevens uitsluitend om:",
+        "list": [
+          "Te reageren op jouw vraag of aanvraag;",
+          "Een offerte of voorstel op te stellen;",
+          "Contact met jou te onderhouden in het kader van een lopend project."
+        ],
+        "p2": "Wij verkopen jouw gegevens nooit aan derden en gebruiken ze niet voor marketingdoeleinden zonder jouw expliciete toestemming."
+      },
+      {
+        "h": "4. Hoe lang bewaren wij jouw gegevens?",
+        "p": "Wij bewaren jouw gegevens niet langer dan noodzakelijk. Berichten via het contactformulier bewaren wij maximaal 12 maanden, tenzij er sprake is van een lopende samenwerking."
+      },
+      {
+        "h": "5. Google Fonts",
+        "p": "Onze website maakt gebruik van Google Fonts, een dienst van Google LLC. Wanneer je onze website bezoekt, wordt er een verbinding gemaakt met de servers van Google, waarbij jouw IP-adres wordt doorgegeven aan Google. Dit valt onder het privacybeleid van Google. Meer informatie vind je op {link}."
+      },
+      {
+        "h": "6. Google Maps",
+        "p": "Op onze contactpagina is een kaart van Google Maps ingebonden. Hierbij kan Google gegevens verzamelen over jouw bezoek. Dit valt eveneens onder het privacybeleid van Google."
+      },
+      {
+        "h": "7. Formulieren via Formspree",
+        "p": "Onze contactformulieren worden verwerkt via Formspree (formspree.io). De gegevens die jij invult worden via hun beveiligde infrastructuur naar ons doorgestuurd. Formspree slaat ingediende formulieren op conform hun eigen privacybeleid, te raadplegen op {link}."
+      },
+      {
+        "h": "8. Jouw rechten",
+        "p": "Op grond van de Algemene Verordening Gegevensbescherming (AVG) heb je de volgende rechten:",
+        "list": [
+          "<strong>Inzage</strong> — je kunt opvragen welke gegevens wij van jou hebben;",
+          "<strong>Correctie</strong> — je kunt onjuiste gegevens laten aanpassen;",
+          "<strong>Verwijdering</strong> — je kunt verzoeken jouw gegevens te verwijderen;",
+          "<strong>Bezwaar</strong> — je kunt bezwaar maken tegen de verwerking van jouw gegevens."
+        ],
+        "p2": "Voor het uitoefenen van deze rechten kun je contact opnemen via {email}. Wij reageren binnen 30 dagen."
+      },
+      {
+        "h": "9. Beveiliging",
+        "p": "Wij nemen passende technische en organisatorische maatregelen om jouw gegevens te beschermen tegen ongeoorloofde toegang, verlies of misbruik."
+      },
+      {
+        "h": "10. Klachten",
+        "p": "Heb je een klacht over de manier waarop wij met jouw gegevens omgaan? Je kunt een klacht indienen bij de Autoriteit Persoonsgegevens via {link}."
+      },
+      {
+        "h": "11. Wijzigingen",
+        "p": "Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd te vinden op deze pagina."
+      }
+    ]
   }
 }

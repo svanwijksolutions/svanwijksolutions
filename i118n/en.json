@@ -226,5 +226,189 @@
       "cta_primary": "Request Free Concept →",
       "cta_secondary": "Start Your Project"
     }
+  },
+  "blog": {
+    "meta_title": "Blog | Tips on websites, SEO & growing online | S. van Wijk Solutions",
+    "meta_description": "Practical tips on web design, SEO, online marketing, and how to grow your business with a strong website.",
+    "hero": {
+      "tag": "BLOG",
+      "title": "Tips, insights &amp; inspiration",
+      "sub": "Practical articles about websites, SEO, and growing online for business owners."
+    },
+    "posts": [
+      {
+        "slug": "5-redenen-trage-website.html",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        "cat": "Tips",
+        "title": "5 reasons your website is slow (and how to fix it)",
+        "text": "A slow website costs you customers. Discover the most common causes and what you can do about it.",
+        "date": "January 2026",
+        "min": 5
+      },
+      {
+        "slug": "seo-basis-mkb.html",
+        "img": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80",
+        "cat": "SEO",
+        "title": "SEO basics for SMEs: how to rank higher on Google",
+        "text": "No technical jargon. We explain what SEO is and which 7 steps you can take today.",
+        "date": "February 2026",
+        "min": 7
+      },
+      {
+        "slug": "website-voor-coaches.html",
+        "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+        "cat": "Industry",
+        "title": "Website for coaches: what you truly cannot skip",
+        "text": "As a coach you sell trust. Discover which 6 elements are essential on your site.",
+        "date": "March 2026",
+        "min": 6
+      },
+      {
+        "slug": "mkb-westland-online-groeien.html",
+        "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+        "cat": "Local",
+        "title": "SMEs in Westland: how to grow online in 2026",
+        "text": "Local competition is getting fiercer. Practical tips for entrepreneurs in the Westland region.",
+        "date": "April 2026",
+        "min": 5
+      },
+      {
+        "slug": "website-voor-schilders.html",
+        "img": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+        "cat": "Industry",
+        "title": "Website for painters: how to attract more jobs",
+        "text": "What sets apart a painter's website that works from one that's just pretty? We explain.",
+        "date": "May 2026",
+        "min": 6
+      }
+    ],
+    "min_read": "min",
+    "cta_banner": {
+      "title": "Ready for a website that works?",
+      "text": "Request a free website concept — in your inbox within 5 working days.",
+      "cta": "Request Free Concept →"
+    }
+  },
+  "start": {
+    "meta_title": "Start Your Project | S. van Wijk Solutions",
+    "meta_description": "Start your web project with S. van Wijk Solutions. Tell us about your needs and we'll get in touch within 24 hours.",
+    "hero": {
+      "tag": "START YOUR PROJECT",
+      "title": "Let's build something great",
+      "sub": "Tell us about your project. Our team will get in touch within 24 hours for a no-obligation conversation."
+    },
+    "why": {
+      "tag": "WHY S. VAN WIJK",
+      "title": "A website that truly works for you",
+      "text": "We don't build standard templates. Every project is custom-built — tailored to your goals, audience, and industry.",
+      "checklist": [
+        "Personal contact with our team from start to finish",
+        "Fast load times and technically strong code",
+        "Fully responsive — perfect on mobile and desktop",
+        "SEO-optimised from the ground up",
+        "Transparent communication, no surprises",
+        "Aftercare and support after launch"
+      ],
+      "box1_text": "Want to see a free concept first?",
+      "box1_link": "→ Request a free website concept",
+      "box2_text": "Prefer to ask a question first?",
+      "box2_link": "→ Go to the contact page"
+    },
+    "form": {
+      "title": "Tell us about your project",
+      "voornaam": "First name",
+      "achternaam": "Last name",
+      "email": "Email address",
+      "telefoon": "Phone number",
+      "telefoon_optioneel": "(optional)",
+      "dienst_label": "What are you looking for?",
+      "dienst_placeholder": "Choose a service…",
+      "dienst_opties": [
+        "New Website",
+        "Redesign existing website",
+        "SEO Optimisation",
+        "Landing Page",
+        "Maintenance & Support",
+        "Other / Not sure yet"
+      ],
+      "bericht_label": "Tell us more about your project",
+      "bericht_placeholder": "What's the goal of the website? Who is your audience? Do you already have a site?",
+      "submit": "Send Request →"
+    }
+  },
+  "privacy": {
+    "meta_title": "Privacy Policy | S. van Wijk Solutions",
+    "meta_description": "Privacy policy of S. van Wijk Solutions. Read how we handle your personal data.",
+    "hero": {
+      "tag": "LEGAL",
+      "title": "Privacy Policy",
+      "updated": "Last updated: May 2026"
+    },
+    "clauses": [
+      {
+        "h": "1. Who are we?",
+        "p": "S. van Wijk Solutions is a web design and development company based in the Westland region, the Netherlands. You can reach us at {email}."
+      },
+      {
+        "h": "2. What data do we collect?",
+        "p": "We only collect personal data when you actively provide it to us, for example via the contact form or the project request form on our website. This includes:",
+        "list": [
+          "First and last name",
+          "Email address",
+          "Phone number (optional)",
+          "The content of your message or request"
+        ],
+        "p2": "We do not collect data via cookies or third-party tracking scripts, with the exception of Google Fonts (see article 5)."
+      },
+      {
+        "h": "3. Why do we process your data?",
+        "p": "We only use your data to:",
+        "list": [
+          "Respond to your question or request;",
+          "Prepare a quote or proposal;",
+          "Maintain contact with you regarding an ongoing project."
+        ],
+        "p2": "We never sell your data to third parties and do not use it for marketing purposes without your explicit consent."
+      },
+      {
+        "h": "4. How long do we retain your data?",
+        "p": "We do not retain your data longer than necessary. Messages via the contact form are kept for a maximum of 12 months, unless there is an ongoing collaboration."
+      },
+      {
+        "h": "5. Google Fonts",
+        "p": "Our website uses Google Fonts, a service provided by Google LLC. When you visit our website, a connection is made to Google's servers, and your IP address is shared with Google. This is covered by Google's privacy policy. More information can be found at {link}."
+      },
+      {
+        "h": "6. Google Maps",
+        "p": "Our contact page includes an embedded Google Maps map. Google may collect data about your visit through this. This also falls under Google's privacy policy."
+      },
+      {
+        "h": "7. Forms via Formspree",
+        "p": "Our contact forms are processed via Formspree (formspree.io). The data you enter is sent to us through their secure infrastructure. Formspree stores submitted forms in accordance with their own privacy policy, available at {link}."
+      },
+      {
+        "h": "8. Your rights",
+        "p": "Under the General Data Protection Regulation (GDPR), you have the following rights:",
+        "list": [
+          "<strong>Access</strong> — you can request which data we hold about you;",
+          "<strong>Correction</strong> — you can have inaccurate data corrected;",
+          "<strong>Deletion</strong> — you can request that your data be deleted;",
+          "<strong>Objection</strong> — you can object to the processing of your data."
+        ],
+        "p2": "To exercise these rights, please contact us at {email}. We respond within 30 days."
+      },
+      {
+        "h": "9. Security",
+        "p": "We take appropriate technical and organisational measures to protect your data against unauthorised access, loss, or misuse."
+      },
+      {
+        "h": "10. Complaints",
+        "p": "Do you have a complaint about how we handle your data? You can file a complaint with the Dutch Data Protection Authority via {link}."
+      },
+      {
+        "h": "11. Changes",
+        "p": "We reserve the right to change this privacy policy. The most current version can always be found on this page."
+      }
+    ]
   }
 }

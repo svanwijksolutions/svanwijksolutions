@@ -226,5 +226,189 @@
       "cta_primary": "Kostenloses Konzept Anfragen →",
       "cta_secondary": "Projekt Starten"
     }
+  },
+  "blog": {
+    "meta_title": "Blog | Tipps zu Websites, SEO & Online-Wachstum | S. van Wijk Solutions",
+    "meta_description": "Praktische Tipps zu Webdesign, SEO, Online-Marketing und wie Sie als Unternehmer mit einer starken Website wachsen.",
+    "hero": {
+      "tag": "BLOG",
+      "title": "Tipps, Einblicke &amp; Inspiration",
+      "sub": "Praktische Artikel über Websites, SEO und Online-Wachstum für Unternehmer."
+    },
+    "posts": [
+      {
+        "slug": "5-redenen-trage-website.html",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        "cat": "Tipps",
+        "title": "5 Gründe, warum Ihre Website langsam ist (und wie Sie das lösen)",
+        "text": "Eine langsame Website kostet Kunden. Entdecken Sie die häufigsten Ursachen und was Sie dagegen tun können.",
+        "date": "Januar 2026",
+        "min": 5
+      },
+      {
+        "slug": "seo-basis-mkb.html",
+        "img": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80",
+        "cat": "SEO",
+        "title": "SEO-Grundlagen für KMU: So ranken Sie höher bei Google",
+        "text": "Kein technisches Fachchinesisch. Wir erklären, was SEO ist und welche 7 Schritte Sie heute noch unternehmen können.",
+        "date": "Februar 2026",
+        "min": 7
+      },
+      {
+        "slug": "website-voor-coaches.html",
+        "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+        "cat": "Branche",
+        "title": "Website für Coaches: das darf wirklich nicht fehlen",
+        "text": "Als Coach verkaufen Sie Vertrauen. Lesen Sie, welche 6 Elemente auf Ihrer Seite unverzichtbar sind.",
+        "date": "März 2026",
+        "min": 6
+      },
+      {
+        "slug": "mkb-westland-online-groeien.html",
+        "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+        "cat": "Lokal",
+        "title": "KMU in Westland: So wachsen Sie 2026 online",
+        "text": "Die lokale Konkurrenz wird härter. Praktische Tipps für Unternehmer in der Region Westland.",
+        "date": "April 2026",
+        "min": 5
+      },
+      {
+        "slug": "website-voor-schilders.html",
+        "img": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+        "cat": "Branche",
+        "title": "Website für Maler: So gewinnen Sie mehr Aufträge",
+        "text": "Was unterscheidet eine Maler-Website, die funktioniert, von einer, die nur hübsch aussieht? Wir erklären es.",
+        "date": "Mai 2026",
+        "min": 6
+      }
+    ],
+    "min_read": "Min.",
+    "cta_banner": {
+      "title": "Bereit für eine Website, die funktioniert?",
+      "text": "Fordern Sie ein kostenloses Website-Konzept an — innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "cta": "Kostenloses Konzept Anfragen →"
+    }
+  },
+  "start": {
+    "meta_title": "Projekt Starten | S. van Wijk Solutions",
+    "meta_description": "Starten Sie Ihr Webprojekt mit S. van Wijk Solutions. Erzählen Sie uns von Ihren Wünschen, wir melden uns innerhalb von 24 Stunden.",
+    "hero": {
+      "tag": "PROJEKT STARTEN",
+      "title": "Lassen Sie uns etwas Großartiges bauen",
+      "sub": "Erzählen Sie uns von Ihrem Projekt. Unser Team meldet sich innerhalb von 24 Stunden für ein unverbindliches Gespräch."
+    },
+    "why": {
+      "tag": "WARUM S. VAN WIJK",
+      "title": "Eine Website, die wirklich für Sie funktioniert",
+      "text": "Wir entwickeln keine Standardvorlagen. Jedes Projekt ist maßgeschneidert — abgestimmt auf Ihre Ziele, Zielgruppe und Branche.",
+      "checklist": [
+        "Persönlicher Kontakt mit unserem Team von Anfang bis Ende",
+        "Schnelle Ladezeiten und technisch starker Code",
+        "Vollständig responsiv — perfekt auf Mobilgeräten und Desktop",
+        "SEO-optimiert von Grund auf",
+        "Transparente Kommunikation, keine Überraschungen",
+        "Nachbetreuung und Support nach dem Launch"
+      ],
+      "box1_text": "Möchten Sie zuerst ein kostenloses Konzept sehen?",
+      "box1_link": "→ Kostenloses Website-Konzept anfragen",
+      "box2_text": "Lieber zuerst eine Frage stellen?",
+      "box2_link": "→ Zur Kontaktseite"
+    },
+    "form": {
+      "title": "Erzählen Sie uns von Ihrem Projekt",
+      "voornaam": "Vorname",
+      "achternaam": "Nachname",
+      "email": "E-Mail-Adresse",
+      "telefoon": "Telefonnummer",
+      "telefoon_optioneel": "(optional)",
+      "dienst_label": "Wonach suchen Sie?",
+      "dienst_placeholder": "Wählen Sie eine Leistung…",
+      "dienst_opties": [
+        "Neue Website",
+        "Redesign bestehender Website",
+        "SEO-Optimierung",
+        "Landingpage",
+        "Wartung & Support",
+        "Anderes / Weiß ich noch nicht"
+      ],
+      "bericht_label": "Erzählen Sie uns mehr über Ihr Projekt",
+      "bericht_placeholder": "Was ist das Ziel der Website? Wer ist Ihre Zielgruppe? Haben Sie bereits eine Website?",
+      "submit": "Anfrage Senden →"
+    }
+  },
+  "privacy": {
+    "meta_title": "Datenschutzerklärung | S. van Wijk Solutions",
+    "meta_description": "Datenschutzerklärung von S. van Wijk Solutions. Erfahren Sie, wie wir mit Ihren personenbezogenen Daten umgehen.",
+    "hero": {
+      "tag": "RECHTLICHES",
+      "title": "Datenschutzerklärung",
+      "updated": "Zuletzt aktualisiert: Mai 2026"
+    },
+    "clauses": [
+      {
+        "h": "1. Wer sind wir?",
+        "p": "S. van Wijk Solutions ist ein Webdesign- und Entwicklungsunternehmen mit Sitz in der Region Westland, Niederlande. Sie erreichen uns unter {email}."
+      },
+      {
+        "h": "2. Welche Daten erheben wir?",
+        "p": "Wir erheben personenbezogene Daten ausschließlich, wenn Sie diese aktiv an uns übermitteln, zum Beispiel über das Kontaktformular oder das Projektanfrageformular auf unserer Website. Dabei handelt es sich um:",
+        "list": [
+          "Vor- und Nachname",
+          "E-Mail-Adresse",
+          "Telefonnummer (optional)",
+          "Der Inhalt Ihrer Nachricht oder Anfrage"
+        ],
+        "p2": "Wir erheben keine Daten über Cookies oder Tracking-Skripte von Drittanbietern, mit Ausnahme von Google Fonts (siehe Artikel 5)."
+      },
+      {
+        "h": "3. Warum verarbeiten wir Ihre Daten?",
+        "p": "Wir verwenden Ihre Daten ausschließlich, um:",
+        "list": [
+          "Auf Ihre Frage oder Anfrage zu reagieren;",
+          "Ein Angebot oder einen Vorschlag zu erstellen;",
+          "Den Kontakt im Rahmen eines laufenden Projekts zu pflegen."
+        ],
+        "p2": "Wir verkaufen Ihre Daten niemals an Dritte und nutzen sie nicht für Marketingzwecke ohne Ihre ausdrückliche Zustimmung."
+      },
+      {
+        "h": "4. Wie lange speichern wir Ihre Daten?",
+        "p": "Wir speichern Ihre Daten nicht länger als nötig. Nachrichten über das Kontaktformular werden maximal 12 Monate aufbewahrt, es sei denn, es besteht eine laufende Zusammenarbeit."
+      },
+      {
+        "h": "5. Google Fonts",
+        "p": "Unsere Website verwendet Google Fonts, einen Dienst von Google LLC. Beim Besuch unserer Website wird eine Verbindung zu den Servern von Google hergestellt, wobei Ihre IP-Adresse an Google übermittelt wird. Dies unterliegt der Datenschutzrichtlinie von Google. Weitere Informationen finden Sie unter {link}."
+      },
+      {
+        "h": "6. Google Maps",
+        "p": "Auf unserer Kontaktseite ist eine Google-Maps-Karte eingebunden. Dabei kann Google Daten über Ihren Besuch erheben. Auch dies unterliegt der Datenschutzrichtlinie von Google."
+      },
+      {
+        "h": "7. Formulare über Formspree",
+        "p": "Unsere Kontaktformulare werden über Formspree (formspree.io) verarbeitet. Die von Ihnen eingegebenen Daten werden über deren sichere Infrastruktur an uns weitergeleitet. Formspree speichert übermittelte Formulare gemäß der eigenen Datenschutzrichtlinie, einsehbar unter {link}."
+      },
+      {
+        "h": "8. Ihre Rechte",
+        "p": "Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie folgende Rechte:",
+        "list": [
+          "<strong>Auskunft</strong> — Sie können erfragen, welche Daten wir über Sie gespeichert haben;",
+          "<strong>Berichtigung</strong> — Sie können unrichtige Daten korrigieren lassen;",
+          "<strong>Löschung</strong> — Sie können die Löschung Ihrer Daten verlangen;",
+          "<strong>Widerspruch</strong> — Sie können der Verarbeitung Ihrer Daten widersprechen."
+        ],
+        "p2": "Um diese Rechte auszuüben, kontaktieren Sie uns unter {email}. Wir antworten innerhalb von 30 Tagen."
+      },
+      {
+        "h": "9. Sicherheit",
+        "p": "Wir ergreifen angemessene technische und organisatorische Maßnahmen, um Ihre Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen."
+      },
+      {
+        "h": "10. Beschwerden",
+        "p": "Haben Sie eine Beschwerde darüber, wie wir mit Ihren Daten umgehen? Sie können eine Beschwerde bei der niederländischen Datenschutzbehörde einreichen unter {link}."
+      },
+      {
+        "h": "11. Änderungen",
+        "p": "Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern. Die aktuellste Version finden Sie stets auf dieser Seite."
+      }
+    ]
   }
 }
