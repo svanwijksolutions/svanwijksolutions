@@ -26,7 +26,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 OUT  = os.path.abspath(os.path.join(BASE, '..'))
 
 LANGS = ['nl', 'en', 'de']
-URL_PREFIX = {'nl': '', 'en': '/en', 'de': '/de'}
+URL_PREFIX = {'nl': '', 'en': '/eng', 'de': '/de'}
 SITE_ROOT = 'https://www.svanwijksolutions.nl'
 
 def load(lang):

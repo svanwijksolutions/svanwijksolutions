@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================================================
      0. TAAL DETECTEREN UIT HET PAD
-     /en/... -> 'en', /de/... -> 'de', anders -> 'nl'
+     /eng/... -> 'en', /de/... -> 'de', anders -> 'nl'
+     (De Engelse URL-map heet 'eng', niet 'en')
   ============================================================ */
   const detectLang = () => {
-    const m = window.location.pathname.match(/^\/(en|de)(\/|$)/);
-    return m ? m[1] : 'nl';
+    const m = window.location.pathname.match(/^\/(eng|de)(\/|$)/);
+    if (!m) return 'nl';
+    return m[1] === 'eng' ? 'en' : m[1];
   };
   const currentLang = detectLang();
 
@@ -43,9 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
+      const suffix = currentLang === 'nl' ? '' : '-' + currentLang;
       const [hRes, fRes] = await Promise.all([
-        fetch('/components/header.html'),
-        fetch('/components/footer.html')
+        fetch('/components/header' + suffix + '.html'),
+        fetch('/components/footer' + suffix + '.html')
       ]);
       if (!hRes.ok || !fRes.ok) throw new Error('Component niet gevonden');
 
@@ -147,9 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ============================================================ */
   const navigateToLanguage = (targetLang) => {
     const path = window.location.pathname;
-    let rest = path.replace(/^\/(en|de)(\/|$)/, '/');
+    let rest = path.replace(/^\/(eng|de)(\/|$)/, '/');
     if (rest === '' || rest === '/') rest = '/index.html';
-    const prefix = targetLang === 'nl' ? '' : '/' + targetLang;
+    const URL_SLUG = { nl: '', en: '/eng', de: '/de' };
+    const prefix = URL_SLUG[targetLang] !== undefined ? URL_SLUG[targetLang] : '';
     window.location.href = prefix + rest;
   };
 
