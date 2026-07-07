@@ -356,7 +356,7 @@ def build_home(lang):
             <h1>{hero['title_prefix']}<br><span class="typewriter" id="typewriter"></span></h1>
             <p class="hero__sub">{hero['sub']}</p>
             <div class="hero__btns">
-              <a href="{prefix}/concept.html" class="btn btn--white">{hero['cta_primary']} →</a>
+              <a href="{prefix}/concept.html" class="btn btn--white">{hero['cta_primary']}</a>
               <a href="{prefix}/diensten.html" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:#fff;">{hero['cta_secondary']}</a>
             </div>
           </div>

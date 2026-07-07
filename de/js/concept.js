@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* Vlagcodes per taal (flagcdn) */
   var TAAL_VLAG = {
-    'Englisch':'gb','Deutsch':'de','Franz\u00f6sisch':'fr','Spanisch':'es','Italienisch':'it','Portugiesisch':'pt',
+    'Niederl\u00e4ndisch':'nl','Englisch':'gb','Deutsch':'de','Franz\u00f6sisch':'fr','Spanisch':'es','Italienisch':'it','Portugiesisch':'pt',
     'Polnisch':'pl','T\u00fcrkisch':'tr','Arabisch':'sa','Chinesisch':'cn','Russisch':'ru','Ukrainisch':'ua',
     'Griechisch':'gr','Schwedisch':'se','Norwegisch':'no','D\u00e4nisch':'dk','Fins':'fi','Japanisch':'jp','Koreanisch':'kr',
     'Hindi':'in','Rum\u00e4nisch':'ro','Ungarisch':'hu','Tschechisch':'cz','Slowakisch':'sk','Bulgarisch':'bg',
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var steps        = [document.getElementById('step1'), document.getElementById('step2'), document.getElementById('step3')];
   var stepEls      = document.querySelectorAll('.concept-step');
   var current      = 0;
-  var gekozenTalen = ['Niederl\u00e4ndisch'];
+  var gekozenTalen = [];
   var pakketTeller = 0;
 
   /* ── Stap navigatie ── */
@@ -708,7 +708,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderTaalTags() {
     Array.from(taalTags.querySelectorAll('.taal-tag:not(.taal-tag--fixed)')).forEach(function (t) { t.remove(); });
     gekozenTalen.forEach(function (taal) {
-      if (taal === 'Niederl\u00e4ndisch') return;
+      
       var tag = document.createElement('span');
       tag.className = 'taal-tag';
       tag.innerHTML = vlagHTML(taal) + ' ' + taal + ' <button type="button" class="taal-tag__remove" aria-label="Verwijder ' + taal + '">\u2715</button>';

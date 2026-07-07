@@ -88,8 +88,9 @@
 .pagina-item__badge.badge-aanbevolen{background:var(--clr-accent);color:#fff;}
 .pagina-item__why{font-size:.78rem;color:var(--clr-muted);padding:0 16px 12px 46px;background:var(--clr-soft);display:none;line-height:1.6;}
 .pagina-item.is-recommended .pagina-item__why{display:block;}
-.pagina-item__toggle{background:none;border:none;cursor:pointer;color:var(--clr-accent);font-size:.78rem;font-weight:600;padding:6px 10px;line-height:1;flex-shrink:0;margin-left:auto;display:flex;align-items:center;gap:5px;border-radius:20px;transition:background .2s;font-family:'Poppins',sans-serif;}
-.pagina-item__toggle:hover{background:var(--clr-soft);}
+.pagina-item__toggle{background:var(--clr-soft);border:1.5px solid var(--clr-border);cursor:pointer;color:var(--clr-accent);font-size:.78rem;font-weight:700;padding:8px 14px;line-height:1;flex-shrink:0;margin-left:auto;display:flex;align-items:center;gap:6px;border-radius:20px;transition:background .2s,border-color .2s;font-family:'Poppins',sans-serif;}
+.pagina-item__toggle:hover{background:var(--clr-accent);color:#fff;border-color:var(--clr-accent);}
+.pagina-item__toggle:hover .pagina-item__toggle-arrow{color:#fff;}
 .pagina-item__toggle-arrow{font-size:.85rem;transition:transform .2s;}
 .pagina-item__toggle[aria-expanded="true"] .pagina-item__toggle-arrow{transform:rotate(180deg);}
 @media(max-width:400px){.pagina-item__toggle-txt{display:none;}}
@@ -188,6 +189,8 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 .inbegrepen-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px;}
 @media(max-width:480px){.inbegrepen-list{grid-template-columns:1fr;}}
 .inbegrepen-list li{font-size:.83rem;color:var(--clr-text);display:flex;align-items:center;gap:8px;}
+.incl-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;color:var(--clr-accent);flex-shrink:0;}
+.incl-icon svg{width:16px;height:16px;}
 /* ── Logo opties ── */
 .logo-optie-box{background:var(--clr-soft);border-radius:var(--radius-md);padding:20px;margin-top:8px;}
 #f-logoidee:focus{outline:none;border-color:var(--clr-accent);box-shadow:0 0 0 3px rgba(99,102,241,.12);background:#fff;}
@@ -408,19 +411,19 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                 <div class="inbegrepen-box">
                   <div class="inbegrepen-box__title">Altijd inbegrepen</div>
                   <ul class="inbegrepen-list">
-                    <li><span>&#127912;</span> Design op maat</li>
-                    <li><span>&#128269;</span> SEO-optimalisatie</li>
-                    <li><span>&#10024;</span> Vloeiende animaties</li>
-                    <li><span>&#128205;</span> Google Maps integratie</li>
-                    <li><span>&#128233;</span> Contactformulier</li>
-                    <li><span>&#128241;</span> Volledig responsive</li>
+                    <li><span class="incl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></span> Design op maat</li>
+                    <li><span class="incl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span> SEO-optimalisatie</li>
+                    <li><span class="incl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Vloeiende animaties</li>
+                    <li><span class="incl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span> Google Maps integratie</li>
+                    <li><span class="incl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="M22 6l-10 7L2 6"></path></svg></span> Contactformulier</li>
+                    <li><span class="incl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><line x1="11" y1="18" x2="13" y2="18"></line></svg></span> Volledig responsive</li>
                   </ul>
                 </div>
                 <div class="pagina-voorstel-banner" id="paginaVoorstelBanner">
                   <p id="paginaVoorstelTekst"></p>
                 </div>
                 <span class="paginas-label">Stap 1: welke pagina's wil je?</span>
-                <p class="paginas-sublabel">We hebben op basis van je bedrijfstype alvast pagina's aangevinkt. Vink gerust aan of uit wat je zelf wilt.</p>
+                <p class="paginas-sublabel">We hebben op basis van je bedrijfstype alvast pagina's aangevinkt. Vink gerust aan of uit wat je zelf wilt. Klik bij elke pagina op <strong>“Onderdelen kiezen”</strong> om te bepalen wat er precies op die pagina komt te staan.</p>
                 <div id="paginasLijst">
                   <!-- HOME -->
                   <div class="pagina-item is-recommended" id="pi-home">
@@ -442,7 +445,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Homepagina elementen" value="Stats en cijfers blok"> Stats / cijfers blok</label>
                         <label><input type="checkbox" name="Homepagina elementen" value="Video sectie"> Video sectie</label>
                       </div>
-                      <textarea name="Homepagina toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Homepagina extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- OVER ONS -->
@@ -464,7 +467,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Over Ons elementen" value="Kernwaarden blok"> Kernwaarden blok</label>
                         <label><input type="checkbox" name="Over Ons elementen" value="Team sectie"> Team sectie</label>
                       </div>
-                      <textarea name="Over Ons toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Over Ons extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- DIENSTEN -->
@@ -484,7 +487,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Diensten elementen" value="FAQ sectie"> FAQ sectie</label>
                         <label><input type="checkbox" name="Diensten elementen" value="Call-to-action"> Call-to-action</label>
                       </div>
-                      <textarea name="Diensten toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Diensten extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- BEHANDELINGEN -->
@@ -504,7 +507,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Behandelingen elementen" value="Duur per behandeling"> Duur per behandeling</label>
                         <label><input type="checkbox" name="Behandelingen elementen" value="Online afspraakmogelijkheid"> Online afspraakmogelijkheid</label>
                       </div>
-                      <textarea name="Behandelingen toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Behandelingen extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- PORTFOLIO -->
@@ -525,7 +528,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Portfolio elementen" value="Beschrijving per project"> Beschrijving per project</label>
                         <label><input type="checkbox" name="Portfolio elementen" value="Klantlogos referenties"> Klantlogo's / referenties</label>
                       </div>
-                      <textarea name="Portfolio toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Portfolio extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- PRIJZEN -->
@@ -546,7 +549,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                           <input type="checkbox" name="Prijzen elementen" value="Vergelijkingstabel" style="accent-color:var(--clr-accent);"> Voeg ook een vergelijkingstabel toe
                         </label>
                       </div>
-                      <textarea name="Prijzen toelichting" rows="2" placeholder="Extra toelichting (optioneel)..." style="margin-top:12px;width:100%;padding:10px 13px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.84rem;color:var(--clr-text);background:var(--clr-light);resize:vertical;min-height:60px;"></textarea>
+                      <textarea name="Prijzen extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)" style="margin-top:12px;width:100%;padding:10px 13px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.84rem;color:var(--clr-text);background:var(--clr-light);resize:vertical;min-height:60px;"></textarea>
                     </div>
                   </div>
                   <!-- BLOG -->
@@ -566,7 +569,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Blog elementen" value="Zoekfunctie"> Zoekfunctie</label>
                         <label><input type="checkbox" name="Blog elementen" value="Uitgelicht artikel"> Uitgelicht artikel bovenaan</label>
                       </div>
-                      <textarea name="Blog toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Blog extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- FAQ -->
@@ -585,7 +588,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="FAQ elementen" value="Zoekfunctie vragen"> Zoekfunctie door vragen</label>
                         <label><input type="checkbox" name="FAQ elementen" value="Link naar contact"> Link naar contactformulier</label>
                       </div>
-                      <textarea name="FAQ toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="FAQ extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- REVIEWS -->
@@ -604,7 +607,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Reviews elementen" value="Handmatige quotes"> Handmatige klantquotes</label>
                         <label><input type="checkbox" name="Reviews elementen" value="Sterren beoordeling"> Sterren beoordeling</label>
                       </div>
-                      <textarea name="Reviews toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Reviews extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- VACATURES -->
@@ -623,7 +626,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                         <label><input type="checkbox" name="Vacatures elementen" value="Sollicitatieformulier"> Sollicitatieformulier</label>
                         <label><input type="checkbox" name="Vacatures elementen" value="Werken bij cultuurpagina"> Werken bij / cultuurpagina</label>
                       </div>
-                      <textarea name="Vacatures toelichting" rows="2" placeholder="Extra toelichting (optioneel)..."></textarea>
+                      <textarea name="Vacatures extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)"></textarea>
                     </div>
                   </div>
                   <!-- CONTACT -->
@@ -648,14 +651,14 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                       <div id="socialLinksWrap" style="display:none;margin-top:12px;">
                         <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:10px;font-weight:600;">Plak de links naar je social media profielen:</p>
                         <div class="social-inputs">
-                          <div class="social-input-row"><span class="social-input-icon" style="background:#e1306c;">&#128247;</span><input type="url" name="Instagram URL" placeholder="https://www.instagram.com/jouwpagina"></div>
+                          <div class="social-input-row"><span class="social-input-icon" style="background:#e1306c;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></span><input type="url" name="Instagram URL" placeholder="https://www.instagram.com/jouwpagina"></div>
                           <div class="social-input-row"><span class="social-input-icon" style="background:#1877f2;">f</span><input type="url" name="Facebook URL" placeholder="https://www.facebook.com/jouwpagina"></div>
                           <div class="social-input-row"><span class="social-input-icon" style="background:#0077b5;">in</span><input type="url" name="LinkedIn URL" placeholder="https://www.linkedin.com/company/jouwbedrijf"></div>
                           <div class="social-input-row"><span class="social-input-icon" style="background:#010101;">&#9835;</span><input type="url" name="TikTok URL" placeholder="https://www.tiktok.com/@jouwaccount"></div>
                           <div class="social-input-row"><span class="social-input-icon" style="background:#ff0000;">&#9654;</span><input type="url" name="YouTube URL" placeholder="https://www.youtube.com/@jouwkanaal"></div>
                         </div>
                       </div>
-                      <textarea name="Contact toelichting" rows="2" placeholder="Extra toelichting (optioneel)..." style="margin-top:12px;width:100%;padding:10px 13px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.84rem;color:var(--clr-text);background:var(--clr-light);resize:vertical;min-height:60px;"></textarea>
+                      <textarea name="Contact extra wensen" rows="2" placeholder="Wil je hier iets aan toevoegen dat niet in het lijstje staat? Typ het hier (optioneel)" style="margin-top:12px;width:100%;padding:10px 13px;border:1.5px solid var(--clr-border);border-radius:var(--radius-sm);font-family:'Poppins',sans-serif;font-size:.84rem;color:var(--clr-text);background:var(--clr-light);resize:vertical;min-height:60px;"></textarea>
                     </div>
                   </div>
                   <!-- ANDERE PAGINA -->
@@ -674,7 +677,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 
                 <!-- CRM advies bij Portfolio/Vacatures -->
                 <div class="crm-advies" id="crmAdvies" style="display:none;">
-                  <div class="crm-advies__icon">&#128161;</div>
+                  <div class="crm-advies__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg></div>
                   <div>
                     <strong>Ons advies: een eigen beheerportaal</strong>
                     <p id="crmAdviesTekst">Omdat je hebt gekozen voor deze pagina's, raden we een eigen beheerportaal sterk aan. Daarmee voeg je later zelf nieuwe projecten of vacatures toe, zonder ons erbij nodig te hebben.</p>
@@ -721,14 +724,14 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
                 <div class="form-section-divider"><span>Talen</span></div>
                 <div class="form-group">
                   <label>In welke talen moet de website beschikbaar zijn?</label>
-                  <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:12px;">Nederlands staat er standaard in. Voeg extra talen toe via de lijst of typ er zelf een in.</p>
+                  <p style="font-size:.8rem;color:var(--clr-muted);margin-bottom:12px;">Kies zelf welke talen de website moet ondersteunen — er staat nog niets vooraf geselecteerd.</p>
                   <div class="taal-selectie">
                     <div class="taal-tags" id="taalTags">
-                      <span class="taal-tag taal-tag--fixed"><img class="taal-tag__vlag" src="https://flagcdn.com/nl.svg" alt="" width="20" height="14" loading="lazy"> Nederlands</span>
+                      
                     </div>
                     <div class="taal-input-wrap">
                       <select id="taalDropdown" class="taal-dropdown">
-                        <option value="">+ Selecteer een taal...</option>
+                        <option value="">+ Selecteer een taal...</option><option value="Nederlands">Nederlands</option>
                         <option value="Engels">Engels</option><option value="Duits">Duits</option><option value="Frans">Frans</option>
                         <option value="Spaans">Spaans</option><option value="Italiaans">Italiaans</option><option value="Portugees">Portugees</option>
                         <option value="Pools">Pools</option><option value="Turks">Turks</option><option value="Arabisch">Arabisch</option>
@@ -777,7 +780,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
 
                 <!-- Advies bij 'Ja' -->
                 <div class="portaal-advies" id="portaalAdvies" style="display:none;">
-                  <div class="portaal-advies__icon">&#128161;</div>
+                  <div class="portaal-advies__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg></div>
                   <div>
                     <strong>Ons advies: een eigen klantportaal</strong>
                     <p>Omdat je zelf de controle wilt houden, raden we een klantportaal sterk aan. Daarmee beheer je teksten, foto's en pagina's helemaal zelf, zonder ons of een developer nodig te hebben. We hebben dit alvast voor je genoteerd.</p>
@@ -841,7 +844,7 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
               </div>
               <div class="price-footer price-footer--final" style="margin-top:16px;">
                 <button type="button" class="btn btn--outline" id="step3Back">Terug</button>
-                <button type="submit" class="btn btn--primary" id="submitBtn">Verstuur aanvraag &#128640;</button>
+                <button type="submit" class="btn btn--primary" id="submitBtn">Verstuur aanvraag</button>
               </div>
             </div>
           </form>
@@ -856,11 +859,11 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
             <h2>Bedankt voor je aanvraag!</h2>
             <p>Wij hebben alles goed ontvangen. Binnen <strong>5 werkdagen</strong> ontvang je een professioneel concept op maat in je inbox.</p>
             <div class="concept-bedankt__details">
-              <div><span>&#128231;</span> Bevestiging onderweg naar je inbox</div>
+              <div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M4 4h16v16H4z"></path><path d="M22 6l-10 7L2 6"></path></svg></span> Bevestiging onderweg naar je inbox</div>
               <div><span>&#8987;&#65039;</span> Reactie binnen 5 werkdagen</div>
-              <div><span>&#128161;</span> Volledig op maat, zonder verplichtingen</div>
+              <div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg></span> Volledig op maat, zonder verplichtingen</div>
             </div>
-            <a href="index.html" class="btn btn--primary">Terug naar de homepagina &#8594;</a>
+            <a href="index.html" class="btn btn--primary">Terug naar de homepagina</a>
           </div>
         </div>
       </div>
@@ -879,9 +882,9 @@ input[type=color]{width:44px;height:44px;border:1.5px solid var(--clr-border);bo
       <h2 class="success-title">Aanvraag ontvangen!</h2>
       <p class="success-sub">Wij gaan er direct mee aan de slag. Binnen <strong>5 werkdagen</strong> ontvang je een professioneel concept in je inbox.</p>
       <div class="success-details">
-        <div class="success-detail-item"><span>&#128231;</span><span>Bevestiging onderweg naar je inbox</span></div>
+        <div class="success-detail-item"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M4 4h16v16H4z"></path><path d="M22 6l-10 7L2 6"></path></svg></span><span>Bevestiging onderweg naar je inbox</span></div>
         <div class="success-detail-item"><span>&#8987;&#65039;</span><span>Reactie binnen 5 werkdagen</span></div>
-        <div class="success-detail-item"><span>&#128161;</span><span>Volledig op maat, zonder verplichtingen</span></div>
+        <div class="success-detail-item"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg></span><span>Volledig op maat, zonder verplichtingen</span></div>
       </div>
       <button class="success-close-btn" id="successClose">Super, bedankt!</button>
     </div>

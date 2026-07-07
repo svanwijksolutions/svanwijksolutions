@@ -162,7 +162,7 @@ header .container {
   justify-self: end;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 32px;
   flex-shrink: 0;
   margin-left: 32px;
 }

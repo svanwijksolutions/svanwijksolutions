@@ -50,7 +50,7 @@
       "s1_label": "Projecten afgerond",
       "s2_label": "Toewijding aan kwaliteit",
       "s3_label": "Gratis concept binnen",
-      "s3_suffix": " dgn",
+      "s3_suffix": "dgn",
       "s4_label": "Reactietijd werkdagen",
       "s4_suffix": "u"
     },
@@ -71,7 +71,7 @@
       "tag": "KLANTVERHAAL",
       "title": "Wat klanten ervaren",
       "sub": "Een recent project, en wat de klant er zelf over zegt.",
-      "live_link": "Bekijk de live website →",
+      "live_link": "Bekijk de live website",
       "hint": "Beweeg je muis over de site om door te scrollen",
       "quote": "Sem dacht goed met ons mee en adviseerde eerlijk wat écht zinvol is. Geen standaard sjabloon, maar een site die helemaal bij ons past.",
       "author_name": "Timo",
@@ -81,7 +81,7 @@
       "tag": "KENNISBANK",
       "title": "Tips & inzichten uit ons blog",
       "sub": "Praktische artikelen over websites, SEO en online groeien.",
-      "cta": "Alle blog artikelen →",
+      "cta": "Alle blog artikelen",
       "p1_cat": "Tips",
       "p1_title": "5 redenen waarom jouw website traag is",
       "p1_text": "Een trage website kost klanten. Ontdek de meest voorkomende oorzaken en wat je eraan kunt doen om dit op te lossen.",
@@ -116,7 +116,7 @@
     "cta_banner": {
       "title": "Klaar voor een website die werkt?",
       "text": "Ontvang vandaag nog gratis een concept op maat, binnen 5 werkdagen in je inbox.",
-      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_primary": "Gratis Concept Aanvragen",
       "cta_secondary": "Start Je Project"
     }
   },
@@ -133,7 +133,7 @@
       "title": "Maatwerk. Altijd. Zonder uitzondering.",
       "p1": "Wij geloven niet in one-size-fits-all. Elk project begint met een gesprek: wat zijn jouw doelen, wie is jouw doelgroep en wat moet de website opleveren? Pas dan beginnen wij te bouwen.",
       "p2": "Het resultaat? Een website die niet alleen mooi oogt, maar ook écht werkt voor jouw business.",
-      "cta": "Gratis concept aanvragen →"
+      "cta": "Gratis concept aanvragen"
     },
     "services": {
       "s1_title": "Zakelijke Websites",
@@ -147,7 +147,7 @@
       "s5_title": "Logo Design",
       "s5_text": "Een sterk logo is de basis van jouw merk. Wij ontwerpen een uniek, professioneel logo dat past bij jouw bedrijf en doelgroep.",
       "s6_title": "Onderhoud & Support",
-      "s6_text": "Maandelijks onderhoud, updates, beveiligingspatches en directe support. Standaard €37,95 per maand."
+      "s6_text": "Maandelijks onderhoud, updates, beveiligingspatches en directe support."
     },
     "process": {
       "tag": "HOE WE WERKEN",
@@ -165,7 +165,7 @@
     "cta_banner": {
       "title": "Klaar om te starten?",
       "text": "Vraag vandaag nog gratis een website concept aan. Binnen 5 werkdagen in je inbox.",
-      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_primary": "Gratis Concept Aanvragen",
       "cta_secondary": "Start Je Project"
     }
   },
@@ -191,14 +191,14 @@
       "v3_text": "Websites gebouwd om te converteren en te groeien.",
       "v4_title": "Transparantie",
       "v4_text": "Heldere prijzen en eerlijke communicatie.",
-      "cta_primary": "Gratis concept aanvragen →",
+      "cta_primary": "Gratis concept aanvragen",
       "cta_secondary": "Bekijk onze diensten"
     },
     "brand_band": {
       "tag": "PERSOONLIJK &amp; BEREIKBAAR",
       "title": "Een vast gezicht achter elk project",
       "text": "Geen anoniem bureau en geen callcenter. Bij S. van Wijk Solutions heb je direct contact met de mens die jouw website bouwt, van het eerste idee tot de livegang en alles daarna.",
-      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_primary": "Gratis Concept Aanvragen",
       "cta_secondary": "Neem contact op"
     },
     "nederland": {
@@ -206,7 +206,7 @@
       "title": "Wij bouwen websites voor bedrijven door heel Nederland",
       "p1": "Vanuit de regio Westland werken wij voor klanten door heel Nederland. Afstand is voor ons geen belemmering: wij bedienen ondernemers van Noord tot Zuid, van Oost tot West.",
       "p2": "Alles kan online én fysiek: van het eerste kennismakingsgesprek tot de oplevering. Flexibel, efficiënt en persoonlijk.",
-      "cta": "Neem contact op →",
+      "cta": "Neem contact op",
       "img_alt": "Luchtfoto van een Nederlandse stad met digitale verbindingen"
     },
     "garanties": {
@@ -223,7 +223,7 @@
     "cta_banner": {
       "title": "Zin om samen iets moois te bouwen?",
       "text": "Vraag gratis een website concept aan, binnen 5 werkdagen in je inbox.",
-      "cta_primary": "Gratis Concept Aanvragen →",
+      "cta_primary": "Gratis Concept Aanvragen",
       "cta_secondary": "Start Je Project"
     }
   },
@@ -286,7 +286,7 @@
     "cta_banner": {
       "title": "Klaar voor een website die werkt?",
       "text": "Vraag gratis een website concept aan, binnen 5 werkdagen in je inbox.",
-      "cta": "Gratis Concept Aanvragen →"
+      "cta": "Gratis Concept Aanvragen"
     }
   },
   "start": {
@@ -310,9 +310,9 @@
         "Nazorg en support na de livegang"
       ],
       "box1_text": "Wil je eerst een gratis concept zien?",
-      "box1_link": "→ Vraag gratis een website concept aan",
+      "box1_link": "Vraag gratis een website concept aan",
       "box2_text": "Liever eerst een vraag stellen?",
-      "box2_link": "→ Ga naar de contactpagina"
+      "box2_link": "Ga naar de contactpagina"
     },
     "form": {
       "title": "Vertel ons over jouw project",
@@ -333,7 +333,7 @@
       ],
       "bericht_label": "Vertel ons meer over je project",
       "bericht_placeholder": "Wat is het doel van de website? Wie is je doelgroep? Heb je al een bestaande site?",
-      "submit": "Verstuur Aanvraag →"
+      "submit": "Verstuur Aanvraag"
     }
   },
   "privacy": {
@@ -438,7 +438,7 @@
       "email": "E-mailadres",
       "bericht_label": "Jouw bericht",
       "bericht_placeholder": "Stel gerust je vraag…",
-      "submit": "Verstuur Bericht →",
+      "submit": "Verstuur Bericht",
       "tip": "Wil je een website laten bouwen? Vraag dan direct een {link} aan, binnen 5 werkdagen in je inbox.",
       "tip_link": "gratis website concept"
     }

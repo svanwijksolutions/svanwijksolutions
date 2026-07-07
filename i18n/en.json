@@ -50,7 +50,7 @@
       "s1_label": "Projects completed",
       "s2_label": "Commitment to quality",
       "s3_label": "Free concept within",
-      "s3_suffix": " days",
+      "s3_suffix": "days",
       "s4_label": "Response time on workdays",
       "s4_suffix": "h"
     },
@@ -71,7 +71,7 @@
       "tag": "CLIENT STORY",
       "title": "What clients experience",
       "sub": "A recent project, and what the client has to say about it.",
-      "live_link": "View the live website →",
+      "live_link": "View the live website",
       "hint": "Move your mouse over the site to scroll through it",
       "quote": "Sem really thought along with us and gave honest advice on what actually adds value. Not a standard template, but a site that fits us perfectly.",
       "author_name": "Timo",
@@ -81,7 +81,7 @@
       "tag": "KNOWLEDGE BASE",
       "title": "Tips & insights from our blog",
       "sub": "Practical articles about websites, SEO, and growing online.",
-      "cta": "All blog articles →",
+      "cta": "All blog articles",
       "p1_cat": "Tips",
       "p1_title": "5 reasons your website is slow",
       "p1_text": "A slow website costs you customers. Discover the most common causes and how to fix them.",
@@ -116,7 +116,7 @@
     "cta_banner": {
       "title": "Ready for a website that works?",
       "text": "Get a free, tailored concept today, in your inbox within 5 working days.",
-      "cta_primary": "Request Free Concept →",
+      "cta_primary": "Request Free Concept",
       "cta_secondary": "Start Your Project"
     }
   },
@@ -133,7 +133,7 @@
       "title": "Custom-built. Always. Without exception.",
       "p1": "We don't believe in one-size-fits-all. Every project starts with a conversation: what are your goals, who is your audience, and what should the website achieve? Only then do we start building.",
       "p2": "The result? A website that not only looks great, but actually works for your business.",
-      "cta": "Request free concept →"
+      "cta": "Request free concept"
     },
     "services": {
       "s1_title": "Business Websites",
@@ -147,7 +147,7 @@
       "s5_title": "Logo Design",
       "s5_text": "A strong logo is the foundation of your brand. We design a unique, professional logo that fits your business and audience.",
       "s6_title": "Maintenance & Support",
-      "s6_text": "Monthly maintenance, updates, security patches, and direct support. Starting at €37.95 per month."
+      "s6_text": "Monthly maintenance, updates, security patches, and direct support."
     },
     "process": {
       "tag": "HOW WE WORK",
@@ -165,7 +165,7 @@
     "cta_banner": {
       "title": "Ready to get started?",
       "text": "Request a free website concept today. In your inbox within 5 working days.",
-      "cta_primary": "Request Free Concept →",
+      "cta_primary": "Request Free Concept",
       "cta_secondary": "Start Your Project"
     }
   },
@@ -191,14 +191,14 @@
       "v3_text": "Websites built to convert and grow.",
       "v4_title": "Transparency",
       "v4_text": "Clear pricing and honest communication.",
-      "cta_primary": "Request free concept →",
+      "cta_primary": "Request free concept",
       "cta_secondary": "View our services"
     },
     "brand_band": {
       "tag": "PERSONAL &amp; ACCESSIBLE",
       "title": "One consistent point of contact for every project",
       "text": "No anonymous agency, no call centre. At S. van Wijk Solutions you have direct contact with the person building your website, from the first idea to launch and everything after.",
-      "cta_primary": "Request Free Concept →",
+      "cta_primary": "Request Free Concept",
       "cta_secondary": "Get in Touch"
     },
     "nederland": {
@@ -206,7 +206,7 @@
       "title": "We build websites for businesses across the Netherlands",
       "p1": "Based in the Westland region, we work with clients throughout the Netherlands. Distance is never an obstacle: we serve businesses from north to south, east to west.",
       "p2": "Everything works online and in person: from the first introductory call to final delivery. Flexible, efficient, and personal.",
-      "cta": "Get in touch →",
+      "cta": "Get in touch",
       "img_alt": "Aerial photo of a Dutch city with digital connections"
     },
     "garanties": {
@@ -223,7 +223,7 @@
     "cta_banner": {
       "title": "Ready to build something great together?",
       "text": "Request a free website concept, in your inbox within 5 working days.",
-      "cta_primary": "Request Free Concept →",
+      "cta_primary": "Request Free Concept",
       "cta_secondary": "Start Your Project"
     }
   },
@@ -286,7 +286,7 @@
     "cta_banner": {
       "title": "Ready for a website that works?",
       "text": "Request a free website concept, in your inbox within 5 working days.",
-      "cta": "Request Free Concept →"
+      "cta": "Request Free Concept"
     }
   },
   "start": {
@@ -310,9 +310,9 @@
         "Aftercare and support after launch"
       ],
       "box1_text": "Want to see a free concept first?",
-      "box1_link": "→ Request a free website concept",
+      "box1_link": "Request a free website concept",
       "box2_text": "Prefer to ask a question first?",
-      "box2_link": "→ Go to the contact page"
+      "box2_link": "Go to the contact page"
     },
     "form": {
       "title": "Tell us about your project",
@@ -333,7 +333,7 @@
       ],
       "bericht_label": "Tell us more about your project",
       "bericht_placeholder": "What's the goal of the website? Who is your audience? Do you already have a site?",
-      "submit": "Send Request →"
+      "submit": "Send Request"
     }
   },
   "privacy": {
@@ -438,7 +438,7 @@
       "email": "Email address",
       "bericht_label": "Your message",
       "bericht_placeholder": "Feel free to ask your question…",
-      "submit": "Send Message →",
+      "submit": "Send Message",
       "tip": "Want a website built? Request a {link} right away, in your inbox within 5 working days.",
       "tip_link": "free website concept"
     }
