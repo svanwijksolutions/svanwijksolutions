@@ -1,0 +1,446 @@
+{
+  "lang": "de",
+  "meta": {
+    "site_name": "S. van Wijk Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "diensten": "Leistungen",
+    "over_ons": "Über Uns",
+    "contact": "Kontakt",
+    "cta_gratis": "Kostenloses Website-Konzept anfragen",
+    "menu_open": "Menü öffnen",
+    "menu_close": "Menü schließen"
+  },
+  "footer": {
+    "tagline": "Wir bauen die Zukunft des Webs.<br>Modern, schnell und ergebnisorientiert.",
+    "links_label": "Menü",
+    "contact_label": "Kontakt",
+    "hours_label": "Öffnungszeiten",
+    "hours_weekdays": "Montag – Freitag",
+    "hours_weekday_time": "08:00 – 17:00",
+    "hours_saturday": "Samstag",
+    "hours_sunday": "Sonntag",
+    "hours_closed": "Geschlossen",
+    "location": "Niederlande, Region Westland",
+    "privacy": "Datenschutzerklärung",
+    "copy_rights": "Alle Rechte vorbehalten.",
+    "blog": "Blog",
+    "concept": "Kostenloses Konzept"
+  },
+  "home": {
+    "meta_title": "S. van Wijk Solutions | Moderne Websites & Maßgeschneiderte Entwicklung",
+    "meta_description": "S. van Wijk Solutions entwickelt ultramoderne, schnelle und SEO-optimierte Websites für Unternehmen in den gesamten Niederlanden.",
+    "hero": {
+      "badge": "S. van Wijk Solutions",
+      "title_prefix": "Wir entwickeln",
+      "typewriter_phrases": [
+        "Moderne Websites",
+        "Starke Logos",
+        "Konvertierende Landingpages",
+        "SEO-Erfolg",
+        "Website-Redesigns",
+        "Maßgeschneiderten Code"
+      ],
+      "sub": "Ihre digitale Visitenkarte verdient mehr als eine Vorlage. Wir entwickeln leistungsstarke Websites, die überzeugen, beeindrucken und wachsen.",
+      "cta_primary": "Kostenloses Konzept",
+      "cta_secondary": "Unsere Leistungen"
+    },
+    "stats": {
+      "s1_label": "Abgeschlossene Projekte",
+      "s2_label": "Engagement für Qualität",
+      "s3_label": "Kostenloses Konzept innerhalb von",
+      "s3_suffix": " Tg.",
+      "s4_label": "Reaktionszeit an Werktagen",
+      "s4_suffix": "Std."
+    },
+    "expertise": {
+      "tag": "WAS WIR TUN",
+      "title": "Unsere Expertise",
+      "sub": "Alles, was Sie für eine dominante Online-Präsenz brauchen.",
+      "c1_title": "Website-Redesign",
+      "c1_text": "Bestehende Website reif für eine Auffrischung? Wir modernisieren sie unter Erhalt Ihres SEO-Werts.",
+      "c2_title": "Neue Websites",
+      "c2_text": "Eine brandneue Website, vollständig maßgeschneidert auf Ihre Marke, Zielgruppe und Ziele.",
+      "c3_title": "Logo-Design",
+      "c3_text": "Ein einzigartiges, professionelles Logo, das zu Ihrer Marke passt, geliefert in allen gängigen Dateiformaten (PNG, SVG, PDF).",
+      "c4_title": "SEO-Optimiert",
+      "c4_text": "Wir schaffen das technische Fundament, damit Ihr Unternehmen sofort bei Google auffindbar ist."
+    },
+    "spotlight": {
+      "tag": "KUNDENGESCHICHTE",
+      "title": "Was Kunden erleben",
+      "sub": "Ein aktuelles Projekt, und was der Kunde selbst dazu sagt.",
+      "live_link": "Live-Website ansehen →",
+      "hint": "Bewegen Sie die Maus über die Seite, um zu scrollen",
+      "quote": "Sem hat wirklich mitgedacht und ehrlich beraten, was tatsächlich sinnvoll ist. Keine Standardvorlage, sondern eine Seite, die perfekt zu uns passt.",
+      "author_name": "Timo",
+      "author_role": "Inhaber · Waterfords Cocktails"
+    },
+    "blog_preview": {
+      "tag": "WISSENSDATENBANK",
+      "title": "Tipps & Einblicke aus unserem Blog",
+      "sub": "Praktische Artikel über Websites, SEO und Online-Wachstum.",
+      "cta": "Alle Blogartikel →",
+      "p1_cat": "Tipps",
+      "p1_title": "5 Gründe, warum Ihre Website langsam ist",
+      "p1_text": "Eine langsame Website kostet Sie Kunden. Entdecken Sie die häufigsten Ursachen und wie Sie sie beheben.",
+      "p1_date": "Januar 2026",
+      "p2_cat": "SEO",
+      "p2_title": "SEO-Grundlagen für KMU in 7 Schritten",
+      "p2_text": "Kein technisches Fachchinesisch. Wir erklären, was SEO ist und welche konkreten Schritte Sie heute noch unternehmen können, um besser zu ranken.",
+      "p2_date": "Februar 2026",
+      "p3_cat": "Lokal",
+      "p3_title": "KMU in Westland: So wachsen Sie online",
+      "p3_text": "Die lokale Konkurrenz wird härter. Praktische Tipps für Unternehmer in der Region Westland, um online sichtbar zu werden.",
+      "p3_date": "April 2026",
+      "min_read": "Min."
+    },
+    "garanties": {
+      "tag": "UNSERE VERSPRECHEN",
+      "title": "Warum S. van Wijk Solutions wählen?",
+      "sub": "Keine leeren Worte, sondern konkrete Garantien, auf die Sie zählen können.",
+      "g1_title": "100% Zufriedenheitsgarantie",
+      "g1_text": "Nicht zufrieden? Wir überarbeiten so lange, bis es passt. Ohne Mehrkosten.",
+      "g2_title": "Termingerechte Lieferung",
+      "g2_text": "Wir liefern pünktlich. Immer. Wenn wir einen Termin vereinbaren, halten wir uns daran.",
+      "g3_title": "Transparente Kommunikation",
+      "g3_text": "Keine Überraschungen im Nachhinein. Klare Preise, ehrliche Beratung und direkter Kontakt.",
+      "g4_title": "Immer perfekt auf Mobilgeräten",
+      "g4_text": "Jede Website funktioniert garantiert perfekt auf Smartphone, Tablet und Desktop.",
+      "g5_title": "SEO-Fundament Inbegriffen",
+      "g5_text": "Technisches SEO, schnelle Ladezeiten und korrekte Struktur, standardmäßig inbegriffen.",
+      "g6_title": "Persönlicher Ansprechpartner",
+      "g6_text": "Direkter Kontakt mit Sem, kein Callcenter, keine Zwischenhändler."
+    },
+    "cta_banner": {
+      "title": "Bereit für eine Website, die funktioniert?",
+      "text": "Erhalten Sie noch heute ein kostenloses, maßgeschneidertes Konzept, innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "cta_primary": "Kostenloses Konzept Anfragen →",
+      "cta_secondary": "Projekt Starten"
+    }
+  },
+  "diensten": {
+    "meta_title": "Leistungen | S. van Wijk Solutions",
+    "meta_description": "Entdecken Sie alle Leistungen von S. van Wijk Solutions: Websites, Redesign, SEO, maßgeschneiderte Entwicklung und Wartung.",
+    "hero": {
+      "tag": "LEISTUNGEN",
+      "title": "Was wir für Sie entwickeln",
+      "sub": "Von einer Business-Website bis zu einem konvertierenden Redesign: wir liefern immer maßgeschneiderte Qualität."
+    },
+    "intro": {
+      "tag": "UNSER ANSATZ",
+      "title": "Maßgeschneidert. Immer. Ohne Ausnahme.",
+      "p1": "Wir glauben nicht an Einheitslösungen. Jedes Projekt beginnt mit einem Gespräch: Was sind Ihre Ziele, wer ist Ihre Zielgruppe, und was soll die Website erreichen? Erst dann beginnen wir mit der Entwicklung.",
+      "p2": "Das Ergebnis? Eine Website, die nicht nur gut aussieht, sondern auch wirklich für Ihr Unternehmen funktioniert.",
+      "cta": "Kostenloses Konzept anfragen →"
+    },
+    "services": {
+      "s1_title": "Business-Websites",
+      "s1_text": "Eine professionelle, schnelle und SEO-optimierte Website, die Ihr Unternehmen repräsentiert und Besucher in Kunden verwandelt.",
+      "s2_title": "Website-Redesign",
+      "s2_text": "Haben Sie bereits eine Website, die einen frischen Look braucht? Wir modernisieren Ihre bestehende Seite unter Erhalt des SEO-Werts.",
+      "s3_title": "SEO-Optimierung",
+      "s3_text": "Technisches SEO, Geschwindigkeitsoptimierung und On-Page-Verbesserungen, damit Sie bei Google besser ranken als die Konkurrenz.",
+      "s4_title": "Landingpages",
+      "s4_text": "Hochkonvertierende Landingpages für Kampagnen oder Produkteinführungen. Fokussiert auf ein Ziel: Konversion.",
+      "s5_title": "Logo-Design",
+      "s5_text": "Ein starkes Logo ist die Grundlage Ihrer Marke. Wir entwerfen ein einzigartiges, professionelles Logo, das zu Ihrem Unternehmen und Ihrer Zielgruppe passt.",
+      "s6_title": "Wartung & Support",
+      "s6_text": "Monatliche Wartung, Updates, Sicherheitspatches und direkter Support. Ab €37,95 pro Monat."
+    },
+    "process": {
+      "tag": "WIE WIR ARBEITEN",
+      "title": "Von der Idee zur Live-Website",
+      "sub": "Ein klarer und transparenter Prozess in vier Schritten.",
+      "p1_title": "Gespräch & Analyse",
+      "p1_text": "Wir besprechen Ihre Wünsche, Zielgruppe und Mitbewerber. Keine Annahmen, nur Ihr Input.",
+      "p2_title": "Design & Konzept",
+      "p2_text": "Unser Team erstellt ein maßgeschneidertes Design. Feedback ist immer willkommen, wir feilen weiter, bis Sie zu 100% zufrieden sind.",
+      "p3_title": "Entwicklung",
+      "p3_text": "Sauberer Code, schnelle Ladezeiten und Optimierung für alle Geräte. SEO-Fundament inbegriffen.",
+      "p4_title": "Livegang & Nachbetreuung",
+      "p4_text": "Nach Freigabe geht die Seite live. Wir begleiten den Launch und stehen danach für Support bereit."
+    },
+    "cta_banner": {
+      "title": "Bereit loszulegen?",
+      "text": "Fordern Sie noch heute ein kostenloses Website-Konzept an. Innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "cta_primary": "Kostenloses Konzept Anfragen →",
+      "cta_secondary": "Projekt Starten"
+    }
+  },
+  "over_ons": {
+    "meta_title": "Über Uns | S. van Wijk Solutions",
+    "meta_description": "Lernen Sie S. van Wijk Solutions kennen, gegründet von Sem van Wijk. Leidenschaft für Code, Design und Kundenerfolg.",
+    "hero": {
+      "tag": "ÜBER UNS",
+      "title": "Die Geschichte hinter<br>S. van Wijk Solutions",
+      "sub": "Angetrieben von der Leidenschaft für Code, Design und den Erfolg unserer Kunden."
+    },
+    "mission": {
+      "tag": "UNSERE MISSION",
+      "title": "Wir glauben, dass jedes Unternehmen eine großartige Website verdient.",
+      "p1": "S. van Wijk Solutions wurde aus einer einfachen Überzeugung heraus gegründet: Zu viele Unternehmen haben eine Website, die sie nicht wachsen lässt. Langsame Ladezeiten, veraltetes Design und schlechtes SEO kosten Unternehmen täglich Kunden.",
+      "p2": "Mit über <strong>5 Jahren Erfahrung</strong> lösen wir das. Mit maßgeschneidertem Code, Liebe zum Detail und einem persönlichen Ansatz entwickeln wir Websites, die wirklich funktionieren und Kunden bringen.",
+      "p3_prefix": "Möchten Sie direkt mit uns in Kontakt treten? Schreiben Sie eine E-Mail an",
+      "v1_title": "Qualität Zuerst",
+      "v1_text": "Keine schnellen Lösungen, nur nachhaltiger, sauberer Code.",
+      "v2_title": "Persönlicher Kontakt",
+      "v2_text": "Direkter Kontakt mit unserem Team, immer.",
+      "v3_title": "Ergebnisorientiert",
+      "v3_text": "Websites, die konvertieren und wachsen.",
+      "v4_title": "Transparenz",
+      "v4_text": "Klare Preise und ehrliche Kommunikation.",
+      "cta_primary": "Kostenloses Konzept anfragen →",
+      "cta_secondary": "Unsere Leistungen ansehen"
+    },
+    "brand_band": {
+      "tag": "PERSÖNLICH &amp; ERREICHBAR",
+      "title": "Ein fester Ansprechpartner für jedes Projekt",
+      "text": "Keine anonyme Agentur, kein Callcenter. Bei S. van Wijk Solutions haben Sie direkten Kontakt mit der Person, die Ihre Website entwickelt, von der ersten Idee bis zum Launch und darüber hinaus.",
+      "cta_primary": "Kostenloses Konzept Anfragen →",
+      "cta_secondary": "Kontakt Aufnehmen"
+    },
+    "nederland": {
+      "tag": "GANZ NIEDERLANDE",
+      "title": "Wir entwickeln Websites für Unternehmen in den gesamten Niederlanden",
+      "p1": "Von der Region Westland aus arbeiten wir für Kunden in den gesamten Niederlanden. Entfernung ist für uns kein Hindernis: wir bedienen Unternehmer von Nord bis Süd, von Ost bis West.",
+      "p2": "Alles ist möglich, online und persönlich: vom ersten Kennenlerngespräch bis zur Lieferung. Flexibel, effizient und persönlich.",
+      "cta": "Kontakt aufnehmen →",
+      "img_alt": "Luftaufnahme einer niederländischen Stadt mit digitalen Verbindungen"
+    },
+    "garanties": {
+      "tag": "UNSERE VERSPRECHEN",
+      "title": "Warum S. van Wijk Solutions wählen?",
+      "sub": "Keine leeren Worte, sondern konkrete Garantien, auf die Sie zählen können.",
+      "g1_title": "100% Zufriedenheitsgarantie",
+      "g1_text": "Nicht zufrieden? Wir überarbeiten so lange, bis es passt. Ohne Mehrkosten.",
+      "g2_title": "Termingerechte Lieferung",
+      "g2_text": "Wir liefern pünktlich. Immer. Wenn wir einen Termin vereinbaren, halten wir uns daran.",
+      "g3_title": "Transparente Kommunikation",
+      "g3_text": "Keine Überraschungen im Nachhinein. Klare Preise und ehrliche Beratung."
+    },
+    "cta_banner": {
+      "title": "Lust, gemeinsam etwas Großartiges zu bauen?",
+      "text": "Fordern Sie ein kostenloses Website-Konzept an, innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "cta_primary": "Kostenloses Konzept Anfragen →",
+      "cta_secondary": "Projekt Starten"
+    }
+  },
+  "blog": {
+    "meta_title": "Blog | Tipps zu Websites, SEO & Online-Wachstum | S. van Wijk Solutions",
+    "meta_description": "Praktische Tipps zu Webdesign, SEO, Online-Marketing und wie Sie als Unternehmer mit einer starken Website wachsen.",
+    "hero": {
+      "tag": "BLOG",
+      "title": "Tipps, Einblicke &amp; Inspiration",
+      "sub": "Praktische Artikel über Websites, SEO und Online-Wachstum für Unternehmer."
+    },
+    "posts": [
+      {
+        "slug": "5-redenen-trage-website.html",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        "cat": "Tipps",
+        "title": "5 Gründe, warum Ihre Website langsam ist (und wie Sie das lösen)",
+        "text": "Eine langsame Website kostet Kunden. Entdecken Sie die häufigsten Ursachen und was Sie dagegen tun können.",
+        "date": "Januar 2026",
+        "min": 5
+      },
+      {
+        "slug": "seo-basis-mkb.html",
+        "img": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80",
+        "cat": "SEO",
+        "title": "SEO-Grundlagen für KMU: So ranken Sie höher bei Google",
+        "text": "Kein technisches Fachchinesisch. Wir erklären, was SEO ist und welche 7 Schritte Sie heute noch unternehmen können.",
+        "date": "Februar 2026",
+        "min": 7
+      },
+      {
+        "slug": "website-voor-coaches.html",
+        "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+        "cat": "Branche",
+        "title": "Website für Coaches: das darf wirklich nicht fehlen",
+        "text": "Als Coach verkaufen Sie Vertrauen. Lesen Sie, welche 6 Elemente auf Ihrer Seite unverzichtbar sind.",
+        "date": "März 2026",
+        "min": 6
+      },
+      {
+        "slug": "mkb-westland-online-groeien.html",
+        "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+        "cat": "Lokal",
+        "title": "KMU in Westland: So wachsen Sie 2026 online",
+        "text": "Die lokale Konkurrenz wird härter. Praktische Tipps für Unternehmer in der Region Westland.",
+        "date": "April 2026",
+        "min": 5
+      },
+      {
+        "slug": "website-voor-schilders.html",
+        "img": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+        "cat": "Branche",
+        "title": "Website für Maler: So gewinnen Sie mehr Aufträge",
+        "text": "Was unterscheidet eine Maler-Website, die funktioniert, von einer, die nur hübsch aussieht? Wir erklären es.",
+        "date": "Mai 2026",
+        "min": 6
+      }
+    ],
+    "min_read": "Min.",
+    "cta_banner": {
+      "title": "Bereit für eine Website, die funktioniert?",
+      "text": "Fordern Sie ein kostenloses Website-Konzept an, innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "cta": "Kostenloses Konzept Anfragen →"
+    }
+  },
+  "start": {
+    "meta_title": "Projekt Starten | S. van Wijk Solutions",
+    "meta_description": "Starten Sie Ihr Webprojekt mit S. van Wijk Solutions. Erzählen Sie uns von Ihren Wünschen, wir melden uns innerhalb von 24 Stunden.",
+    "hero": {
+      "tag": "PROJEKT STARTEN",
+      "title": "Lassen Sie uns etwas Großartiges bauen",
+      "sub": "Erzählen Sie uns von Ihrem Projekt. Unser Team meldet sich innerhalb von 24 Stunden für ein unverbindliches Gespräch."
+    },
+    "why": {
+      "tag": "WARUM S. VAN WIJK",
+      "title": "Eine Website, die wirklich für Sie funktioniert",
+      "text": "Wir entwickeln keine Standardvorlagen. Jedes Projekt ist maßgeschneidert, abgestimmt auf Ihre Ziele, Zielgruppe und Branche.",
+      "checklist": [
+        "Persönlicher Kontakt mit unserem Team von Anfang bis Ende",
+        "Schnelle Ladezeiten und technisch starker Code",
+        "Vollständig responsiv: perfekt auf Mobilgeräten und Desktop",
+        "SEO-optimiert von Grund auf",
+        "Transparente Kommunikation, keine Überraschungen",
+        "Nachbetreuung und Support nach dem Launch"
+      ],
+      "box1_text": "Möchten Sie zuerst ein kostenloses Konzept sehen?",
+      "box1_link": "→ Kostenloses Website-Konzept anfragen",
+      "box2_text": "Lieber zuerst eine Frage stellen?",
+      "box2_link": "→ Zur Kontaktseite"
+    },
+    "form": {
+      "title": "Erzählen Sie uns von Ihrem Projekt",
+      "voornaam": "Vorname",
+      "achternaam": "Nachname",
+      "email": "E-Mail-Adresse",
+      "telefoon": "Telefonnummer",
+      "telefoon_optioneel": "(optional)",
+      "dienst_label": "Wonach suchen Sie?",
+      "dienst_placeholder": "Wählen Sie eine Leistung…",
+      "dienst_opties": [
+        "Neue Website",
+        "Redesign bestehender Website",
+        "SEO-Optimierung",
+        "Landingpage",
+        "Wartung & Support",
+        "Anderes / Weiß ich noch nicht"
+      ],
+      "bericht_label": "Erzählen Sie uns mehr über Ihr Projekt",
+      "bericht_placeholder": "Was ist das Ziel der Website? Wer ist Ihre Zielgruppe? Haben Sie bereits eine Website?",
+      "submit": "Anfrage Senden →"
+    }
+  },
+  "privacy": {
+    "meta_title": "Datenschutzerklärung | S. van Wijk Solutions",
+    "meta_description": "Datenschutzerklärung von S. van Wijk Solutions. Erfahren Sie, wie wir mit Ihren personenbezogenen Daten umgehen.",
+    "hero": {
+      "tag": "RECHTLICHES",
+      "title": "Datenschutzerklärung",
+      "updated": "Zuletzt aktualisiert: Mai 2026"
+    },
+    "clauses": [
+      {
+        "h": "1. Wer sind wir?",
+        "p": "S. van Wijk Solutions ist ein Webdesign- und Entwicklungsunternehmen mit Sitz in der Region Westland, Niederlande. Sie erreichen uns unter {email}."
+      },
+      {
+        "h": "2. Welche Daten erheben wir?",
+        "p": "Wir erheben personenbezogene Daten ausschließlich, wenn Sie diese aktiv an uns übermitteln, zum Beispiel über das Kontaktformular oder das Projektanfrageformular auf unserer Website. Dabei handelt es sich um:",
+        "list": [
+          "Vor- und Nachname",
+          "E-Mail-Adresse",
+          "Telefonnummer (optional)",
+          "Der Inhalt Ihrer Nachricht oder Anfrage"
+        ],
+        "p2": "Wir erheben keine Daten über Cookies oder Tracking-Skripte von Drittanbietern, mit Ausnahme von Google Fonts (siehe Artikel 5)."
+      },
+      {
+        "h": "3. Warum verarbeiten wir Ihre Daten?",
+        "p": "Wir verwenden Ihre Daten ausschließlich, um:",
+        "list": [
+          "Auf Ihre Frage oder Anfrage zu reagieren;",
+          "Ein Angebot oder einen Vorschlag zu erstellen;",
+          "Den Kontakt im Rahmen eines laufenden Projekts zu pflegen."
+        ],
+        "p2": "Wir verkaufen Ihre Daten niemals an Dritte und nutzen sie nicht für Marketingzwecke ohne Ihre ausdrückliche Zustimmung."
+      },
+      {
+        "h": "4. Wie lange speichern wir Ihre Daten?",
+        "p": "Wir speichern Ihre Daten nicht länger als nötig. Nachrichten über das Kontaktformular werden maximal 12 Monate aufbewahrt, es sei denn, es besteht eine laufende Zusammenarbeit."
+      },
+      {
+        "h": "5. Google Fonts",
+        "p": "Unsere Website verwendet Google Fonts, einen Dienst von Google LLC. Beim Besuch unserer Website wird eine Verbindung zu den Servern von Google hergestellt, wobei Ihre IP-Adresse an Google übermittelt wird. Dies unterliegt der Datenschutzrichtlinie von Google. Weitere Informationen finden Sie unter {link}."
+      },
+      {
+        "h": "6. Google Maps",
+        "p": "Auf unserer Kontaktseite ist eine Google-Maps-Karte eingebunden. Dabei kann Google Daten über Ihren Besuch erheben. Auch dies unterliegt der Datenschutzrichtlinie von Google."
+      },
+      {
+        "h": "7. Formulare über Formspree",
+        "p": "Unsere Kontaktformulare werden über Formspree (formspree.io) verarbeitet. Die von Ihnen eingegebenen Daten werden über deren sichere Infrastruktur an uns weitergeleitet. Formspree speichert übermittelte Formulare gemäß der eigenen Datenschutzrichtlinie, einsehbar unter {link}."
+      },
+      {
+        "h": "8. Ihre Rechte",
+        "p": "Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie folgende Rechte:",
+        "list": [
+          "<strong>Auskunft</strong>: Sie können erfragen, welche Daten wir über Sie gespeichert haben;",
+          "<strong>Berichtigung</strong>: Sie können unrichtige Daten korrigieren lassen;",
+          "<strong>Löschung</strong>: Sie können die Löschung Ihrer Daten verlangen;",
+          "<strong>Widerspruch</strong>: Sie können der Verarbeitung Ihrer Daten widersprechen."
+        ],
+        "p2": "Um diese Rechte auszuüben, kontaktieren Sie uns unter {email}. Wir antworten innerhalb von 30 Tagen."
+      },
+      {
+        "h": "9. Sicherheit",
+        "p": "Wir ergreifen angemessene technische und organisatorische Maßnahmen, um Ihre Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen."
+      },
+      {
+        "h": "10. Beschwerden",
+        "p": "Haben Sie eine Beschwerde darüber, wie wir mit Ihren Daten umgehen? Sie können eine Beschwerde bei der niederländischen Datenschutzbehörde einreichen unter {link}."
+      },
+      {
+        "h": "11. Änderungen",
+        "p": "Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern. Die aktuellste Version finden Sie stets auf dieser Seite."
+      }
+    ]
+  },
+  "contact": {
+    "meta_title": "Kontakt | S. van Wijk Solutions",
+    "meta_description": "Kontaktieren Sie S. van Wijk Solutions. Wir sind per E-Mail erreichbar und antworten innerhalb von 24 Stunden an Werktagen.",
+    "hero": {
+      "tag": "KONTAKT",
+      "title": "Kontakt aufnehmen",
+      "sub": "Haben Sie eine Frage oder möchten Sie mehr Informationen? Wir antworten innerhalb von 24 Stunden an Werktagen."
+    },
+    "info": {
+      "title": "Unsere Daten",
+      "email_label": "E-Mail",
+      "location_label": "Standort",
+      "location_value": "Niederlande, Region Westland",
+      "hours_label": "Öffnungszeiten",
+      "hours_value": "Montag bis Freitag: 08:00 – 17:00",
+      "response_label": "Reaktionszeit",
+      "response_value": "Innerhalb von 24 Stunden an Werktagen",
+      "img_alt": "Person arbeitet an einer Website auf einem Laptop bei S. van Wijk Solutions"
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "intro": "Haben Sie eine Frage, möchten Sie ein Angebot oder einfach nur Hallo sagen? Füllen Sie das Formular aus, wir melden uns so schnell wie möglich.",
+      "voornaam": "Vorname",
+      "achternaam": "Nachname",
+      "email": "E-Mail-Adresse",
+      "bericht_label": "Ihre Nachricht",
+      "bericht_placeholder": "Stellen Sie ruhig Ihre Frage…",
+      "submit": "Nachricht Senden →",
+      "tip": "Möchten Sie eine Website bauen lassen? Fordern Sie direkt ein {link} an, innerhalb von 5 Werktagen in Ihrem Postfach.",
+      "tip_link": "kostenloses Website-Konzept"
+    }
+  }
+}

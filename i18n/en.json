@@ -1,0 +1,446 @@
+{
+  "lang": "en",
+  "meta": {
+    "site_name": "S. van Wijk Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "diensten": "Services",
+    "over_ons": "About Us",
+    "contact": "Contact",
+    "cta_gratis": "Request your free website concept here",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu"
+  },
+  "footer": {
+    "tagline": "We build the future of the web.<br>Modern, fast, and results-driven.",
+    "links_label": "Menu",
+    "contact_label": "Contact",
+    "hours_label": "Opening Hours",
+    "hours_weekdays": "Monday – Friday",
+    "hours_weekday_time": "08:00 – 17:00",
+    "hours_saturday": "Saturday",
+    "hours_sunday": "Sunday",
+    "hours_closed": "Closed",
+    "location": "The Netherlands, Westland Region",
+    "privacy": "Privacy Policy",
+    "copy_rights": "All rights reserved.",
+    "blog": "Blog",
+    "concept": "Free Concept"
+  },
+  "home": {
+    "meta_title": "S. van Wijk Solutions | Modern Websites & Custom Development",
+    "meta_description": "S. van Wijk Solutions builds ultra-modern, fast, and SEO-optimised websites for businesses across the Netherlands.",
+    "hero": {
+      "badge": "S. van Wijk Solutions",
+      "title_prefix": "We build",
+      "typewriter_phrases": [
+        "Modern Websites",
+        "Strong Logos",
+        "Converting Landing Pages",
+        "SEO Success",
+        "Website Redesigns",
+        "Custom Code"
+      ],
+      "sub": "Your digital business card deserves more than a template. We create high-performance websites that convert, impress, and grow.",
+      "cta_primary": "Free Concept",
+      "cta_secondary": "Our Services"
+    },
+    "stats": {
+      "s1_label": "Projects completed",
+      "s2_label": "Commitment to quality",
+      "s3_label": "Free concept within",
+      "s3_suffix": " days",
+      "s4_label": "Response time on workdays",
+      "s4_suffix": "h"
+    },
+    "expertise": {
+      "tag": "WHAT WE DO",
+      "title": "Our Expertise",
+      "sub": "Everything you need for a dominant online presence.",
+      "c1_title": "Website Redesign",
+      "c1_text": "Existing website due for a refresh? We modernise it while preserving your SEO value.",
+      "c2_title": "New Websites",
+      "c2_text": "A brand-new website, fully custom-built around your brand, audience, and goals.",
+      "c3_title": "Logo Design",
+      "c3_text": "A unique, professional logo that fits your brand, delivered in all common file formats (PNG, SVG, PDF).",
+      "c4_title": "SEO Optimised",
+      "c4_text": "We build the technical foundation so your business is instantly findable on Google."
+    },
+    "spotlight": {
+      "tag": "CLIENT STORY",
+      "title": "What clients experience",
+      "sub": "A recent project, and what the client has to say about it.",
+      "live_link": "View the live website →",
+      "hint": "Move your mouse over the site to scroll through it",
+      "quote": "Sem really thought along with us and gave honest advice on what actually adds value. Not a standard template, but a site that fits us perfectly.",
+      "author_name": "Timo",
+      "author_role": "Owner · Waterfords Cocktails"
+    },
+    "blog_preview": {
+      "tag": "KNOWLEDGE BASE",
+      "title": "Tips & insights from our blog",
+      "sub": "Practical articles about websites, SEO, and growing online.",
+      "cta": "All blog articles →",
+      "p1_cat": "Tips",
+      "p1_title": "5 reasons your website is slow",
+      "p1_text": "A slow website costs you customers. Discover the most common causes and how to fix them.",
+      "p1_date": "January 2026",
+      "p2_cat": "SEO",
+      "p2_title": "SEO basics for SMEs in 7 steps",
+      "p2_text": "No technical jargon. We explain what SEO is and which concrete steps you can take today to rank higher.",
+      "p2_date": "February 2026",
+      "p3_cat": "Local",
+      "p3_title": "SMEs in Westland: how to grow online",
+      "p3_text": "Local competition is getting fiercer. Practical tips for entrepreneurs in the Westland region to stand out online.",
+      "p3_date": "April 2026",
+      "min_read": "min"
+    },
+    "garanties": {
+      "tag": "OUR PROMISES",
+      "title": "Why choose S. van Wijk Solutions?",
+      "sub": "No empty words, just concrete guarantees you can count on.",
+      "g1_title": "100% Satisfaction Guarantee",
+      "g1_text": "Not happy? We keep refining until it's right. No extra costs.",
+      "g2_title": "On the Agreed Deadline",
+      "g2_text": "We deliver on time. Always. If we agree on a deadline, we stick to it.",
+      "g3_title": "Transparent Communication",
+      "g3_text": "No surprises afterwards. Clear pricing, honest advice, and direct contact.",
+      "g4_title": "Always Mobile Perfect",
+      "g4_text": "Every website is guaranteed to look perfect on mobile, tablet, and desktop.",
+      "g5_title": "SEO Foundation Included",
+      "g5_text": "Technical SEO, fast load times, and correct structure, included as standard.",
+      "g6_title": "Personal Point of Contact",
+      "g6_text": "Direct contact with Sem, no call centre, no middlemen."
+    },
+    "cta_banner": {
+      "title": "Ready for a website that works?",
+      "text": "Get a free, tailored concept today, in your inbox within 5 working days.",
+      "cta_primary": "Request Free Concept →",
+      "cta_secondary": "Start Your Project"
+    }
+  },
+  "diensten": {
+    "meta_title": "Services | S. van Wijk Solutions",
+    "meta_description": "See all services from S. van Wijk Solutions: websites, redesigns, SEO, custom development, and maintenance.",
+    "hero": {
+      "tag": "SERVICES",
+      "title": "What we build for you",
+      "sub": "From a business website to a converting redesign: we always deliver quality on measure."
+    },
+    "intro": {
+      "tag": "OUR APPROACH",
+      "title": "Custom-built. Always. Without exception.",
+      "p1": "We don't believe in one-size-fits-all. Every project starts with a conversation: what are your goals, who is your audience, and what should the website achieve? Only then do we start building.",
+      "p2": "The result? A website that not only looks great, but actually works for your business.",
+      "cta": "Request free concept →"
+    },
+    "services": {
+      "s1_title": "Business Websites",
+      "s1_text": "A professional, fast, and SEO-optimised website that represents your business and turns visitors into customers.",
+      "s2_title": "Website Redesign",
+      "s2_text": "Already have a website but it's time for a fresh look? We modernise your existing site while preserving its SEO value.",
+      "s3_title": "SEO Optimisation",
+      "s3_text": "Technical SEO, speed optimisation, and on-page improvements so you rank higher on Google than the competition.",
+      "s4_title": "Landing Pages",
+      "s4_text": "High-converting landing pages for campaigns or product launches. Focused on one goal: conversion.",
+      "s5_title": "Logo Design",
+      "s5_text": "A strong logo is the foundation of your brand. We design a unique, professional logo that fits your business and audience.",
+      "s6_title": "Maintenance & Support",
+      "s6_text": "Monthly maintenance, updates, security patches, and direct support. Starting at €37.95 per month."
+    },
+    "process": {
+      "tag": "HOW WE WORK",
+      "title": "From idea to live website",
+      "sub": "A clear and transparent process in four steps.",
+      "p1_title": "Conversation & Analysis",
+      "p1_text": "We discuss your wishes, audience, and competitors. No assumptions, only your input.",
+      "p2_title": "Design & Concept",
+      "p2_text": "Our team creates a custom design. Feedback is always welcome, we keep refining until you're 100% satisfied.",
+      "p3_title": "Development",
+      "p3_text": "Clean code, fast load times, and optimised for all devices. SEO foundation built in.",
+      "p4_title": "Launch & Aftercare",
+      "p4_text": "Once approved, the site goes live. We guide the launch and are ready for support afterwards."
+    },
+    "cta_banner": {
+      "title": "Ready to get started?",
+      "text": "Request a free website concept today. In your inbox within 5 working days.",
+      "cta_primary": "Request Free Concept →",
+      "cta_secondary": "Start Your Project"
+    }
+  },
+  "over_ons": {
+    "meta_title": "About Us | S. van Wijk Solutions",
+    "meta_description": "Get to know S. van Wijk Solutions, founded by Sem van Wijk. Passionate about code, design, and client success.",
+    "hero": {
+      "tag": "ABOUT US",
+      "title": "The story behind<br>S. van Wijk Solutions",
+      "sub": "Driven by a passion for code, design, and our clients' success."
+    },
+    "mission": {
+      "tag": "OUR MISSION",
+      "title": "We believe every business deserves a great website.",
+      "p1": "S. van Wijk Solutions was founded on a simple belief: too many businesses have a website that holds them back instead of helping them grow. Slow load times, outdated design, and poor SEO cost businesses customers every day.",
+      "p2": "With over <strong>5 years of experience</strong>, we fix that. With custom code, attention to detail, and a personal approach, we build websites that truly perform and deliver customers.",
+      "p3_prefix": "Want to get in touch directly? Send an email to",
+      "v1_title": "Quality First",
+      "v1_text": "No quick fixes, only durable, clean code.",
+      "v2_title": "Personal Contact",
+      "v2_text": "Direct contact with our team, always.",
+      "v3_title": "Results-Driven",
+      "v3_text": "Websites built to convert and grow.",
+      "v4_title": "Transparency",
+      "v4_text": "Clear pricing and honest communication.",
+      "cta_primary": "Request free concept →",
+      "cta_secondary": "View our services"
+    },
+    "brand_band": {
+      "tag": "PERSONAL &amp; ACCESSIBLE",
+      "title": "One consistent point of contact for every project",
+      "text": "No anonymous agency, no call centre. At S. van Wijk Solutions you have direct contact with the person building your website, from the first idea to launch and everything after.",
+      "cta_primary": "Request Free Concept →",
+      "cta_secondary": "Get in Touch"
+    },
+    "nederland": {
+      "tag": "ALL OF THE NETHERLANDS",
+      "title": "We build websites for businesses across the Netherlands",
+      "p1": "Based in the Westland region, we work with clients throughout the Netherlands. Distance is never an obstacle: we serve businesses from north to south, east to west.",
+      "p2": "Everything works online and in person: from the first introductory call to final delivery. Flexible, efficient, and personal.",
+      "cta": "Get in touch →",
+      "img_alt": "Aerial photo of a Dutch city with digital connections"
+    },
+    "garanties": {
+      "tag": "OUR PROMISES",
+      "title": "Why choose S. van Wijk Solutions?",
+      "sub": "No empty words, just concrete guarantees you can count on.",
+      "g1_title": "100% Satisfaction Guarantee",
+      "g1_text": "Not happy? We keep refining until it's right. No extra costs.",
+      "g2_title": "On the Agreed Deadline",
+      "g2_text": "We deliver on time. Always. If we agree on a deadline, we stick to it.",
+      "g3_title": "Transparent Communication",
+      "g3_text": "No surprises afterwards. Clear pricing and honest advice."
+    },
+    "cta_banner": {
+      "title": "Ready to build something great together?",
+      "text": "Request a free website concept, in your inbox within 5 working days.",
+      "cta_primary": "Request Free Concept →",
+      "cta_secondary": "Start Your Project"
+    }
+  },
+  "blog": {
+    "meta_title": "Blog | Tips on websites, SEO & growing online | S. van Wijk Solutions",
+    "meta_description": "Practical tips on web design, SEO, online marketing, and how to grow your business with a strong website.",
+    "hero": {
+      "tag": "BLOG",
+      "title": "Tips, insights &amp; inspiration",
+      "sub": "Practical articles about websites, SEO, and growing online for business owners."
+    },
+    "posts": [
+      {
+        "slug": "5-redenen-trage-website.html",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        "cat": "Tips",
+        "title": "5 reasons your website is slow (and how to fix it)",
+        "text": "A slow website costs you customers. Discover the most common causes and what you can do about it.",
+        "date": "January 2026",
+        "min": 5
+      },
+      {
+        "slug": "seo-basis-mkb.html",
+        "img": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&q=80",
+        "cat": "SEO",
+        "title": "SEO basics for SMEs: how to rank higher on Google",
+        "text": "No technical jargon. We explain what SEO is and which 7 steps you can take today.",
+        "date": "February 2026",
+        "min": 7
+      },
+      {
+        "slug": "website-voor-coaches.html",
+        "img": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+        "cat": "Industry",
+        "title": "Website for coaches: what you truly cannot skip",
+        "text": "As a coach you sell trust. Discover which 6 elements are essential on your site.",
+        "date": "March 2026",
+        "min": 6
+      },
+      {
+        "slug": "mkb-westland-online-groeien.html",
+        "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+        "cat": "Local",
+        "title": "SMEs in Westland: how to grow online in 2026",
+        "text": "Local competition is getting fiercer. Practical tips for entrepreneurs in the Westland region.",
+        "date": "April 2026",
+        "min": 5
+      },
+      {
+        "slug": "website-voor-schilders.html",
+        "img": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+        "cat": "Industry",
+        "title": "Website for painters: how to attract more jobs",
+        "text": "What sets apart a painter's website that works from one that's just pretty? We explain.",
+        "date": "May 2026",
+        "min": 6
+      }
+    ],
+    "min_read": "min",
+    "cta_banner": {
+      "title": "Ready for a website that works?",
+      "text": "Request a free website concept, in your inbox within 5 working days.",
+      "cta": "Request Free Concept →"
+    }
+  },
+  "start": {
+    "meta_title": "Start Your Project | S. van Wijk Solutions",
+    "meta_description": "Start your web project with S. van Wijk Solutions. Tell us about your needs and we'll get in touch within 24 hours.",
+    "hero": {
+      "tag": "START YOUR PROJECT",
+      "title": "Let's build something great",
+      "sub": "Tell us about your project. Our team will get in touch within 24 hours for a no-obligation conversation."
+    },
+    "why": {
+      "tag": "WHY S. VAN WIJK",
+      "title": "A website that truly works for you",
+      "text": "We don't build standard templates. Every project is custom-built, tailored to your goals, audience, and industry.",
+      "checklist": [
+        "Personal contact with our team from start to finish",
+        "Fast load times and technically strong code",
+        "Fully responsive: perfect on mobile and desktop",
+        "SEO-optimised from the ground up",
+        "Transparent communication, no surprises",
+        "Aftercare and support after launch"
+      ],
+      "box1_text": "Want to see a free concept first?",
+      "box1_link": "→ Request a free website concept",
+      "box2_text": "Prefer to ask a question first?",
+      "box2_link": "→ Go to the contact page"
+    },
+    "form": {
+      "title": "Tell us about your project",
+      "voornaam": "First name",
+      "achternaam": "Last name",
+      "email": "Email address",
+      "telefoon": "Phone number",
+      "telefoon_optioneel": "(optional)",
+      "dienst_label": "What are you looking for?",
+      "dienst_placeholder": "Choose a service…",
+      "dienst_opties": [
+        "New Website",
+        "Redesign existing website",
+        "SEO Optimisation",
+        "Landing Page",
+        "Maintenance & Support",
+        "Other / Not sure yet"
+      ],
+      "bericht_label": "Tell us more about your project",
+      "bericht_placeholder": "What's the goal of the website? Who is your audience? Do you already have a site?",
+      "submit": "Send Request →"
+    }
+  },
+  "privacy": {
+    "meta_title": "Privacy Policy | S. van Wijk Solutions",
+    "meta_description": "Privacy policy of S. van Wijk Solutions. Read how we handle your personal data.",
+    "hero": {
+      "tag": "LEGAL",
+      "title": "Privacy Policy",
+      "updated": "Last updated: May 2026"
+    },
+    "clauses": [
+      {
+        "h": "1. Who are we?",
+        "p": "S. van Wijk Solutions is a web design and development company based in the Westland region, the Netherlands. You can reach us at {email}."
+      },
+      {
+        "h": "2. What data do we collect?",
+        "p": "We only collect personal data when you actively provide it to us, for example via the contact form or the project request form on our website. This includes:",
+        "list": [
+          "First and last name",
+          "Email address",
+          "Phone number (optional)",
+          "The content of your message or request"
+        ],
+        "p2": "We do not collect data via cookies or third-party tracking scripts, with the exception of Google Fonts (see article 5)."
+      },
+      {
+        "h": "3. Why do we process your data?",
+        "p": "We only use your data to:",
+        "list": [
+          "Respond to your question or request;",
+          "Prepare a quote or proposal;",
+          "Maintain contact with you regarding an ongoing project."
+        ],
+        "p2": "We never sell your data to third parties and do not use it for marketing purposes without your explicit consent."
+      },
+      {
+        "h": "4. How long do we retain your data?",
+        "p": "We do not retain your data longer than necessary. Messages via the contact form are kept for a maximum of 12 months, unless there is an ongoing collaboration."
+      },
+      {
+        "h": "5. Google Fonts",
+        "p": "Our website uses Google Fonts, a service provided by Google LLC. When you visit our website, a connection is made to Google's servers, and your IP address is shared with Google. This is covered by Google's privacy policy. More information can be found at {link}."
+      },
+      {
+        "h": "6. Google Maps",
+        "p": "Our contact page includes an embedded Google Maps map. Google may collect data about your visit through this. This also falls under Google's privacy policy."
+      },
+      {
+        "h": "7. Forms via Formspree",
+        "p": "Our contact forms are processed via Formspree (formspree.io). The data you enter is sent to us through their secure infrastructure. Formspree stores submitted forms in accordance with their own privacy policy, available at {link}."
+      },
+      {
+        "h": "8. Your rights",
+        "p": "Under the General Data Protection Regulation (GDPR), you have the following rights:",
+        "list": [
+          "<strong>Access</strong>: you can request which data we hold about you;",
+          "<strong>Correction</strong>: you can have inaccurate data corrected;",
+          "<strong>Deletion</strong>: you can request that your data be deleted;",
+          "<strong>Objection</strong>: you can object to the processing of your data."
+        ],
+        "p2": "To exercise these rights, please contact us at {email}. We respond within 30 days."
+      },
+      {
+        "h": "9. Security",
+        "p": "We take appropriate technical and organisational measures to protect your data against unauthorised access, loss, or misuse."
+      },
+      {
+        "h": "10. Complaints",
+        "p": "Do you have a complaint about how we handle your data? You can file a complaint with the Dutch Data Protection Authority via {link}."
+      },
+      {
+        "h": "11. Changes",
+        "p": "We reserve the right to change this privacy policy. The most current version can always be found on this page."
+      }
+    ]
+  },
+  "contact": {
+    "meta_title": "Contact | S. van Wijk Solutions",
+    "meta_description": "Get in touch with S. van Wijk Solutions. We're reachable by email and respond within 24 hours on working days.",
+    "hero": {
+      "tag": "CONTACT",
+      "title": "Get in touch",
+      "sub": "Have a question or want more information? We respond within 24 hours on working days."
+    },
+    "info": {
+      "title": "Our details",
+      "email_label": "Email",
+      "location_label": "Location",
+      "location_value": "The Netherlands, Westland Region",
+      "hours_label": "Opening hours",
+      "hours_value": "Monday to Friday: 08:00 – 17:00",
+      "response_label": "Response time",
+      "response_value": "Within 24 hours on working days",
+      "img_alt": "Person working on a website on a laptop at S. van Wijk Solutions"
+    },
+    "form": {
+      "title": "Send a message",
+      "intro": "Got a question, want a quote, or just want to say hello? Fill in the form and we'll get back to you as soon as possible.",
+      "voornaam": "First name",
+      "achternaam": "Last name",
+      "email": "Email address",
+      "bericht_label": "Your message",
+      "bericht_placeholder": "Feel free to ask your question…",
+      "submit": "Send Message →",
+      "tip": "Want a website built? Request a {link} right away, in your inbox within 5 working days.",
+      "tip_link": "free website concept"
+    }
+  }
+}
