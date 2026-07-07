@@ -4,7 +4,7 @@ lange, doorlopende tekst is (geen korte UI-strings)."""
 import json, os
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build import build_header, build_footer, SITE_ROOT, LANGS, URL_PREFIX
+from build import build_header, build_footer, SITE_ROOT, LANGS, URL_PREFIX, GA_SNIPPET, icon
 
 OUT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
@@ -56,7 +56,7 @@ def build_article(lang, slug):
     "datePublished": "{a['date_published']}"
   }}
   </script>
-</head>
+{GA_SNIPPET}</head>
 <body>
 
   <div id="header-placeholder">{header_html}</div>
@@ -70,9 +70,9 @@ def build_article(lang, slug):
           <span class="tag">{a['tag']}</span>
           <h1>{a['title']}</h1>
           <div class="blog-hero__meta">
-            <span>📅 {a['date']}</span>
-            <span>⏱ {a['min']} {a['min_read']}</span>
-            <span>✍️ Sem van Wijk</span>
+            <span>{icon('calendar')} {a['date']}</span>
+            <span>{icon('stopwatch')} {a['min']} {a['min_read']}</span>
+            <span>{icon('user')} Sem van Wijk</span>
           </div>
         </div>
       </section>

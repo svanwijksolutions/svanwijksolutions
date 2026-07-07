@@ -1,19 +1,98 @@
 /* ============================================================
-   GEDEELD FORMULIER SCRIPT
-   Gebruik op: contact.html en start.html
+   GEDEELD FORMULIER SCRIPT (taalbewust)
+   Gebruik op: contact.html en start.html, in alle 3 talen
    Vereisten:  - <form id="contactForm">
                - <button id="submitBtn">
                Injecteert automatisch de success-overlay in de <body>
 ============================================================ */
 
 (() => {
+  /* ── 0. Taal detecteren uit het pad ── */
+  const detectLang = () => {
+    const m = window.location.pathname.match(/^\/(eng|de)(\/|$)/);
+    if (!m) return 'nl';
+    return m[1] === 'eng' ? 'en' : m[1];
+  };
+  const lang = detectLang();
+
+  const TEXTS = {
+    nl: {
+      overlayLabel: 'Bericht verzonden',
+      close: 'Sluiten ✕',
+      lines: [
+        { t: '> Aanvraag verzonden...',              cls: null,    ms: 0    },
+        { t: '\n',                                   cls: null,    ms: 600  },
+        { t: 'const result = {',                     cls: null,    ms: 700  },
+        { t: '\n  status:  ',                        cls: null,    ms: 900  },
+        { t: '"✅ Succesvol"',                        cls: 's-str', ms: 1050 },
+        { t: ',\n  ontvangen: ',                     cls: null,    ms: 1200 },
+        { t: '"Ja, direct"',                         cls: 's-str', ms: 1380 },
+        { t: ',\n  reactie:   ',                     cls: null,    ms: 1560 },
+        { t: '"Binnen 24 uur"',                      cls: 's-str', ms: 1740 },
+        { t: ',\n  team:      ',                     cls: null,    ms: 1920 },
+        { t: '"S. van Wijk Solutions"',              cls: 's-fn',  ms: 2100 },
+        { t: '\n};',                                 cls: null,    ms: 2300 },
+        { t: '\n\n// 🚀 Wij nemen zo snel mogelijk contact op!', cls: 's-cmt', ms: 2520 },
+      ],
+      sending: 'Verzenden…',
+      errorServer: 'Er ging iets mis. Probeer het opnieuw of mail ons op info@svanwijksolutions.nl',
+      errorConnection: 'Geen verbinding. Controleer je internet en probeer het opnieuw.',
+    },
+    en: {
+      overlayLabel: 'Message sent',
+      close: 'Close ✕',
+      lines: [
+        { t: '> Request sent...',                    cls: null,    ms: 0    },
+        { t: '\n',                                   cls: null,    ms: 600  },
+        { t: 'const result = {',                     cls: null,    ms: 700  },
+        { t: '\n  status:   ',                       cls: null,    ms: 900  },
+        { t: '"✅ Successful"',                       cls: 's-str', ms: 1050 },
+        { t: ',\n  received: ',                      cls: null,    ms: 1200 },
+        { t: '"Yes, instantly"',                     cls: 's-str', ms: 1380 },
+        { t: ',\n  response:  ',                     cls: null,    ms: 1560 },
+        { t: '"Within 24 hours"',                    cls: 's-str', ms: 1740 },
+        { t: ',\n  team:      ',                     cls: null,    ms: 1920 },
+        { t: '"S. van Wijk Solutions"',              cls: 's-fn',  ms: 2100 },
+        { t: '\n};',                                 cls: null,    ms: 2300 },
+        { t: '\n\n// 🚀 We\'ll get in touch as soon as possible!', cls: 's-cmt', ms: 2520 },
+      ],
+      sending: 'Sending…',
+      errorServer: 'Something went wrong. Please try again or email us at info@svanwijksolutions.nl',
+      errorConnection: 'No connection. Please check your internet and try again.',
+    },
+    de: {
+      overlayLabel: 'Nachricht gesendet',
+      close: 'Schließen ✕',
+      lines: [
+        { t: '> Anfrage gesendet...',                cls: null,    ms: 0    },
+        { t: '\n',                                   cls: null,    ms: 600  },
+        { t: 'const result = {',                     cls: null,    ms: 700  },
+        { t: '\n  status:    ',                      cls: null,    ms: 900  },
+        { t: '"✅ Erfolgreich"',                      cls: 's-str', ms: 1050 },
+        { t: ',\n  empfangen: ',                     cls: null,    ms: 1200 },
+        { t: '"Ja, sofort"',                         cls: 's-str', ms: 1380 },
+        { t: ',\n  antwort:   ',                     cls: null,    ms: 1560 },
+        { t: '"Innerhalb von 24 Std."',              cls: 's-str', ms: 1740 },
+        { t: ',\n  team:      ',                     cls: null,    ms: 1920 },
+        { t: '"S. van Wijk Solutions"',              cls: 's-fn',  ms: 2100 },
+        { t: '\n};',                                 cls: null,    ms: 2300 },
+        { t: '\n\n// 🚀 Wir melden uns so schnell wie möglich!', cls: 's-cmt', ms: 2520 },
+      ],
+      sending: 'Wird gesendet…',
+      errorServer: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns an info@svanwijksolutions.nl',
+      errorConnection: 'Keine Verbindung. Überprüfen Sie Ihr Internet und versuchen Sie es erneut.',
+    },
+  };
+
+  const T = TEXTS[lang] || TEXTS.nl;
+
   /* ── 1. Bouw success-overlay HTML en injecteer in body ── */
   const overlayHTML = `
-    <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-label="Bericht verzonden">
+    <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-label="${T.overlayLabel}">
       <div class="success-card">
         <div class="success-dots"><span></span><span></span><span></span></div>
         <pre class="success-pre" id="successPre"><span class="s-cursor"></span></pre>
-        <button class="success-close" id="successClose">Sluiten ✕</button>
+        <button class="success-close" id="successClose">${T.close}</button>
       </div>
     </div>`;
 
@@ -77,26 +156,10 @@
   if (!form || !overlay) return; // Pagina heeft geen formulier
 
   /* ── 2. Typewriter animatie ── */
-  const lines = [
-    { t: '> Aanvraag verzonden...',              cls: null,    ms: 0    },
-    { t: '\n',                                   cls: null,    ms: 600  },
-    { t: 'const result = {',                     cls: null,    ms: 700  },
-    { t: '\n  status:  ',                        cls: null,    ms: 900  },
-    { t: '"✅ Succesvol"',                        cls: 's-str', ms: 1050 },
-    { t: ',\n  ontvangen: ',                     cls: null,    ms: 1200 },
-    { t: '"Ja, direct"',                         cls: 's-str', ms: 1380 },
-    { t: ',\n  reactie:   ',                     cls: null,    ms: 1560 },
-    { t: '"Binnen 24 uur"',                      cls: 's-str', ms: 1740 },
-    { t: ',\n  team:      ',                     cls: null,    ms: 1920 },
-    { t: '"S. van Wijk Solutions"',              cls: 's-fn',  ms: 2100 },
-    { t: '\n};',                                 cls: null,    ms: 2300 },
-    { t: '\n\n// 🚀 Wij nemen zo snel mogelijk contact op!', cls: 's-cmt', ms: 2520 },
-  ];
-
   const runTypewriter = () => {
     pre.innerHTML = '<span class="s-cursor"></span>';
     let html = '';
-    lines.forEach(({ t, cls, ms }) => {
+    T.lines.forEach(({ t, cls, ms }) => {
       setTimeout(() => {
         const esc = t.replace(/&/g, '&amp;');
         html += cls ? `<span class="${cls}">${esc}</span>` : esc;
@@ -115,7 +178,7 @@
     if (honey && honey.value) return;
 
     const origText     = submitBtn.textContent;
-    submitBtn.textContent = 'Verzenden…';
+    submitBtn.textContent = T.sending;
     submitBtn.disabled    = true;
 
     try {
@@ -132,10 +195,10 @@
         runTypewriter();
         form.reset();
       } else {
-        alert('Er ging iets mis. Probeer het opnieuw of mail ons op info@svanwijksolutions.nl');
+        alert(T.errorServer);
       }
     } catch {
-      alert('Geen verbinding. Controleer je internet en probeer het opnieuw.');
+      alert(T.errorConnection);
     } finally {
       submitBtn.textContent = origText;
       submitBtn.disabled    = false;

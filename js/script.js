@@ -201,6 +201,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   setTimeout(initReveal, 100);
 
+  /* Iconen buiten een .reveal-blok (bijv. in de hero) tekenen zichzelf
+     gewoon in bij het laden van de pagina, met een lichte vertraging per icoon. */
+  document.querySelectorAll('.icon-svg').forEach((el, i) => {
+    if (!el.closest('.reveal')) {
+      setTimeout(() => el.classList.add('icon-svg--drawn'), 300 + i * 80);
+    }
+  });
+
 
   /* ============================================================
      6. TYPEWRITER EFFECT (alleen homepage)

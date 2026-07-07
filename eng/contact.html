@@ -26,6 +26,14 @@
   <meta property="og:image" content="https://www.svanwijksolutions.nl/assets/images/og-image.jpg">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS7GHNBJXD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZS7GHNBJXD');
+  </script>
 </head>
 <body>
 
@@ -41,11 +49,9 @@
         <li><a href="/eng/index.html" data-page="index" class="active" aria-current="page">Home</a></li>
         <li><a href="/eng/diensten.html" data-page="diensten">Services</a></li>
         <li><a href="/eng/over-ons.html" data-page="over-ons">About Us</a></li>
-        <li><a href="/eng/contact.html" data-page="contact">Contact</a></li>
       </ul>
 
       <div class="nav__right">
-        <a href="/eng/concept.html" class="nav__cta--gratis"><span>Request your free website concept here</span> <span class="nav__cta-arrow">→</span></a>
         <div class="lang-switch" aria-label="Switch language">
           <button class="lang-switch__current" aria-expanded="false" aria-haspopup="listbox" type="button">
             <span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t-en-cur"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t-en-cur)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg></span>
@@ -58,6 +64,8 @@
             <li role="option" aria-selected="false"><a href="#" data-lang="de" class="lang-switch__option"><span class="flag-icon" aria-hidden="true"><svg viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></span><span>Deutsch</span></a></li>
           </ul>
         </div>
+        <a href="/eng/concept.html" class="nav__cta--gratis"><span>Request your free website concept here</span></a>
+        <span class="nav__cta--contact"><a href="/eng/contact.html" data-page="contact">Contact</a></span>
         <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -104,28 +112,28 @@
             <div class="contact-info">
               <h3>Our details</h3>
               <div class="info-item">
-                <div class="info-icon">📧</div>
+                <div class="info-icon"><span class="icon-svg " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" pathLength="1"></path><path d="M22 6l-10 7L2 6" pathLength="1"></path></svg></span></div>
                 <div>
                   <h4>Email</h4>
                   <a href="mailto:info@svanwijksolutions.nl">info@svanwijksolutions.nl</a>
                 </div>
               </div>
               <div class="info-item">
-                <div class="info-icon">📍</div>
+                <div class="info-icon"><span class="icon-svg " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" pathLength="1"></path><circle cx="12" cy="10" r="3" pathLength="1"></circle></svg></span></div>
                 <div>
                   <h4>Location</h4>
                   <p>The Netherlands, Westland Region</p>
                 </div>
               </div>
               <div class="info-item">
-                <div class="info-icon">🕐</div>
+                <div class="info-icon"><span class="icon-svg " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" pathLength="1"></circle><polyline points="12 6 12 12 16 14" pathLength="1"></polyline></svg></span></div>
                 <div>
                   <h4>Opening hours</h4>
                   <p>Monday to Friday: 08:00 – 17:00</p>
                 </div>
               </div>
               <div class="info-item">
-                <div class="info-icon">⚡</div>
+                <div class="info-icon"><span class="icon-svg " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8" pathLength="1"></circle><path d="M12 9v4l2 2" pathLength="1"></path><path d="M9 2h6" pathLength="1"></path></svg></span></div>
                 <div>
                   <h4>Response time</h4>
                   <p>Within 24 hours on working days</p>
@@ -137,7 +145,7 @@
             <div class="contact-sfeer">
               <img
                 src="/assets/images/website.jpg"
-                alt="Person working on a website on a laptop — S. van Wijk Solutions"
+                alt="Person working on a website on a laptop at S. van Wijk Solutions"
                 loading="lazy"
                 width="600"
                 height="400"
@@ -177,7 +185,7 @@
 
             <!-- Gratis concept CTA -->
             <div class="contact-concept-tip">
-              <p>💡 Want a website built? Request a <a href="/eng/concept.html">free website concept</a> right away — in your inbox within 5 working days.</p>
+              <p>Want a website built? Request a <a href="/eng/concept.html">free website concept</a> right away, in your inbox within 5 working days.</p>
             </div>
           </div>
 

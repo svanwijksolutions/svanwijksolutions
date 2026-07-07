@@ -1,5 +1,5 @@
 /* ============================================================
-   GRATIS CONCEPT FORMULIER — S. van Wijk Solutions
+   GRATIS CONCEPT FORMULIER, S. van Wijk Solutions
    - Bedrijfstype zoekbalk met autocomplete
    - Paginavoorstel per branche (aangevinkt + reden)
    - Talen (uitgebreid + eigen invoer)
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!form) return;
 
   /* ─────────────────────────────────────────────
-     BRANCHE DATA — type + voorgestelde pagina's
+     BRANCHE DATA: type + voorgestelde pagina's
      paginas = interne id's (zie PAGINA_FORM_ID)
   ───────────────────────────────────────────── */
   var BRANCHES = [
